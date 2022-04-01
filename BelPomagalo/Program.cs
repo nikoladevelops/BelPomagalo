@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+
 namespace BelPomagalo
 {
     internal static class Program
@@ -12,6 +14,9 @@ namespace BelPomagalo
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
+
+            var db = new ApplicationDbContext();
+            db.Database.Migrate();
         }
     }
 }
