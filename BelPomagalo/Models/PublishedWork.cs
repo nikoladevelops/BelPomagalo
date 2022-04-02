@@ -22,5 +22,10 @@ namespace BelPomagalo.Models
 
         public Theme Theme { get; set; }
         public int ThemeId { get; set; }
+
+        public string MotivesAndFigures { get; set; }
+        public string Oppositions { get; set; }
+        public string IdeologicalSuggestions { get; set; }
+        public string Remarks { get; set; }
     }
 }

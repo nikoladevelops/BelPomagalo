@@ -10,8 +10,6 @@ namespace BelPomagalo.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public PublishedWork PublishedWork { get; set; }
-        public int PublishedWorkId { get; set; }
         public string Description { get; set; }
     }
 }
