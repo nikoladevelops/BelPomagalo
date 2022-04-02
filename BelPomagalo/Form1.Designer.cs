@@ -81,6 +81,7 @@
             this.showButton.TabIndex = 4;
             this.showButton.Text = "Покажи";
             this.showButton.UseVisualStyleBackColor = true;
+            this.showButton.Click += new System.EventHandler(this.showButton_Click);
             // 
             // Form1
             // 
@@ -93,6 +94,7 @@
             this.Controls.Add(this.authorLabel);
             this.Controls.Add(this.authorsListBox);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Помагало";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -16,5 +16,10 @@ namespace BelPomagalo
         }
 
         public DbSet<Author> Authors { get; set; }
+        public DbSet<Character> Characters { get; set; }
+        public DbSet<Genre> Genres { get; set; }
+        public DbSet<PublishedWork> PublishedWorks { get; set; }
+        public DbSet<PublishedWorkCharacters> PublishedWorkCharacters { get; set; }
+        public DbSet<Theme> Themes { get; set; }
     }
 }

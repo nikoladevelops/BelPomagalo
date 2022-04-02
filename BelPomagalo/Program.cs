@@ -13,11 +13,15 @@ namespace BelPomagalo
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
+
+            // Ensure the database is created and if not create it
+            using (var db = new ApplicationDbContext())
+            {
+                db.Database.Migrate();
+            }
+
             Application.Run(new Form1());
 
-            var db = new ApplicationDbContext();
-            db.Database.Migrate();
-            //TODO work on the design, create a PublishedWorks table contianing info about each author's published work
         }
     }
 }
