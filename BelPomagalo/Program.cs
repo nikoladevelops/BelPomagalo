@@ -17,6 +17,7 @@ namespace BelPomagalo
 
             var db = new ApplicationDbContext();
             db.Database.Migrate();
+            //TODO work on the design, create a PublishedWorks table contianing info about each author's published work
         }
     }
 }
