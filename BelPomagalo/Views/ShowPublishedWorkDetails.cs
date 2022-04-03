@@ -16,5 +16,13 @@ namespace BelPomagalo.Views
         {
             InitializeComponent();
         }
+
+        public ShowPublishedWorkDetails(string name, string genreName, string authorName, string themeName) : this()
+        {
+            nameLabel.Text = name;
+            genreLabel.Text = genreName;
+            authorLabel.Text = authorName;
+            themeLabel.Text = themeName;
+        }
     }
 }
