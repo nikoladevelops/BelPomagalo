@@ -1,5 +1,6 @@
 ﻿using BelPomagalo.Models;
 using BelPomagalo.Services;
+using BelPomagalo.Utility;
 using BelPomagalo.Views;
 using Microsoft.EntityFrameworkCore;
 
@@ -19,28 +20,14 @@ namespace BelPomagalo
             _authorService = new AuthorService(_context);
             _publishedWorkService = new PublishedWorkService(_context);
 
-            LoadListBoxData(authorsListBox, _authorService.GetAllAuthorsNames());
+            Helper.LoadListBoxData(authorsListBox, _authorService.GetAllAuthorsNames());
 
             if (authorsListBox.Items.Count>0)
             {
                 var currentSelectedAuthorName = authorsListBox.SelectedItem.ToString();
                 var author = _authorService.GetAuthor(currentSelectedAuthorName);
 
-                LoadListBoxData(publishedWorkListBox, _publishedWorkService.GetPublishedWorksNames(author.Id));
-            }
-        }
-
-        private void LoadListBoxData(ListBox listBox, IEnumerable<string> data) 
-        {
-            listBox.Items.Clear();
-
-            if (data != null)
-            {
-                foreach (var item in data)
-                {
-                    listBox.Items.Add(item);
-                }
-                listBox.SelectedIndex = 0;
+                Helper.LoadListBoxData(publishedWorkListBox, _publishedWorkService.GetPublishedWorksNames(author.Id));
             }
         }
 
@@ -57,7 +44,13 @@ namespace BelPomagalo
             var authorName = ((ListBox)sender).SelectedItem.ToString();
             
             var author = _authorService.GetAuthor(authorName);
-            LoadListBoxData(publishedWorkListBox,_publishedWorkService.GetPublishedWorksNames(author.Id));
+            Helper.LoadListBoxData(publishedWorkListBox,_publishedWorkService.GetPublishedWorksNames(author.Id));
+        }
+
+        private void addNewPublishedWorkButton_Click(object sender, EventArgs e)
+        {
+            var addNewPublishedWorkForm = new AddNewPublishedWork();
+            addNewPublishedWorkForm.Show();
         }
     }
 }

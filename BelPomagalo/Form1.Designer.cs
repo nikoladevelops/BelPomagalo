@@ -33,6 +33,7 @@
             this.authorLabel = new System.Windows.Forms.Label();
             this.publishedWorkLabel = new System.Windows.Forms.Label();
             this.showButton = new System.Windows.Forms.Button();
+            this.addNewPublishedWorkButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // authorsListBox
@@ -76,7 +77,7 @@
             // 
             // showButton
             // 
-            this.showButton.Location = new System.Drawing.Point(325, 321);
+            this.showButton.Location = new System.Drawing.Point(245, 321);
             this.showButton.Name = "showButton";
             this.showButton.Size = new System.Drawing.Size(149, 61);
             this.showButton.TabIndex = 4;
@@ -84,11 +85,22 @@
             this.showButton.UseVisualStyleBackColor = true;
             this.showButton.Click += new System.EventHandler(this.showButton_Click);
             // 
+            // addNewPublishedWorkButton
+            // 
+            this.addNewPublishedWorkButton.Location = new System.Drawing.Point(12, 12);
+            this.addNewPublishedWorkButton.Name = "addNewPublishedWorkButton";
+            this.addNewPublishedWorkButton.Size = new System.Drawing.Size(141, 49);
+            this.addNewPublishedWorkButton.TabIndex = 5;
+            this.addNewPublishedWorkButton.Text = "Добави Произведение";
+            this.addNewPublishedWorkButton.UseVisualStyleBackColor = true;
+            this.addNewPublishedWorkButton.Click += new System.EventHandler(this.addNewPublishedWorkButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.addNewPublishedWorkButton);
             this.Controls.Add(this.showButton);
             this.Controls.Add(this.publishedWorkLabel);
             this.Controls.Add(this.publishedWorkListBox);
@@ -109,5 +121,6 @@
         private Label authorLabel;
         private Label publishedWorkLabel;
         private Button showButton;
+        private Button addNewPublishedWorkButton;
     }
 }
