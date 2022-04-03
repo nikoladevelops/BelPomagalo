@@ -12,14 +12,16 @@ namespace BelPomagalo.Services
         public AuthorService(ApplicationDbContext context) : base(context)
         {
         }
-
-        internal IEnumerable<Author> GetAllAuthors() 
+        internal IEnumerable<string> GetAllAuthorsNames()
         {
-            return _context.Authors.ToList();
+            return _context.Authors
+                .Select(x => x.Name)
+                .ToList();
         }
         internal Author GetAuthor(string authorName)
         {
-            return _context.Authors.FirstOrDefault(x => x.Name == authorName);
+            return _context.Authors
+                .FirstOrDefault(x => x.Name == authorName);
         }
     }
 }

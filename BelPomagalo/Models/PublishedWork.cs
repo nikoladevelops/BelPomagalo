@@ -10,7 +10,7 @@ namespace BelPomagalo.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public DateTime PublishedDate { get; set; }
+        public string? PublishedDate { get; set; }
 
         public Genre Genre { get; set; }
         public int GenreId { get; set; }
@@ -18,14 +18,14 @@ namespace BelPomagalo.Models
         public Author Author { get; set; }
         public int AuthorId { get; set; }
 
-        public string CompositionDetails { get; set; }
+        public string? CompositionDetails { get; set; }
 
         public Theme Theme { get; set; }
         public int ThemeId { get; set; }
 
-        public string MotivesAndFigures { get; set; }
-        public string Oppositions { get; set; }
-        public string IdeologicalSuggestions { get; set; }
-        public string Remarks { get; set; }
+        public string? MotivesAndFigures { get; set; }
+        public string? Oppositions { get; set; }
+        public string? IdeologicalSuggestions { get; set; }
+        public string? Remarks { get; set; }
     }
 }

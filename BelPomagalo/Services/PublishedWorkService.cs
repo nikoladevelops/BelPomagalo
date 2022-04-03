@@ -12,17 +12,17 @@ namespace BelPomagalo.Services
         public PublishedWorkService(ApplicationDbContext context) : base(context)
         {
         }
-
-        internal IEnumerable<PublishedWork> GetAllPublishedWorks()
-        {
-            return _context.PublishedWorks.ToList();
-        }
-
-        internal IEnumerable<PublishedWork> GetPublishedWorksOfAuthor(int authorId)
+        internal IEnumerable<string> GetPublishedWorksNames(int authorId)
         {
             return _context.PublishedWorks
-                .Where(x=>x.AuthorId==authorId)
+                .Where(x => x.AuthorId == authorId)
+                .Select(x => x.Name)
                 .ToList();
+        }
+        internal PublishedWork GetPublishedWork(string publishedWorkName)
+        {
+            return _context.PublishedWorks
+                .FirstOrDefault(x => x.Name == publishedWorkName);
         }
     }
 }
