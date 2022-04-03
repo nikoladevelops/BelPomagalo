@@ -36,7 +36,7 @@
             this.authorListBox = new System.Windows.Forms.ListBox();
             this.genreListBox = new System.Windows.Forms.ListBox();
             this.themeListBox = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.addPublishedWorkButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // nameTextBox
@@ -114,22 +114,23 @@
             this.themeListBox.Size = new System.Drawing.Size(160, 154);
             this.themeListBox.TabIndex = 10;
             // 
-            // button1
+            // addPublishedWorkButton
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(318, 323);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(160, 66);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Добави";
-            this.button1.UseVisualStyleBackColor = true;
+            this.addPublishedWorkButton.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.addPublishedWorkButton.Location = new System.Drawing.Point(318, 323);
+            this.addPublishedWorkButton.Name = "addPublishedWorkButton";
+            this.addPublishedWorkButton.Size = new System.Drawing.Size(160, 66);
+            this.addPublishedWorkButton.TabIndex = 11;
+            this.addPublishedWorkButton.Text = "Добави";
+            this.addPublishedWorkButton.UseVisualStyleBackColor = true;
+            this.addPublishedWorkButton.Click += new System.EventHandler(this.addPublishedWorkButton_Click);
             // 
             // AddNewPublishedWork
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.addPublishedWorkButton);
             this.Controls.Add(this.themeListBox);
             this.Controls.Add(this.genreListBox);
             this.Controls.Add(this.authorListBox);
@@ -155,6 +156,6 @@
         private ListBox authorListBox;
         private ListBox genreListBox;
         private ListBox themeListBox;
-        private Button button1;
+        private Button addPublishedWorkButton;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BelPomagalo.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,12 @@ namespace BelPomagalo.Services
             return _context.Genres
                 .Select(x => x.Name)
                 .ToList();
+        }
+
+        internal Genre GetGenre(string genreName)
+        {
+            return _context.Genres
+                .FirstOrDefault(x=>x.Name==genreName);
         }
     }
 }

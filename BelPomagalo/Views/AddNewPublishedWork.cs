@@ -1,4 +1,5 @@
-﻿using BelPomagalo.Services;
+﻿using BelPomagalo.Models;
+using BelPomagalo.Services;
 using BelPomagalo.Utility;
 using System;
 using System.Collections.Generic;
@@ -31,6 +32,24 @@ namespace BelPomagalo.Views
             Helper.LoadListBoxData(authorListBox, _authorService.GetAllAuthorsNames());
             Helper.LoadListBoxData(genreListBox, _genreService.GetAllGenresNames());
             Helper.LoadListBoxData(themeListBox, _themeService.GetAllThemesNames());
+        }
+
+        private void addPublishedWorkButton_Click(object sender, EventArgs e)
+        {
+            var name = nameTextBox.Text;
+            var author = _authorService.GetAuthor(authorListBox.SelectedItem.ToString());
+            var genre = _genreService.GetGenre(genreListBox.SelectedItem.ToString());
+            var theme = _themeService.GetTheme(themeListBox.SelectedItem.ToString());
+
+            var publishedWork = new PublishedWork()
+            {
+                Name=name,
+                AuthorId=author.Id,
+                GenreId=genre.Id,
+                ThemeId=theme.Id
+            };
+
+            _publishedWorkService.AddPublishedWork(publishedWork);
         }
     }
 }

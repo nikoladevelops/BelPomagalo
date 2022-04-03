@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BelPomagalo.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,11 @@ namespace BelPomagalo.Services
             return _context.Themes
                 .Select(x => x.Name)
                 .ToList();
+        }
+        internal Theme GetTheme(string themeName)
+        {
+            return _context.Themes
+                .FirstOrDefault(x => x.Name == themeName);
         }
     }
 }
