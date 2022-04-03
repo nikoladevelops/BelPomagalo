@@ -39,10 +39,13 @@
             // 
             this.authorsListBox.FormattingEnabled = true;
             this.authorsListBox.ItemHeight = 15;
+            this.authorsListBox.Items.AddRange(new object[] {
+            "test"});
             this.authorsListBox.Location = new System.Drawing.Point(12, 116);
             this.authorsListBox.Name = "authorsListBox";
             this.authorsListBox.Size = new System.Drawing.Size(382, 199);
             this.authorsListBox.TabIndex = 0;
+            this.authorsListBox.SelectedIndexChanged += new System.EventHandler(this.SelectedAuthorChanged);
             // 
             // publishedWorkListBox
             // 

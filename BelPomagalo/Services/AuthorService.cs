@@ -17,5 +17,9 @@ namespace BelPomagalo.Services
         {
             return _context.Authors.ToList();
         }
+        internal Author GetAuthor(string authorName)
+        {
+            return _context.Authors.FirstOrDefault(x => x.Name == authorName);
+        }
     }
 }
