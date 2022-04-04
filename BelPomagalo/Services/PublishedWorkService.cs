@@ -23,7 +23,6 @@ namespace BelPomagalo.Services
         internal PublishedWork GetPublishedWork(string publishedWorkName)
         {
             return _context.PublishedWorks
-                .Include(x=>x.Theme)
                 .Include(x=>x.Genre)
                 .Include(x=>x.Author)
                 .FirstOrDefault(x => x.Name == publishedWorkName);

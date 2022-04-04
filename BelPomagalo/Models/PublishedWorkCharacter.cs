@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BelPomagalo.Models
 {
-    internal class PublishedWorkCharacters
+    internal class PublishedWorkCharacter
     {
         public int Id { get; set; }
 

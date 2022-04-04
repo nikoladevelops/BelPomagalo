@@ -34,6 +34,9 @@
             this.publishedWorkLabel = new System.Windows.Forms.Label();
             this.showButton = new System.Windows.Forms.Button();
             this.addNewPublishedWorkButton = new System.Windows.Forms.Button();
+            this.addNewAuthorButton = new System.Windows.Forms.Button();
+            this.addNewGenreButton = new System.Windows.Forms.Button();
+            this.addNewThemeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // authorsListBox
@@ -95,11 +98,41 @@
             this.addNewPublishedWorkButton.UseVisualStyleBackColor = true;
             this.addNewPublishedWorkButton.Click += new System.EventHandler(this.addNewPublishedWorkButton_Click);
             // 
+            // addNewAuthorButton
+            // 
+            this.addNewAuthorButton.Location = new System.Drawing.Point(159, 12);
+            this.addNewAuthorButton.Name = "addNewAuthorButton";
+            this.addNewAuthorButton.Size = new System.Drawing.Size(141, 49);
+            this.addNewAuthorButton.TabIndex = 6;
+            this.addNewAuthorButton.Text = "Добави Автор";
+            this.addNewAuthorButton.UseVisualStyleBackColor = true;
+            // 
+            // addNewGenreButton
+            // 
+            this.addNewGenreButton.Location = new System.Drawing.Point(306, 12);
+            this.addNewGenreButton.Name = "addNewGenreButton";
+            this.addNewGenreButton.Size = new System.Drawing.Size(141, 49);
+            this.addNewGenreButton.TabIndex = 7;
+            this.addNewGenreButton.Text = "Добави Жанр";
+            this.addNewGenreButton.UseVisualStyleBackColor = true;
+            // 
+            // addNewThemeButton
+            // 
+            this.addNewThemeButton.Location = new System.Drawing.Point(453, 12);
+            this.addNewThemeButton.Name = "addNewThemeButton";
+            this.addNewThemeButton.Size = new System.Drawing.Size(141, 49);
+            this.addNewThemeButton.TabIndex = 8;
+            this.addNewThemeButton.Text = "Добави Тема";
+            this.addNewThemeButton.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.addNewThemeButton);
+            this.Controls.Add(this.addNewGenreButton);
+            this.Controls.Add(this.addNewAuthorButton);
             this.Controls.Add(this.addNewPublishedWorkButton);
             this.Controls.Add(this.showButton);
             this.Controls.Add(this.publishedWorkLabel);
@@ -122,5 +155,8 @@
         private Label publishedWorkLabel;
         private Button showButton;
         private Button addNewPublishedWorkButton;
+        private Button addNewAuthorButton;
+        private Button addNewGenreButton;
+        private Button addNewThemeButton;
     }
 }

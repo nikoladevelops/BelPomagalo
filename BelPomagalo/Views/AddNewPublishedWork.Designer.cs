@@ -140,6 +140,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nameTextBox);
             this.Name = "AddNewPublishedWork";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Добави Произведение";
             this.ResumeLayout(false);
             this.PerformLayout();

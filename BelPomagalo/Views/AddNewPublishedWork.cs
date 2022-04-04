@@ -41,12 +41,15 @@ namespace BelPomagalo.Views
             var genre = _genreService.GetGenre(genreListBox.SelectedItem.ToString());
             var theme = _themeService.GetTheme(themeListBox.SelectedItem.ToString());
 
+            // TODO Published works can have more than 1 theme, so instead of using one to many, you should use many to many relationship by creating a new model PublishedWorkThemes
+            // TODO Make it so that u can have multiselect in the themeListBox , => to be able to select many themes and add them to the specified published work.
+            // TODO do the same for the genres as well -> one published work can have many genres and one genre can be in many published works -> basically u need yet another model PublishedWorkGenres
+            // TODO maybe make a Core folder/ Controller folder and make your Form1 look like this form as well
             var publishedWork = new PublishedWork()
             {
                 Name=name,
                 AuthorId=author.Id,
-                GenreId=genre.Id,
-                ThemeId=theme.Id
+                GenreId=genre.Id
             };
 
             _publishedWorkService.AddPublishedWork(publishedWork);

@@ -35,8 +35,8 @@ namespace BelPomagalo
         {
             var publishedWork = _publishedWorkService.GetPublishedWork(publishedWorkListBox.SelectedItem.ToString());
 
-            var publishedWorkForm = new ShowPublishedWorkDetails(publishedWork.Name, publishedWork.Genre.Name, publishedWork.Author.Name, publishedWork.Theme.Name);
-            publishedWorkForm.Show();
+            //var publishedWorkForm = new ShowPublishedWorkDetails(publishedWork.Name, publishedWork.Genre.Name, publishedWork.Author.Name, publishedWork.Theme.Name);
+            //publishedWorkForm.Show();
         }
 
         private void SelectedAuthorChanged(object sender, EventArgs e)

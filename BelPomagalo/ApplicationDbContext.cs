@@ -19,7 +19,8 @@ namespace BelPomagalo
         public DbSet<Character> Characters { get; set; }
         public DbSet<Genre> Genres { get; set; }
         public DbSet<PublishedWork> PublishedWorks { get; set; }
-        public DbSet<PublishedWorkCharacters> PublishedWorkCharacters { get; set; }
+        public DbSet<PublishedWorkCharacter> PublishedWorkCharacters { get; set; }
         public DbSet<Theme> Themes { get; set; }
+        public DbSet<PublishedWorkTheme> PublishedWorkThemes { get; set; }
     }
 }
