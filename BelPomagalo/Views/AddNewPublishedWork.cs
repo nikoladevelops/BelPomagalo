@@ -16,15 +16,15 @@ namespace BelPomagalo.Views
 {
     public partial class AddNewPublishedWork : Form
     {
-        private readonly AddNewPublishedWorkController _controller;
+        private readonly FormDataController _controller;
         public AddNewPublishedWork()
         {
             InitializeComponent();
-            _controller = new AddNewPublishedWorkController();
+            _controller = new FormDataController();
 
-            Helper.LoadListBoxData(authorListBox, _controller.GetAllAuthorNames());
-            Helper.LoadListBoxData(genreListBox, _controller.GetAllGenresNames());
-            Helper.LoadListBoxData(themeListBox, _controller.GetAllThemesNames());
+            Helper.LoadListBoxData(authorListBox, _controller.GetAllAuthorsNames());
+            Helper.LoadListBoxData(genreListBox, _controller.GetAllGenresNames(), false);
+            Helper.LoadListBoxData(themeListBox, _controller.GetAllThemesNames(), false);
         }
 
         private async void addPublishedWorkButton_Click(object sender, EventArgs e)

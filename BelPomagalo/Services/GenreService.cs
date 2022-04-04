@@ -18,13 +18,11 @@ namespace BelPomagalo.Services
                 .Select(x => x.Name)
                 .ToList();
         }
-
         internal Genre GetGenre(string genreName)
         {
             return _context.Genres
                 .FirstOrDefault(x=>x.Name==genreName);
         }
-
         internal Genre GetGenre(int genreId)
         {
             return _context.Genres

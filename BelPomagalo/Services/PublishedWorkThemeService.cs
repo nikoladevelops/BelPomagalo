@@ -12,6 +12,12 @@ namespace BelPomagalo.Services
         public PublishedWorkThemeService(ApplicationDbContext context) : base(context)
         {
         }
+        internal IEnumerable<PublishedWorkTheme> GetAllPublishedWorksThemes(PublishedWork publishedWork)
+        {
+            return _context.PublishedWorkThemes
+                .Where(x => x.PublishedWorkId == publishedWork.Id)
+                .ToList();
+        }
         internal async Task<PublishedWorkTheme> AddPublishedWorkTheme(PublishedWorkTheme publishedWorkTheme)
         {
             var result = await _context.PublishedWorkThemes.AddAsync(publishedWorkTheme);

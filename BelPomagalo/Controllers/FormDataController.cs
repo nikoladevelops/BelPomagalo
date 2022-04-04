@@ -1,5 +1,6 @@
 ﻿using BelPomagalo.Models;
 using BelPomagalo.Services;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,19 +9,21 @@ using System.Threading.Tasks;
 
 namespace BelPomagalo.Controllers
 {
-    internal class AddNewPublishedWorkController
+    internal class FormDataController
     {
         private readonly ApplicationDbContext _context;
-        internal readonly AuthorService _authorService;
-        internal readonly GenreService _genreService;
-        internal readonly ThemeService _themeService;
-        internal readonly PublishedWorkService _publishedWorkService;
-        internal readonly PublishedWorkGenreService _publishedWorkGenreService;
-        internal readonly PublishedWorkThemeService _publishedWorkThemeService;
+        private readonly AuthorService _authorService;
+        private readonly GenreService _genreService;
+        private readonly ThemeService _themeService;
+        private readonly PublishedWorkService _publishedWorkService;
+        private readonly PublishedWorkGenreService _publishedWorkGenreService;
+        private readonly PublishedWorkThemeService _publishedWorkThemeService;
 
-        internal AddNewPublishedWorkController()
+        internal FormDataController()
         {
             _context = new ApplicationDbContext();
+            _context.Database.Migrate();
+
             _authorService = new AuthorService(_context);
             _genreService = new GenreService(_context);
             _themeService = new ThemeService(_context);
@@ -29,7 +32,7 @@ namespace BelPomagalo.Controllers
             _publishedWorkThemeService = new PublishedWorkThemeService(_context);
         }
 
-        internal IEnumerable<string> GetAllAuthorNames() 
+        internal IEnumerable<string> GetAllAuthorsNames() 
         {
             return _authorService.GetAllAuthorsNames();
         }
@@ -41,6 +44,10 @@ namespace BelPomagalo.Controllers
         {
             return _themeService.GetAllThemesNames();
         }
+        internal IEnumerable<string> GetPublishedWorksNames(int authorId)
+        {
+            return _publishedWorkService.GetPublishedWorksNames(authorId);
+        }
         internal Author GetAuthor(string authorName)
         {
             return _authorService.GetAuthor(authorName);
@@ -49,9 +56,29 @@ namespace BelPomagalo.Controllers
         {
             return _genreService.GetGenre(genreName);
         }
+        internal Genre GetGenre(int genreId)
+        {
+            return _genreService.GetGenre(genreId);
+        }
         internal Theme GetTheme(string themeName)
         {
             return _themeService.GetTheme(themeName);
+        }
+        internal Theme GetTheme(int themeId)
+        {
+            return _themeService.GetTheme(themeId);
+        }
+        internal PublishedWork GetPublishedWork(string publishedWorkName)
+        {
+            return _publishedWorkService.GetPublishedWork(publishedWorkName);
+        }
+        internal IEnumerable<PublishedWorkGenre> GetAllPublishedWorksGenres(PublishedWork publishedWork)
+        {
+            return _publishedWorkGenreService.GetAllPublishedWorksGenres(publishedWork);
+        }
+        internal IEnumerable<PublishedWorkTheme> GetAllPublishedWorksThemes(PublishedWork publishedWork)
+        {
+            return _publishedWorkThemeService.GetAllPublishedWorksThemes(publishedWork);
         }
         internal async Task<PublishedWork> AddPublishedWork(PublishedWork publishedWork)
         {

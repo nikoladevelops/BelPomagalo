@@ -12,6 +12,12 @@ namespace BelPomagalo.Services
         public PublishedWorkGenreService(ApplicationDbContext context) : base(context)
         {
         }
+        internal IEnumerable<PublishedWorkGenre> GetAllPublishedWorksGenres(PublishedWork publishedWork)
+        {
+            return _context.PublishedWorkGenres
+                .Where(x => x.PublishedWorkId == publishedWork.Id)
+                .ToList();
+        }
         internal async Task<PublishedWorkGenre> AddPublishedWorkGenre(PublishedWorkGenre publishedWorkGenre)
         {
             var result = await _context.PublishedWorkGenres.AddAsync(publishedWorkGenre);
