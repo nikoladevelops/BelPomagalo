@@ -12,7 +12,7 @@ namespace BelPomagalo.Services
         public PublishedWorkGenreService(ApplicationDbContext context) : base(context)
         {
         }
-        internal IEnumerable<PublishedWorkGenre> GetAllPublishedWorksGenres(PublishedWork publishedWork)
+        internal IEnumerable<PublishedWorkGenre> GetPublishedWorksGenres(PublishedWork publishedWork)
         {
             return _context.PublishedWorkGenres
                 .Where(x => x.PublishedWorkId == publishedWork.Id)

@@ -72,13 +72,13 @@ namespace BelPomagalo.Controllers
         {
             return _publishedWorkService.GetPublishedWork(publishedWorkName);
         }
-        internal IEnumerable<PublishedWorkGenre> GetAllPublishedWorksGenres(PublishedWork publishedWork)
+        internal IEnumerable<PublishedWorkGenre> GetPublishedWorksGenres(PublishedWork publishedWork)
         {
-            return _publishedWorkGenreService.GetAllPublishedWorksGenres(publishedWork);
+            return _publishedWorkGenreService.GetPublishedWorksGenres(publishedWork);
         }
-        internal IEnumerable<PublishedWorkTheme> GetAllPublishedWorksThemes(PublishedWork publishedWork)
+        internal IEnumerable<PublishedWorkTheme> GetPublishedWorksThemes(PublishedWork publishedWork)
         {
-            return _publishedWorkThemeService.GetAllPublishedWorksThemes(publishedWork);
+            return _publishedWorkThemeService.GetPublishedWorksThemes(publishedWork);
         }
         internal async Task<PublishedWork> AddPublishedWork(PublishedWork publishedWork)
         {

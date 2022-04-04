@@ -6,14 +6,13 @@ using BelPomagalo.Views;
 
 namespace BelPomagalo
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         private readonly FormDataController _controller;
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
             _controller = new FormDataController();
-
             Helper.LoadListBoxData(authorsListBox, _controller.GetAllAuthorsNames());
 
             if (authorsListBox.Items.Count>0)
@@ -28,8 +27,8 @@ namespace BelPomagalo
         private void showButton_Click(object sender, EventArgs e)
         {
             var publishedWork = _controller.GetPublishedWork(publishedWorkListBox.SelectedItem.ToString());
-            var publishedWorkGenres = _controller.GetAllPublishedWorksGenres(publishedWork);
-            var publishedWorkThemes = _controller.GetAllPublishedWorksThemes(publishedWork);
+            var publishedWorkGenres = _controller.GetPublishedWorksGenres(publishedWork);
+            var publishedWorkThemes = _controller.GetPublishedWorksThemes(publishedWork);
 
             var genreNames = new List<string>();
             foreach (var workGenre in publishedWorkGenres)
