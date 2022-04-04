@@ -12,9 +12,6 @@ namespace BelPomagalo.Models
         public string Name { get; set; }
         public string? PublishedDate { get; set; }
 
-        public Genre Genre { get; set; }
-        public int GenreId { get; set; }
-
         public Author Author { get; set; }
         public int AuthorId { get; set; }
 
