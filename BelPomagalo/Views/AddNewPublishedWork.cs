@@ -1,4 +1,5 @@
-﻿using BelPomagalo.Models;
+﻿using BelPomagalo.Controllers;
+using BelPomagalo.Models;
 using BelPomagalo.Services;
 using BelPomagalo.Utility;
 using System;
@@ -15,42 +16,34 @@ namespace BelPomagalo.Views
 {
     public partial class AddNewPublishedWork : Form
     {
-        private readonly ApplicationDbContext _context;
-        private readonly AuthorService _authorService;
-        private readonly GenreService _genreService;
-        private readonly ThemeService _themeService;
-        private readonly PublishedWorkService _publishedWorkService;
+        private readonly AddNewPublishedWorkController _controller;
         public AddNewPublishedWork()
         {
             InitializeComponent();
-            _context = new ApplicationDbContext();
-            _authorService = new AuthorService(_context);
-            _genreService = new GenreService(_context);
-            _themeService = new ThemeService(_context);
-            _publishedWorkService = new PublishedWorkService(_context);
+            _controller = new AddNewPublishedWorkController();
 
-            Helper.LoadListBoxData(authorListBox, _authorService.GetAllAuthorsNames());
-            Helper.LoadListBoxData(genreListBox, _genreService.GetAllGenresNames());
-            Helper.LoadListBoxData(themeListBox, _themeService.GetAllThemesNames());
+            Helper.LoadListBoxData(authorListBox, _controller.GetAllAuthorNames());
+            Helper.LoadListBoxData(genreListBox, _controller.GetAllGenresNames());
+            Helper.LoadListBoxData(themeListBox, _controller.GetAllThemesNames());
         }
 
         private async void addPublishedWorkButton_Click(object sender, EventArgs e)
         {
             var name = nameTextBox.Text;
-            var author = _authorService.GetAuthor(authorListBox.SelectedItem.ToString());
+            var author = _controller.GetAuthor(authorListBox.SelectedItem.ToString());
 
 
             var genres = new List<Genre>();
             foreach (var selectedItem in genreListBox.SelectedItems)
             {
-                var selectedGenre = _genreService.GetGenre(selectedItem.ToString());
+                var selectedGenre = _controller.GetGenre(selectedItem.ToString());
                 genres.Add(selectedGenre);
             }
 
             var themes = new List<Theme>();
             foreach (var selectedItem in themeListBox.SelectedItems)
             {
-                var selectedTheme = _themeService.GetTheme(selectedItem.ToString());
+                var selectedTheme = _controller.GetTheme(selectedItem.ToString());
                 themes.Add(selectedTheme);
             }
 
@@ -60,20 +53,17 @@ namespace BelPomagalo.Views
                 AuthorId=author.Id
             };
 
-            publishedWork = await _publishedWorkService.AddPublishedWork(publishedWork);
+            publishedWork = await _controller.AddPublishedWork(publishedWork);
 
             foreach (var genre in genres)
             {
-                _context.PublishedWorkGenres.Add(new PublishedWorkGenre() { PublishedWorkId = publishedWork.Id, GenreId = genre.Id });
-
+                await _controller.AddPublishedWorkGenre(new PublishedWorkGenre() { PublishedWorkId = publishedWork.Id, GenreId = genre.Id });
             }
 
             foreach (var theme in themes)
             {
-                _context.PublishedWorkThemes.Add(new PublishedWorkTheme() { PublishedWorkId = publishedWork.Id, ThemeId = theme.Id });
+                await _controller.AddPublishedWorkTheme(new PublishedWorkTheme() { PublishedWorkId = publishedWork.Id, ThemeId = theme.Id });
             }
-
-            await _context.SaveChangesAsync();
         }
     }
 }

@@ -8,7 +8,7 @@ namespace BelPomagalo.Utility
 {
     internal class Helper
     {
-        internal static void LoadListBoxData(ListBox listBox, IEnumerable<string> data)
+        internal static void LoadListBoxData(ListBox listBox, IEnumerable<string> data, bool selectTheFirstItem = true)
         {
             listBox.Items.Clear();
 
@@ -18,7 +18,11 @@ namespace BelPomagalo.Utility
                 {
                     listBox.Items.Add(item);
                 }
-                listBox.SelectedIndex = 0;
+
+                if (selectTheFirstItem)
+                {
+                    listBox.SelectedIndex = 0;
+                }
             }
         }
     }

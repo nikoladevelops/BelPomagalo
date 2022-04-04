@@ -28,9 +28,9 @@ namespace BelPomagalo.Services
         }
         internal async Task<PublishedWork> AddPublishedWork(PublishedWork publishedWork)
         {
-            var entity = await _context.PublishedWorks.AddAsync(publishedWork);
+            var result = await _context.PublishedWorks.AddAsync(publishedWork);
             await _context.SaveChangesAsync();
-            return entity.Entity;
+            return result.Entity;
         }
     }
 }
