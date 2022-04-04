@@ -11,6 +11,8 @@ namespace BelPomagalo
         private readonly ApplicationDbContext _context;
         private readonly AuthorService _authorService;
         private readonly PublishedWorkService _publishedWorkService;
+        private readonly GenreService _genreService;
+        private readonly ThemeService _themeService;
         public Form1()
         {
             InitializeComponent();
@@ -19,6 +21,8 @@ namespace BelPomagalo
 
             _authorService = new AuthorService(_context);
             _publishedWorkService = new PublishedWorkService(_context);
+            _genreService = new GenreService(_context);
+            _themeService = new ThemeService(_context);
 
             Helper.LoadListBoxData(authorsListBox, _authorService.GetAllAuthorsNames());
 
@@ -34,9 +38,25 @@ namespace BelPomagalo
         private void showButton_Click(object sender, EventArgs e)
         {
             var publishedWork = _publishedWorkService.GetPublishedWork(publishedWorkListBox.SelectedItem.ToString());
+            var publishedWorkGenres = _context.PublishedWorkGenres.Where(x => x.PublishedWorkId == publishedWork.Id).ToList();
+            var publishedWorkThemes = _context.PublishedWorkThemes.Where(x => x.PublishedWorkId == publishedWork.Id).ToList();
 
-            //var publishedWorkForm = new ShowPublishedWorkDetails(publishedWork.Name, publishedWork.Genre.Name, publishedWork.Author.Name, publishedWork.Theme.Name);
-            //publishedWorkForm.Show();
+            var genreNames = new List<string>();
+            foreach (var workGenre in publishedWorkGenres)
+            {
+                var pwGenre = _genreService.GetGenre(workGenre.GenreId);
+                genreNames.Add(pwGenre.Name);
+            }
+
+            var themeNames = new List<string>();
+            foreach (var workTheme in publishedWorkThemes)
+            {
+                var pwTheme = _themeService.GetTheme(workTheme.ThemeId);
+                themeNames.Add(pwTheme.Name);
+            }
+
+            var publishedWorkForm = new ShowPublishedWorkDetails(publishedWork.Name, publishedWork.Author.Name, genreNames, themeNames);
+            publishedWorkForm.Show();
         }
 
         private void SelectedAuthorChanged(object sender, EventArgs e)

@@ -17,12 +17,12 @@ namespace BelPomagalo.Views
             InitializeComponent();
         }
 
-        public ShowPublishedWorkDetails(string name, string genreName, string authorName, string themeName) : this()
+        public ShowPublishedWorkDetails(string name, string authorName, IEnumerable<string> genreNames,IEnumerable<string> themeNames) : this()
         {
             nameLabel.Text = name;
-            genreLabel.Text = genreName;
             authorLabel.Text = authorName;
-            themeLabel.Text = themeName;
+            genreLabel.Text = string.Join(", ",genreNames);
+            themeLabel.Text = string.Join(", ",themeNames);
         }
     }
 }

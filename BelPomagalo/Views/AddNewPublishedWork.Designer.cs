@@ -102,6 +102,7 @@
             this.genreListBox.ItemHeight = 15;
             this.genreListBox.Location = new System.Drawing.Point(318, 145);
             this.genreListBox.Name = "genreListBox";
+            this.genreListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.genreListBox.Size = new System.Drawing.Size(160, 154);
             this.genreListBox.TabIndex = 9;
             // 
@@ -111,6 +112,7 @@
             this.themeListBox.ItemHeight = 15;
             this.themeListBox.Location = new System.Drawing.Point(497, 145);
             this.themeListBox.Name = "themeListBox";
+            this.themeListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.themeListBox.Size = new System.Drawing.Size(160, 154);
             this.themeListBox.TabIndex = 10;
             // 

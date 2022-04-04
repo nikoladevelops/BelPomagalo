@@ -24,5 +24,10 @@ namespace BelPomagalo.Services
             return _context.Themes
                 .FirstOrDefault(x => x.Name == themeName);
         }
+        internal Theme GetTheme(int themeId)
+        {
+            return _context.Themes
+                .FirstOrDefault(x => x.Id == themeId);
+        }
     }
 }

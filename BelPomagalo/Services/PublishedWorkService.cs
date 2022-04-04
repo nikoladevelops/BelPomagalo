@@ -26,10 +26,11 @@ namespace BelPomagalo.Services
                 .Include(x=>x.Author)
                 .FirstOrDefault(x => x.Name == publishedWorkName);
         }
-        internal async void AddPublishedWork(PublishedWork publishedWork)
+        internal async Task<PublishedWork> AddPublishedWork(PublishedWork publishedWork)
         {
-            await _context.PublishedWorks.AddAsync(publishedWork);
+            var entity = await _context.PublishedWorks.AddAsync(publishedWork);
             await _context.SaveChangesAsync();
+            return entity.Entity;
         }
     }
 }

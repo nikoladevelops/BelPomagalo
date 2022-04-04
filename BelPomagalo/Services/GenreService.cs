@@ -24,5 +24,11 @@ namespace BelPomagalo.Services
             return _context.Genres
                 .FirstOrDefault(x=>x.Name==genreName);
         }
+
+        internal Genre GetGenre(int genreId)
+        {
+            return _context.Genres
+                .FirstOrDefault(x => x.Id == genreId);
+        }
     }
 }

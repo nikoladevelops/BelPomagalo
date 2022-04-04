@@ -34,22 +34,46 @@ namespace BelPomagalo.Views
             Helper.LoadListBoxData(themeListBox, _themeService.GetAllThemesNames());
         }
 
-        private void addPublishedWorkButton_Click(object sender, EventArgs e)
+        private async void addPublishedWorkButton_Click(object sender, EventArgs e)
         {
             var name = nameTextBox.Text;
             var author = _authorService.GetAuthor(authorListBox.SelectedItem.ToString());
-            var genre = _genreService.GetGenre(genreListBox.SelectedItem.ToString());
-            var theme = _themeService.GetTheme(themeListBox.SelectedItem.ToString());
 
-            // TODO Make it so that u can have multiselect in the themeListBox , => to be able to select many themes and add them to the specified published work.
-            // TODO maybe make a Core folder/ Controller folder and make your Form1 look like this form as well
+
+            var genres = new List<Genre>();
+            foreach (var selectedItem in genreListBox.SelectedItems)
+            {
+                var selectedGenre = _genreService.GetGenre(selectedItem.ToString());
+                genres.Add(selectedGenre);
+            }
+
+            var themes = new List<Theme>();
+            foreach (var selectedItem in themeListBox.SelectedItems)
+            {
+                var selectedTheme = _themeService.GetTheme(selectedItem.ToString());
+                themes.Add(selectedTheme);
+            }
+
             var publishedWork = new PublishedWork()
             {
                 Name=name,
                 AuthorId=author.Id
             };
 
-            _publishedWorkService.AddPublishedWork(publishedWork);
+            publishedWork = await _publishedWorkService.AddPublishedWork(publishedWork);
+
+            foreach (var genre in genres)
+            {
+                _context.PublishedWorkGenres.Add(new PublishedWorkGenre() { PublishedWorkId = publishedWork.Id, GenreId = genre.Id });
+
+            }
+
+            foreach (var theme in themes)
+            {
+                _context.PublishedWorkThemes.Add(new PublishedWorkTheme() { PublishedWorkId = publishedWork.Id, ThemeId = theme.Id });
+            }
+
+            await _context.SaveChangesAsync();
         }
     }
 }
