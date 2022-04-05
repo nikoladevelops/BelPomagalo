@@ -7,20 +7,10 @@ namespace BelPomagalo.Controllers
     {
         private readonly FormDataController _controller;
         private readonly MainForm _mainForm;
-        private readonly AddNewPublishedWorkForm _addNewPublishedWorkForm;
-        private readonly AddNewAuthorForm _addNewAuthorForm;
-        private readonly AddNewGenreForm _addNewGenreForm;
-        private readonly AddNewThemeForm _addNewThemeForm;
-        public MainFormController(MainForm mainForm, AddNewPublishedWorkForm publishedWorkForm,
-            AddNewAuthorForm authorForm, AddNewGenreForm genreForm, AddNewThemeForm themeForm)
+        public MainFormController(MainForm mainForm)
         {
             _controller= new FormDataController();
             _mainForm = mainForm;
-            _addNewPublishedWorkForm = publishedWorkForm;
-            _addNewAuthorForm = authorForm;
-            _addNewGenreForm = genreForm;
-            _addNewThemeForm = themeForm;
-
             _mainForm.Load += HandleFormLoad;
             _mainForm.AuthorsListBox.SelectedIndexChanged += HandleAuthorsListBoxSelectedIndexChanged;
 
@@ -78,19 +68,19 @@ namespace BelPomagalo.Controllers
 
         public void HandleAddNewPublishedWorkButtonClick(object? sender, EventArgs e)
         {
-            _addNewPublishedWorkForm.Show();
+            new AddNewPublishedWorkFormController(new AddNewPublishedWorkForm()).Form.Show();
         }
         public void HandleAddNewAuthorButtonClick(object? sender, EventArgs e)
         {
-            _addNewAuthorForm.Show();
+            new AddNewAuthorForm().Show();
         }
         public void HandleAddNewGenreButtonClick(object? sender, EventArgs e)
         {
-            _addNewGenreForm.Show();
+            new AddNewGenreForm().Show();
         }
         public void HandleAddNewThemeButtonClick(object? sender, EventArgs e)
         {
-            _addNewThemeForm.Show();
+            new AddNewThemeForm().Show();
         }
 
     }

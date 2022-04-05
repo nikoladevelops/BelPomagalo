@@ -14,14 +14,8 @@ namespace BelPomagalo
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            var addNewPublishedWorkForm = new AddNewPublishedWorkFormController(new AddNewPublishedWorkForm()).Form;
-            var addNewAuthorForm = new AddNewAuthorForm();
-            var addNewGenreForm = new AddNewGenreForm();
-            var addNewThemeForm= new AddNewThemeForm();
 
-            var form = new MainFormController(new MainForm(), addNewPublishedWorkForm, addNewAuthorForm, addNewGenreForm, addNewThemeForm).Form;
-
-
+            var form = new MainFormController(new MainForm()).Form;
             Application.Run(form);
         }
     }
