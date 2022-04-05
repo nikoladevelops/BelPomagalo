@@ -30,13 +30,13 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.descriptionTextBox = new System.Windows.Forms.TextBox();
-            this.addNewGenreButton = new System.Windows.Forms.Button();
+            this.addNewAuthorButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.authorNameTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.bornLocationTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.birthDateTextBox = new System.Windows.Forms.TextBox();
+            this.bornDateTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.diedDateTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -60,15 +60,15 @@
             this.descriptionTextBox.Size = new System.Drawing.Size(295, 155);
             this.descriptionTextBox.TabIndex = 11;
             // 
-            // addNewGenreButton
+            // addNewAuthorButton
             // 
-            this.addNewGenreButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.addNewGenreButton.Location = new System.Drawing.Point(210, 286);
-            this.addNewGenreButton.Name = "addNewGenreButton";
-            this.addNewGenreButton.Size = new System.Drawing.Size(295, 59);
-            this.addNewGenreButton.TabIndex = 10;
-            this.addNewGenreButton.Text = "Добави";
-            this.addNewGenreButton.UseVisualStyleBackColor = true;
+            this.addNewAuthorButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.addNewAuthorButton.Location = new System.Drawing.Point(210, 286);
+            this.addNewAuthorButton.Name = "addNewAuthorButton";
+            this.addNewAuthorButton.Size = new System.Drawing.Size(295, 59);
+            this.addNewAuthorButton.TabIndex = 10;
+            this.addNewAuthorButton.Text = "Добави";
+            this.addNewAuthorButton.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -116,13 +116,13 @@
             this.label4.TabIndex = 16;
             this.label4.Text = "Рожденна дата";
             // 
-            // birthDateTextBox
+            // bornDateTextBox
             // 
-            this.birthDateTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.birthDateTextBox.Location = new System.Drawing.Point(362, 125);
-            this.birthDateTextBox.Name = "birthDateTextBox";
-            this.birthDateTextBox.Size = new System.Drawing.Size(167, 35);
-            this.birthDateTextBox.TabIndex = 15;
+            this.bornDateTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bornDateTextBox.Location = new System.Drawing.Point(362, 125);
+            this.bornDateTextBox.Name = "bornDateTextBox";
+            this.bornDateTextBox.Size = new System.Drawing.Size(167, 35);
+            this.bornDateTextBox.TabIndex = 15;
             // 
             // label5
             // 
@@ -150,12 +150,12 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.diedDateTextBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.birthDateTextBox);
+            this.Controls.Add(this.bornDateTextBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.bornLocationTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.descriptionTextBox);
-            this.Controls.Add(this.addNewGenreButton);
+            this.Controls.Add(this.addNewAuthorButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.authorNameTextBox);
             this.Name = "AddNewAuthorForm";
@@ -170,13 +170,13 @@
 
         private Label label2;
         private TextBox descriptionTextBox;
-        private Button addNewGenreButton;
+        private Button addNewAuthorButton;
         private Label label1;
         private TextBox authorNameTextBox;
         private Label label3;
         private TextBox bornLocationTextBox;
         private Label label4;
-        private TextBox birthDateTextBox;
+        private TextBox bornDateTextBox;
         private Label label5;
         private TextBox diedDateTextBox;
     }

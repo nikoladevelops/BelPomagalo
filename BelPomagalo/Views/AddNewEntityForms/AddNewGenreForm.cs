@@ -16,5 +16,8 @@ namespace BelPomagalo.Views
         {
             InitializeComponent();
         }
+        public TextBox GenreNameTextBox { get => genreNameTextBox; }
+        public TextBox GenreDescriptionTextBox { get => descriptionTextBox; }
+        public Button AddNewGenreButton { get => addNewGenreButton; }
     }
 }
