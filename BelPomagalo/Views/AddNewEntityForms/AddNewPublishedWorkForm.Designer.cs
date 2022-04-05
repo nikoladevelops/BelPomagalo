@@ -125,9 +125,8 @@
             this.addPublishedWorkButton.TabIndex = 11;
             this.addPublishedWorkButton.Text = "Добави";
             this.addPublishedWorkButton.UseVisualStyleBackColor = true;
-            this.addPublishedWorkButton.Click += new System.EventHandler(this.addPublishedWorkButton_Click);
             // 
-            // AddNewPublishedWork
+            // AddNewPublishedWorkForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -141,7 +140,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nameTextBox);
-            this.Name = "AddNewPublishedWork";
+            this.Name = "AddNewPublishedWorkForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Добави Произведение";
             this.ResumeLayout(false);

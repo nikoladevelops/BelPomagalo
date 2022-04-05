@@ -1,3 +1,6 @@
+using BelPomagalo.Controllers;
+using BelPomagalo.Views;
+
 namespace BelPomagalo
 {
     internal static class Program
@@ -11,7 +14,15 @@ namespace BelPomagalo
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new MainForm());
+            var addNewPublishedWorkForm = new AddNewPublishedWorkFormController(new AddNewPublishedWorkForm()).Form;
+            var addNewAuthorForm = new AddNewAuthorForm();
+            var addNewGenreForm = new AddNewGenreForm();
+            var addNewThemeForm= new AddNewThemeForm();
+
+            var form = new MainFormController(new MainForm(), addNewPublishedWorkForm, addNewAuthorForm, addNewGenreForm, addNewThemeForm).Form;
+
+
+            Application.Run(form);
         }
     }
 }

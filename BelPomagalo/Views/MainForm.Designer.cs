@@ -47,7 +47,6 @@
             this.authorsListBox.Name = "authorsListBox";
             this.authorsListBox.Size = new System.Drawing.Size(382, 199);
             this.authorsListBox.TabIndex = 0;
-            this.authorsListBox.SelectedIndexChanged += new System.EventHandler(this.SelectedAuthorChanged);
             // 
             // publishedWorkListBox
             // 
@@ -86,7 +85,6 @@
             this.showButton.TabIndex = 4;
             this.showButton.Text = "Покажи";
             this.showButton.UseVisualStyleBackColor = true;
-            this.showButton.Click += new System.EventHandler(this.showButton_Click);
             // 
             // addNewPublishedWorkButton
             // 
@@ -96,7 +94,6 @@
             this.addNewPublishedWorkButton.TabIndex = 5;
             this.addNewPublishedWorkButton.Text = "Добави Произведение";
             this.addNewPublishedWorkButton.UseVisualStyleBackColor = true;
-            this.addNewPublishedWorkButton.Click += new System.EventHandler(this.addNewPublishedWorkButton_Click);
             // 
             // addNewAuthorButton
             // 
@@ -106,7 +103,6 @@
             this.addNewAuthorButton.TabIndex = 6;
             this.addNewAuthorButton.Text = "Добави Автор";
             this.addNewAuthorButton.UseVisualStyleBackColor = true;
-            this.addNewAuthorButton.Click += new System.EventHandler(this.addNewAuthorButton_Click);
             // 
             // addNewGenreButton
             // 
@@ -116,7 +112,6 @@
             this.addNewGenreButton.TabIndex = 7;
             this.addNewGenreButton.Text = "Добави Жанр";
             this.addNewGenreButton.UseVisualStyleBackColor = true;
-            this.addNewGenreButton.Click += new System.EventHandler(this.addNewGenreButton_Click);
             // 
             // addNewThemeButton
             // 
@@ -126,7 +121,6 @@
             this.addNewThemeButton.TabIndex = 8;
             this.addNewThemeButton.Text = "Добави Тема";
             this.addNewThemeButton.UseVisualStyleBackColor = true;
-            this.addNewThemeButton.Click += new System.EventHandler(this.addNewThemeButton_Click);
             // 
             // MainForm
             // 
