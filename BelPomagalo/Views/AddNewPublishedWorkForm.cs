@@ -14,10 +14,10 @@ using System.Windows.Forms;
 
 namespace BelPomagalo.Views
 {
-    public partial class AddNewPublishedWork : Form
+    public partial class AddNewPublishedWorkForm : Form
     {
         private readonly FormDataController _controller;
-        public AddNewPublishedWork()
+        public AddNewPublishedWorkForm()
         {
             InitializeComponent();
             _controller = new FormDataController();

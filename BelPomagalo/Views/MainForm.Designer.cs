@@ -106,6 +106,7 @@
             this.addNewAuthorButton.TabIndex = 6;
             this.addNewAuthorButton.Text = "Добави Автор";
             this.addNewAuthorButton.UseVisualStyleBackColor = true;
+            this.addNewAuthorButton.Click += new System.EventHandler(this.addNewAuthorButton_Click);
             // 
             // addNewGenreButton
             // 
@@ -115,6 +116,7 @@
             this.addNewGenreButton.TabIndex = 7;
             this.addNewGenreButton.Text = "Добави Жанр";
             this.addNewGenreButton.UseVisualStyleBackColor = true;
+            this.addNewGenreButton.Click += new System.EventHandler(this.addNewGenreButton_Click);
             // 
             // addNewThemeButton
             // 
@@ -124,8 +126,9 @@
             this.addNewThemeButton.TabIndex = 8;
             this.addNewThemeButton.Text = "Добави Тема";
             this.addNewThemeButton.UseVisualStyleBackColor = true;
+            this.addNewThemeButton.Click += new System.EventHandler(this.addNewThemeButton_Click);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -139,7 +142,7 @@
             this.Controls.Add(this.publishedWorkListBox);
             this.Controls.Add(this.authorLabel);
             this.Controls.Add(this.authorsListBox);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Помагало";
             this.ResumeLayout(false);

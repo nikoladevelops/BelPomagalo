@@ -1,6 +1,6 @@
 ﻿namespace BelPomagalo.Views
 {
-    partial class AddNewPublishedWork
+    partial class AddNewPublishedWorkForm
     {
         /// <summary>
         /// Required designer variable.

@@ -58,8 +58,22 @@ namespace BelPomagalo
 
         private void addNewPublishedWorkButton_Click(object sender, EventArgs e)
         {
-            var addNewPublishedWorkForm = new AddNewPublishedWork();
-            addNewPublishedWorkForm.Show();
+            new AddNewPublishedWorkForm().Show();
+        }
+
+        private void addNewAuthorButton_Click(object sender, EventArgs e)
+        {
+            new AddNewAuthorForm().Show();
+        }
+
+        private void addNewGenreButton_Click(object sender, EventArgs e)
+        {
+            new AddNewGenreForm().Show();
+        }
+
+        private void addNewThemeButton_Click(object sender, EventArgs e)
+        {
+            new AddNewThemeForm().Show();
         }
     }
 }
