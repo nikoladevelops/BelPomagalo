@@ -31,6 +31,8 @@
             this.themeNameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.addNewThemeButton = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.descriptionTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // themeNameTextBox
@@ -54,24 +56,45 @@
             // addNewThemeButton
             // 
             this.addNewThemeButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.addNewThemeButton.Location = new System.Drawing.Point(23, 104);
+            this.addNewThemeButton.Location = new System.Drawing.Point(23, 265);
             this.addNewThemeButton.Name = "addNewThemeButton";
             this.addNewThemeButton.Size = new System.Drawing.Size(295, 59);
             this.addNewThemeButton.TabIndex = 2;
             this.addNewThemeButton.Text = "Добави";
             this.addNewThemeButton.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(23, 100);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 25);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Описание";
+            // 
+            // descriptionTextBox
+            // 
+            this.descriptionTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.descriptionTextBox.Location = new System.Drawing.Point(23, 128);
+            this.descriptionTextBox.Multiline = true;
+            this.descriptionTextBox.Name = "descriptionTextBox";
+            this.descriptionTextBox.Size = new System.Drawing.Size(295, 131);
+            this.descriptionTextBox.TabIndex = 3;
+            // 
             // AddNewThemeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(348, 201);
+            this.ClientSize = new System.Drawing.Size(348, 349);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.descriptionTextBox);
             this.Controls.Add(this.addNewThemeButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.themeNameTextBox);
             this.Name = "AddNewThemeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AddNewThemeForm";
+            this.Text = "Добави Тема";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -82,5 +105,7 @@
         private TextBox themeNameTextBox;
         private Label label1;
         private Button addNewThemeButton;
+        private Label label2;
+        private TextBox descriptionTextBox;
     }
 }

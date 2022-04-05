@@ -2,6 +2,7 @@
 using BelPomagalo;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BelPomagalo.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220405105313_GenresCanHaveDescription")]
+    partial class GenresCanHaveDescription
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.3");
@@ -26,9 +28,6 @@ namespace BelPomagalo.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("BornLocation")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Description")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("DiedDate")

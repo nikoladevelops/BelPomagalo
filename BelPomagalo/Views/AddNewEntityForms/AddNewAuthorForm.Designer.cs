@@ -28,20 +28,156 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.label2 = new System.Windows.Forms.Label();
+            this.descriptionTextBox = new System.Windows.Forms.TextBox();
+            this.addNewGenreButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.authorNameTextBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.bornLocationTextBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.birthDateTextBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.diedDateTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(29, 97);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 25);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Описание";
+            // 
+            // descriptionTextBox
+            // 
+            this.descriptionTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.descriptionTextBox.Location = new System.Drawing.Point(29, 125);
+            this.descriptionTextBox.Multiline = true;
+            this.descriptionTextBox.Name = "descriptionTextBox";
+            this.descriptionTextBox.Size = new System.Drawing.Size(295, 155);
+            this.descriptionTextBox.TabIndex = 11;
+            // 
+            // addNewGenreButton
+            // 
+            this.addNewGenreButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.addNewGenreButton.Location = new System.Drawing.Point(210, 286);
+            this.addNewGenreButton.Name = "addNewGenreButton";
+            this.addNewGenreButton.Size = new System.Drawing.Size(295, 59);
+            this.addNewGenreButton.TabIndex = 10;
+            this.addNewGenreButton.Text = "Добави";
+            this.addNewGenreButton.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(29, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(140, 25);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Име на автора";
+            // 
+            // authorNameTextBox
+            // 
+            this.authorNameTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.authorNameTextBox.Location = new System.Drawing.Point(29, 47);
+            this.authorNameTextBox.Name = "authorNameTextBox";
+            this.authorNameTextBox.Size = new System.Drawing.Size(295, 35);
+            this.authorNameTextBox.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(362, 19);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(122, 25);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Родно място";
+            // 
+            // bornLocationTextBox
+            // 
+            this.bornLocationTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bornLocationTextBox.Location = new System.Drawing.Point(362, 47);
+            this.bornLocationTextBox.Name = "bornLocationTextBox";
+            this.bornLocationTextBox.Size = new System.Drawing.Size(295, 35);
+            this.bornLocationTextBox.TabIndex = 13;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(362, 97);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(143, 25);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Рожденна дата";
+            // 
+            // birthDateTextBox
+            // 
+            this.birthDateTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.birthDateTextBox.Location = new System.Drawing.Point(362, 125);
+            this.birthDateTextBox.Name = "birthDateTextBox";
+            this.birthDateTextBox.Size = new System.Drawing.Size(167, 35);
+            this.birthDateTextBox.TabIndex = 15;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(362, 184);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(133, 25);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Починал дата";
+            // 
+            // diedDateTextBox
+            // 
+            this.diedDateTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.diedDateTextBox.Location = new System.Drawing.Point(362, 212);
+            this.diedDateTextBox.Name = "diedDateTextBox";
+            this.diedDateTextBox.Size = new System.Drawing.Size(167, 35);
+            this.diedDateTextBox.TabIndex = 17;
             // 
             // AddNewAuthorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(687, 369);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.diedDateTextBox);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.birthDateTextBox);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.bornLocationTextBox);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.descriptionTextBox);
+            this.Controls.Add(this.addNewGenreButton);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.authorNameTextBox);
             this.Name = "AddNewAuthorForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AddNewAuthorForm";
+            this.Text = "Добави Автор";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private Label label2;
+        private TextBox descriptionTextBox;
+        private Button addNewGenreButton;
+        private Label label1;
+        private TextBox authorNameTextBox;
+        private Label label3;
+        private TextBox bornLocationTextBox;
+        private Label label4;
+        private TextBox birthDateTextBox;
+        private Label label5;
+        private TextBox diedDateTextBox;
     }
 }

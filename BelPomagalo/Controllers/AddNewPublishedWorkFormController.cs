@@ -25,7 +25,6 @@ namespace BelPomagalo.Controllers
             var name = _form.NameTextBox.Text;
             var author = _controller.GetAuthor(_form.AuthorsListBox.SelectedItem.ToString());
 
-
             var genres = new List<Genre>();
             foreach (var selectedItem in _form.GenreListBox.SelectedItems)
             {
