@@ -17,6 +17,9 @@ namespace BelPomagalo
 
             var form = new MainFormController(new MainForm()).Form;
             Application.Run(form);
+            // TODO create methods for adding entities in the services
+            // TODO wrap those methods inside the FormDataController
+            // TODO create other controllers that use FormDataController, and make it so that each controller attaches event handlers for a form's events
         }
     }
 }

@@ -23,5 +23,11 @@ namespace BelPomagalo.Services
             return _context.Authors
                 .FirstOrDefault(x => x.Name == authorName);
         }
+        internal async Task<Author> AddAuthor(Author author)
+        {
+            var addedAuthor = await _context.Authors.AddAsync(author);
+            await _context.SaveChangesAsync();
+            return addedAuthor.Entity;
+        }
     }
 }

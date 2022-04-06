@@ -28,5 +28,11 @@ namespace BelPomagalo.Services
             return _context.Genres
                 .FirstOrDefault(x => x.Id == genreId);
         }
+        internal async Task<Genre> AddGenre(Genre genre)
+        {
+            var addedGenre = await _context.Genres.AddAsync(genre);
+            await _context.SaveChangesAsync();
+            return addedGenre.Entity;
+        }
     }
 }

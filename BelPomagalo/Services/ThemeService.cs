@@ -29,5 +29,11 @@ namespace BelPomagalo.Services
             return _context.Themes
                 .FirstOrDefault(x => x.Id == themeId);
         }
+        internal async Task<Theme> AddTheme(Theme theme)
+        {
+             var addedTheme = await _context.Themes.AddAsync(theme);
+             await _context.SaveChangesAsync();
+             return addedTheme.Entity;
+        }
     }
 }
