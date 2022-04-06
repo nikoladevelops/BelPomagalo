@@ -80,6 +80,18 @@ namespace BelPomagalo.Controllers
         {
             return _publishedWorkThemeService.GetPublishedWorksThemes(publishedWork);
         }
+        internal async Task<Theme> AddTheme(Theme theme)
+        {
+            return await _themeService.AddTheme(theme);
+        }
+        internal async Task<Genre> AddGenre(Genre genre)
+        {
+            return await _genreService.AddGenre(genre);
+        }
+        internal async Task<Author> AddAuthor(Author author)
+        {
+            return await _authorService.AddAuthor(author);
+        }
         internal async Task<PublishedWork> AddPublishedWork(PublishedWork publishedWork)
         {
             return await _publishedWorkService.AddPublishedWork(publishedWork);

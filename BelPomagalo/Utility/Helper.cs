@@ -12,7 +12,7 @@ namespace BelPomagalo.Utility
         {
             listBox.Items.Clear();
 
-            if (data != null)
+            if (data != null && data.Count() != 0)
             {
                 foreach (var item in data)
                 {

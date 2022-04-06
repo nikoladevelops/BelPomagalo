@@ -72,15 +72,15 @@ namespace BelPomagalo.Controllers
         }
         public void HandleAddNewAuthorButtonClick(object? sender, EventArgs e)
         {
-            new AddNewAuthorForm().Show();
+            new AddNewAuthorFormController(new AddNewAuthorForm()).Form.Show();
         }
         public void HandleAddNewGenreButtonClick(object? sender, EventArgs e)
         {
-            new AddNewGenreForm().Show();
+            new AddNewGenreFormController(new AddNewGenreForm()).Form.Show();
         }
         public void HandleAddNewThemeButtonClick(object? sender, EventArgs e)
         {
-            new AddNewThemeForm().Show();
+            new AddNewThemeFormController(new AddNewThemeForm()).Form.Show();
         }
 
     }
