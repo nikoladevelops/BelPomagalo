@@ -72,7 +72,7 @@ namespace BelPomagalo.Controllers
         }
         public void HandleAddNewAuthorButtonClick(object? sender, EventArgs e)
         {
-            new AddNewAuthorFormController(new AddNewAuthorForm()).Form.Show();
+            new AddNewAuthorFormController(new AddNewAuthorForm(), _mainForm.AuthorsListBox).Form.Show();
         }
         public void HandleAddNewGenreButtonClick(object? sender, EventArgs e)
         {

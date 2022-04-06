@@ -1,4 +1,5 @@
 ﻿using BelPomagalo.Models;
+using BelPomagalo.Utility;
 using BelPomagalo.Views;
 
 namespace BelPomagalo.Controllers
@@ -7,10 +8,12 @@ namespace BelPomagalo.Controllers
     {
         private readonly FormDataController _controller;
         private readonly AddNewAuthorForm _form;
-        public AddNewAuthorFormController(AddNewAuthorForm form)
+        private readonly ListBox _authorsListBox;
+        public AddNewAuthorFormController(AddNewAuthorForm form, ListBox authorsListBox)
         {
             _controller = new FormDataController();
             _form = form;
+            _authorsListBox= authorsListBox;
 
             _form.AddNewAuthorButton.Click += HandleAddNewAuthorButtonClick;
         }
@@ -26,6 +29,7 @@ namespace BelPomagalo.Controllers
                 DiedDate=_form.AuthorDiedDateTextBox.Text
             };
             await _controller.AddAuthor(author);
+            Helper.LoadListBoxData(_authorsListBox, _controller.GetAllAuthorsNames());
         }
     }
 }
