@@ -37,12 +37,26 @@
             this.genreListBox = new System.Windows.Forms.ListBox();
             this.themeListBox = new System.Windows.Forms.ListBox();
             this.addPublishedWorkButton = new System.Windows.Forms.Button();
+            this.characterListBox = new System.Windows.Forms.ListBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.ideologicalSuggestionsListBox = new System.Windows.Forms.ListBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.oppositionsListBox = new System.Windows.Forms.ListBox();
+            this.motivesAndFiguresListBox = new System.Windows.Forms.ListBox();
+            this.compositionDetailsListBox = new System.Windows.Forms.ListBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.publishedDateListBox = new System.Windows.Forms.ListBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.remarksListBox = new System.Windows.Forms.ListBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // nameTextBox
             // 
             this.nameTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.nameTextBox.Location = new System.Drawing.Point(253, 47);
+            this.nameTextBox.Location = new System.Drawing.Point(30, 37);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(272, 35);
             this.nameTextBox.TabIndex = 0;
@@ -51,7 +65,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(253, 19);
+            this.label1.Location = new System.Drawing.Point(30, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 25);
             this.label1.TabIndex = 1;
@@ -61,7 +75,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(142, 117);
+            this.label2.Location = new System.Drawing.Point(31, 88);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 25);
             this.label2.TabIndex = 3;
@@ -71,7 +85,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(318, 117);
+            this.label3.Location = new System.Drawing.Point(207, 88);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 25);
             this.label3.TabIndex = 5;
@@ -81,7 +95,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(497, 117);
+            this.label4.Location = new System.Drawing.Point(386, 88);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 25);
             this.label4.TabIndex = 7;
@@ -91,7 +105,7 @@
             // 
             this.authorListBox.FormattingEnabled = true;
             this.authorListBox.ItemHeight = 15;
-            this.authorListBox.Location = new System.Drawing.Point(142, 145);
+            this.authorListBox.Location = new System.Drawing.Point(31, 116);
             this.authorListBox.Name = "authorListBox";
             this.authorListBox.Size = new System.Drawing.Size(160, 154);
             this.authorListBox.TabIndex = 8;
@@ -100,7 +114,7 @@
             // 
             this.genreListBox.FormattingEnabled = true;
             this.genreListBox.ItemHeight = 15;
-            this.genreListBox.Location = new System.Drawing.Point(318, 145);
+            this.genreListBox.Location = new System.Drawing.Point(207, 116);
             this.genreListBox.Name = "genreListBox";
             this.genreListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.genreListBox.Size = new System.Drawing.Size(160, 154);
@@ -110,7 +124,7 @@
             // 
             this.themeListBox.FormattingEnabled = true;
             this.themeListBox.ItemHeight = 15;
-            this.themeListBox.Location = new System.Drawing.Point(497, 145);
+            this.themeListBox.Location = new System.Drawing.Point(386, 116);
             this.themeListBox.Name = "themeListBox";
             this.themeListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.themeListBox.Size = new System.Drawing.Size(160, 154);
@@ -119,18 +133,171 @@
             // addPublishedWorkButton
             // 
             this.addPublishedWorkButton.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.addPublishedWorkButton.Location = new System.Drawing.Point(318, 323);
+            this.addPublishedWorkButton.Location = new System.Drawing.Point(345, 486);
             this.addPublishedWorkButton.Name = "addPublishedWorkButton";
             this.addPublishedWorkButton.Size = new System.Drawing.Size(160, 66);
             this.addPublishedWorkButton.TabIndex = 11;
             this.addPublishedWorkButton.Text = "Добави";
             this.addPublishedWorkButton.UseVisualStyleBackColor = true;
             // 
+            // characterListBox
+            // 
+            this.characterListBox.FormattingEnabled = true;
+            this.characterListBox.ItemHeight = 15;
+            this.characterListBox.Location = new System.Drawing.Point(563, 116);
+            this.characterListBox.Name = "characterListBox";
+            this.characterListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.characterListBox.Size = new System.Drawing.Size(160, 154);
+            this.characterListBox.TabIndex = 13;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(563, 88);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 25);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Герои";
+            // 
+            // ideologicalSuggestionsListBox
+            // 
+            this.ideologicalSuggestionsListBox.FormattingEnabled = true;
+            this.ideologicalSuggestionsListBox.ItemHeight = 15;
+            this.ideologicalSuggestionsListBox.Location = new System.Drawing.Point(386, 313);
+            this.ideologicalSuggestionsListBox.Name = "ideologicalSuggestionsListBox";
+            this.ideologicalSuggestionsListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.ideologicalSuggestionsListBox.Size = new System.Drawing.Size(160, 154);
+            this.ideologicalSuggestionsListBox.TabIndex = 21;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(386, 285);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(171, 25);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "Идейни внушения";
+            // 
+            // oppositionsListBox
+            // 
+            this.oppositionsListBox.FormattingEnabled = true;
+            this.oppositionsListBox.ItemHeight = 15;
+            this.oppositionsListBox.Location = new System.Drawing.Point(209, 313);
+            this.oppositionsListBox.Name = "oppositionsListBox";
+            this.oppositionsListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.oppositionsListBox.Size = new System.Drawing.Size(160, 154);
+            this.oppositionsListBox.TabIndex = 19;
+            // 
+            // motivesAndFiguresListBox
+            // 
+            this.motivesAndFiguresListBox.FormattingEnabled = true;
+            this.motivesAndFiguresListBox.ItemHeight = 15;
+            this.motivesAndFiguresListBox.Location = new System.Drawing.Point(30, 313);
+            this.motivesAndFiguresListBox.Name = "motivesAndFiguresListBox";
+            this.motivesAndFiguresListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.motivesAndFiguresListBox.Size = new System.Drawing.Size(160, 154);
+            this.motivesAndFiguresListBox.TabIndex = 18;
+            // 
+            // compositionDetailsListBox
+            // 
+            this.compositionDetailsListBox.FormattingEnabled = true;
+            this.compositionDetailsListBox.ItemHeight = 15;
+            this.compositionDetailsListBox.Location = new System.Drawing.Point(739, 116);
+            this.compositionDetailsListBox.Name = "compositionDetailsListBox";
+            this.compositionDetailsListBox.Size = new System.Drawing.Size(160, 154);
+            this.compositionDetailsListBox.TabIndex = 17;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(209, 285);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(100, 25);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Опозиции";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(30, 285);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(163, 25);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Мотиви и фигури";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(739, 88);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(120, 25);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "Композиция";
+            // 
+            // publishedDateListBox
+            // 
+            this.publishedDateListBox.FormattingEnabled = true;
+            this.publishedDateListBox.ItemHeight = 15;
+            this.publishedDateListBox.Location = new System.Drawing.Point(327, 37);
+            this.publishedDateListBox.Name = "publishedDateListBox";
+            this.publishedDateListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.publishedDateListBox.Size = new System.Drawing.Size(195, 34);
+            this.publishedDateListBox.TabIndex = 25;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(327, 9);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(195, 25);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "Дата на публикуване";
+            // 
+            // remarksListBox
+            // 
+            this.remarksListBox.FormattingEnabled = true;
+            this.remarksListBox.ItemHeight = 15;
+            this.remarksListBox.Location = new System.Drawing.Point(562, 313);
+            this.remarksListBox.Name = "remarksListBox";
+            this.remarksListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.remarksListBox.Size = new System.Drawing.Size(160, 154);
+            this.remarksListBox.TabIndex = 23;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label11.Location = new System.Drawing.Point(562, 285);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(107, 25);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "Забележки";
+            // 
             // AddNewPublishedWorkForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(927, 564);
+            this.Controls.Add(this.publishedDateListBox);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.remarksListBox);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.ideologicalSuggestionsListBox);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.oppositionsListBox);
+            this.Controls.Add(this.motivesAndFiguresListBox);
+            this.Controls.Add(this.compositionDetailsListBox);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.characterListBox);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.addPublishedWorkButton);
             this.Controls.Add(this.themeListBox);
             this.Controls.Add(this.genreListBox);
@@ -159,5 +326,19 @@
         private ListBox genreListBox;
         private ListBox themeListBox;
         private Button addPublishedWorkButton;
+        private ListBox characterListBox;
+        private Label label5;
+        private ListBox ideologicalSuggestionsListBox;
+        private Label label6;
+        private ListBox oppositionsListBox;
+        private ListBox motivesAndFiguresListBox;
+        private ListBox compositionDetailsListBox;
+        private Label label7;
+        private Label label8;
+        private Label label9;
+        private ListBox publishedDateListBox;
+        private Label label10;
+        private ListBox remarksListBox;
+        private Label label11;
     }
 }
