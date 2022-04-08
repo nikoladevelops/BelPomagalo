@@ -37,6 +37,7 @@
             this.addNewAuthorButton = new System.Windows.Forms.Button();
             this.addNewGenreButton = new System.Windows.Forms.Button();
             this.addNewThemeButton = new System.Windows.Forms.Button();
+            this.addNewCharacterButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // authorsListBox
@@ -122,11 +123,21 @@
             this.addNewThemeButton.Text = "Добави Тема";
             this.addNewThemeButton.UseVisualStyleBackColor = true;
             // 
+            // addNewCharacterButton
+            // 
+            this.addNewCharacterButton.Location = new System.Drawing.Point(600, 12);
+            this.addNewCharacterButton.Name = "addNewCharacterButton";
+            this.addNewCharacterButton.Size = new System.Drawing.Size(141, 49);
+            this.addNewCharacterButton.TabIndex = 9;
+            this.addNewCharacterButton.Text = "Добави Герой";
+            this.addNewCharacterButton.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.addNewCharacterButton);
             this.Controls.Add(this.addNewThemeButton);
             this.Controls.Add(this.addNewGenreButton);
             this.Controls.Add(this.addNewAuthorButton);
@@ -155,5 +166,6 @@
         private Button addNewAuthorButton;
         private Button addNewGenreButton;
         private Button addNewThemeButton;
+        private Button addNewCharacterButton;
     }
 }

@@ -19,6 +19,7 @@ namespace BelPomagalo.Controllers
             _mainForm.AddNewAuthorButton.Click += HandleAddNewAuthorButtonClick;
             _mainForm.AddNewGenreButton.Click += HandleAddNewGenreButtonClick;
             _mainForm.AddNewThemeButton.Click += HandleAddNewThemeButtonClick;
+            _mainForm.AddNewCharacterButton.Click += HandleAddNewCharacterButtonClick;
         }
 
         public MainForm Form { get => _mainForm; }
@@ -82,6 +83,9 @@ namespace BelPomagalo.Controllers
         {
             new AddNewThemeFormController(new AddNewThemeForm()).Form.Show();
         }
-
+        public void HandleAddNewCharacterButtonClick(object? sender, EventArgs e)
+        {
+            new AddNewCharacterFormController(new AddNewCharacterForm()).Form.Show();
+        }
     }
 }
