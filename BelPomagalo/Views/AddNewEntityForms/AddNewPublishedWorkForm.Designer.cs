@@ -44,13 +44,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.publishedDateListBox = new System.Windows.Forms.ListBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.compositionTextBox = new System.Windows.Forms.TextBox();
             this.motivesAndFiguresTextBox = new System.Windows.Forms.TextBox();
             this.ideologicalSuggestionsTextBox = new System.Windows.Forms.TextBox();
             this.remarksTextBox = new System.Windows.Forms.TextBox();
+            this.publishedDateTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // nameTextBox
@@ -210,16 +210,6 @@
             this.label9.TabIndex = 14;
             this.label9.Text = "Композиция";
             // 
-            // publishedDateListBox
-            // 
-            this.publishedDateListBox.FormattingEnabled = true;
-            this.publishedDateListBox.ItemHeight = 15;
-            this.publishedDateListBox.Location = new System.Drawing.Point(327, 37);
-            this.publishedDateListBox.Name = "publishedDateListBox";
-            this.publishedDateListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.publishedDateListBox.Size = new System.Drawing.Size(195, 34);
-            this.publishedDateListBox.TabIndex = 25;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -272,16 +262,24 @@
             this.remarksTextBox.Size = new System.Drawing.Size(160, 154);
             this.remarksTextBox.TabIndex = 29;
             // 
+            // publishedDateTextBox
+            // 
+            this.publishedDateTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.publishedDateTextBox.Location = new System.Drawing.Point(327, 37);
+            this.publishedDateTextBox.Name = "publishedDateTextBox";
+            this.publishedDateTextBox.Size = new System.Drawing.Size(195, 35);
+            this.publishedDateTextBox.TabIndex = 30;
+            // 
             // AddNewPublishedWorkForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(927, 564);
+            this.Controls.Add(this.publishedDateTextBox);
             this.Controls.Add(this.remarksTextBox);
             this.Controls.Add(this.ideologicalSuggestionsTextBox);
             this.Controls.Add(this.motivesAndFiguresTextBox);
             this.Controls.Add(this.compositionTextBox);
-            this.Controls.Add(this.publishedDateListBox);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label6);
@@ -326,12 +324,12 @@
         private Label label7;
         private Label label8;
         private Label label9;
-        private ListBox publishedDateListBox;
         private Label label10;
         private Label label11;
         private TextBox compositionTextBox;
         private TextBox motivesAndFiguresTextBox;
         private TextBox ideologicalSuggestionsTextBox;
         private TextBox remarksTextBox;
+        private TextBox publishedDateTextBox;
     }
 }
