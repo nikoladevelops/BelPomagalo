@@ -39,18 +39,18 @@
             this.addPublishedWorkButton = new System.Windows.Forms.Button();
             this.characterListBox = new System.Windows.Forms.ListBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.ideologicalSuggestionsListBox = new System.Windows.Forms.ListBox();
             this.label6 = new System.Windows.Forms.Label();
             this.oppositionsListBox = new System.Windows.Forms.ListBox();
-            this.motivesAndFiguresListBox = new System.Windows.Forms.ListBox();
-            this.compositionDetailsListBox = new System.Windows.Forms.ListBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.publishedDateListBox = new System.Windows.Forms.ListBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.remarksListBox = new System.Windows.Forms.ListBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.compositionTextBox = new System.Windows.Forms.TextBox();
+            this.motivesAndFiguresTextBox = new System.Windows.Forms.TextBox();
+            this.ideologicalSuggestionsTextBox = new System.Windows.Forms.TextBox();
+            this.remarksTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // nameTextBox
@@ -160,16 +160,6 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "Герои";
             // 
-            // ideologicalSuggestionsListBox
-            // 
-            this.ideologicalSuggestionsListBox.FormattingEnabled = true;
-            this.ideologicalSuggestionsListBox.ItemHeight = 15;
-            this.ideologicalSuggestionsListBox.Location = new System.Drawing.Point(386, 313);
-            this.ideologicalSuggestionsListBox.Name = "ideologicalSuggestionsListBox";
-            this.ideologicalSuggestionsListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.ideologicalSuggestionsListBox.Size = new System.Drawing.Size(160, 154);
-            this.ideologicalSuggestionsListBox.TabIndex = 21;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -189,25 +179,6 @@
             this.oppositionsListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.oppositionsListBox.Size = new System.Drawing.Size(160, 154);
             this.oppositionsListBox.TabIndex = 19;
-            // 
-            // motivesAndFiguresListBox
-            // 
-            this.motivesAndFiguresListBox.FormattingEnabled = true;
-            this.motivesAndFiguresListBox.ItemHeight = 15;
-            this.motivesAndFiguresListBox.Location = new System.Drawing.Point(30, 313);
-            this.motivesAndFiguresListBox.Name = "motivesAndFiguresListBox";
-            this.motivesAndFiguresListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.motivesAndFiguresListBox.Size = new System.Drawing.Size(160, 154);
-            this.motivesAndFiguresListBox.TabIndex = 18;
-            // 
-            // compositionDetailsListBox
-            // 
-            this.compositionDetailsListBox.FormattingEnabled = true;
-            this.compositionDetailsListBox.ItemHeight = 15;
-            this.compositionDetailsListBox.Location = new System.Drawing.Point(739, 116);
-            this.compositionDetailsListBox.Name = "compositionDetailsListBox";
-            this.compositionDetailsListBox.Size = new System.Drawing.Size(160, 154);
-            this.compositionDetailsListBox.TabIndex = 17;
             // 
             // label7
             // 
@@ -259,16 +230,6 @@
             this.label10.TabIndex = 24;
             this.label10.Text = "Дата на публикуване";
             // 
-            // remarksListBox
-            // 
-            this.remarksListBox.FormattingEnabled = true;
-            this.remarksListBox.ItemHeight = 15;
-            this.remarksListBox.Location = new System.Drawing.Point(562, 313);
-            this.remarksListBox.Name = "remarksListBox";
-            this.remarksListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.remarksListBox.Size = new System.Drawing.Size(160, 154);
-            this.remarksListBox.TabIndex = 23;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -279,20 +240,52 @@
             this.label11.TabIndex = 22;
             this.label11.Text = "Забележки";
             // 
+            // compositionTextBox
+            // 
+            this.compositionTextBox.Location = new System.Drawing.Point(739, 116);
+            this.compositionTextBox.Multiline = true;
+            this.compositionTextBox.Name = "compositionTextBox";
+            this.compositionTextBox.Size = new System.Drawing.Size(160, 154);
+            this.compositionTextBox.TabIndex = 26;
+            // 
+            // motivesAndFiguresTextBox
+            // 
+            this.motivesAndFiguresTextBox.Location = new System.Drawing.Point(33, 313);
+            this.motivesAndFiguresTextBox.Multiline = true;
+            this.motivesAndFiguresTextBox.Name = "motivesAndFiguresTextBox";
+            this.motivesAndFiguresTextBox.Size = new System.Drawing.Size(160, 154);
+            this.motivesAndFiguresTextBox.TabIndex = 27;
+            // 
+            // ideologicalSuggestionsTextBox
+            // 
+            this.ideologicalSuggestionsTextBox.Location = new System.Drawing.Point(386, 313);
+            this.ideologicalSuggestionsTextBox.Multiline = true;
+            this.ideologicalSuggestionsTextBox.Name = "ideologicalSuggestionsTextBox";
+            this.ideologicalSuggestionsTextBox.Size = new System.Drawing.Size(160, 154);
+            this.ideologicalSuggestionsTextBox.TabIndex = 28;
+            // 
+            // remarksTextBox
+            // 
+            this.remarksTextBox.Location = new System.Drawing.Point(563, 313);
+            this.remarksTextBox.Multiline = true;
+            this.remarksTextBox.Name = "remarksTextBox";
+            this.remarksTextBox.Size = new System.Drawing.Size(160, 154);
+            this.remarksTextBox.TabIndex = 29;
+            // 
             // AddNewPublishedWorkForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(927, 564);
+            this.Controls.Add(this.remarksTextBox);
+            this.Controls.Add(this.ideologicalSuggestionsTextBox);
+            this.Controls.Add(this.motivesAndFiguresTextBox);
+            this.Controls.Add(this.compositionTextBox);
             this.Controls.Add(this.publishedDateListBox);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.remarksListBox);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.ideologicalSuggestionsListBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.oppositionsListBox);
-            this.Controls.Add(this.motivesAndFiguresListBox);
-            this.Controls.Add(this.compositionDetailsListBox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
@@ -328,17 +321,17 @@
         private Button addPublishedWorkButton;
         private ListBox characterListBox;
         private Label label5;
-        private ListBox ideologicalSuggestionsListBox;
         private Label label6;
         private ListBox oppositionsListBox;
-        private ListBox motivesAndFiguresListBox;
-        private ListBox compositionDetailsListBox;
         private Label label7;
         private Label label8;
         private Label label9;
         private ListBox publishedDateListBox;
         private Label label10;
-        private ListBox remarksListBox;
         private Label label11;
+        private TextBox compositionTextBox;
+        private TextBox motivesAndFiguresTextBox;
+        private TextBox ideologicalSuggestionsTextBox;
+        private TextBox remarksTextBox;
     }
 }
