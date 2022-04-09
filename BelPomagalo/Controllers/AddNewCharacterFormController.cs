@@ -21,13 +21,15 @@ namespace BelPomagalo.Controllers
 
         private void HandleAddNeCharacterButtonClick(object? sender, EventArgs e)
         {
+            var author = _controller.GetAuthor(_form.AuthorListBox.SelectedItem.ToString());
             var character = new Character()
             {
                 Name = _form.CharacterNameTextBox.Text,
-                Description = _form.CharacterDescriptionTextBox.Text
+                Description = _form.CharacterDescriptionTextBox.Text,
+                AuthorId = author.Id
             };
 
-            // await add character
+            _controller.AddCharacter(character);
         }
 
     }

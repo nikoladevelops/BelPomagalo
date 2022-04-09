@@ -128,6 +128,10 @@ namespace BelPomagalo.Controllers
         {
             return await _authorService.AddAuthor(author);
         }
+        internal async Task<Character> AddCharacter(Character character)
+        {
+            return await _characterService.AddCharacter(character);
+        }
         internal async Task<PublishedWork> AddPublishedWork(PublishedWork publishedWork)
         {
             return await _publishedWorkService.AddPublishedWork(publishedWork);

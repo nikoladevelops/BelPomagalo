@@ -18,9 +18,9 @@ namespace BelPomagalo.Controllers
             Helper.LoadListBoxData(_form.ThemeListBox, _controller.GetAllThemesNames(), false);
 
             var currentSelectedAuthor = _controller.GetAuthor(_form.AuthorListBox.SelectedItem.ToString());
-            Helper.LoadListBoxData(_form.CharacterListBox, _controller.GetCharactersNamesOfAuthor(currentSelectedAuthor.Id));
+            Helper.LoadListBoxData(_form.CharacterListBox, _controller.GetCharactersNamesOfAuthor(currentSelectedAuthor.Id), false);
 
-            Helper.LoadListBoxData(_form.OppositionListBox, _controller.GetAllOppositionsNames());
+            Helper.LoadListBoxData(_form.OppositionListBox, _controller.GetAllOppositionsNames(), false);
 
             _form.AddPublishedWorkButton.Click += HandleAddPublishedWorkButtonClick;
             _form.AuthorListBox.SelectedIndexChanged += HandleAuthorListBoxSelectedIndexChanged;
