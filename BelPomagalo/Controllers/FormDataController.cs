@@ -10,9 +10,13 @@ namespace BelPomagalo.Controllers
         private readonly AuthorService _authorService;
         private readonly GenreService _genreService;
         private readonly ThemeService _themeService;
+        private readonly CharacterService _characterService;
+        private readonly OppositionService _oppositionService;
         private readonly PublishedWorkService _publishedWorkService;
         private readonly PublishedWorkGenreService _publishedWorkGenreService;
         private readonly PublishedWorkThemeService _publishedWorkThemeService;
+        private readonly PublishedWorkCharacterService _publishedWorkCharacterService;
+        private readonly PublishedWorkOppositionService _publishedWorkOppositionService;
 
         internal FormDataController()
         {
@@ -22,9 +26,14 @@ namespace BelPomagalo.Controllers
             _authorService = new AuthorService(_context);
             _genreService = new GenreService(_context);
             _themeService = new ThemeService(_context);
+            _characterService = new CharacterService(_context);
+            _oppositionService = new OppositionService(_context);
             _publishedWorkService = new PublishedWorkService(_context);
             _publishedWorkGenreService = new PublishedWorkGenreService(_context);
             _publishedWorkThemeService = new PublishedWorkThemeService(_context);
+            _publishedWorkCharacterService = new PublishedWorkCharacterService(_context);
+            _publishedWorkOppositionService= new PublishedWorkOppositionService(_context);
+
         }
 
         internal IEnumerable<string> GetAllAuthorsNames() 
@@ -63,6 +72,30 @@ namespace BelPomagalo.Controllers
         {
             return _themeService.GetTheme(themeId);
         }
+        internal Character GetCharacter(int characterId) 
+        {
+            return _characterService.GetCharacter(characterId); 
+        }
+        internal Character GetCharacter(string characterName)
+        {
+            return _characterService.GetCharacter(characterName);
+        }
+        internal IEnumerable<string> GetCharactersNamesOfAuthor(int authorId)
+        {
+            return _characterService.GetAllCharactersNamesOfAuthor(authorId);
+        }
+        internal Opposition GetOpposition(string oppositionName)
+        {
+            return _oppositionService.GetOpposition(oppositionName);
+        }
+        internal Opposition GetOpposition(int oppositionId)
+        {
+            return _oppositionService.GetOpposition(oppositionId);
+        }
+        internal IEnumerable<string> GetAllOppositionsNames()
+        {
+            return _oppositionService.GetAllOppositionsNames();
+        }
         internal PublishedWork GetPublishedWork(string publishedWorkName)
         {
             return _publishedWorkService.GetPublishedWork(publishedWorkName);
@@ -74,6 +107,14 @@ namespace BelPomagalo.Controllers
         internal IEnumerable<PublishedWorkTheme> GetPublishedWorksThemes(PublishedWork publishedWork)
         {
             return _publishedWorkThemeService.GetPublishedWorksThemes(publishedWork);
+        }
+        internal IEnumerable<PublishedWorkCharacter> GetPublishedWorkCharacters(PublishedWork publishedWork)
+        {
+            return _publishedWorkCharacterService.GetPublishedWorkCharacters(publishedWork);
+        }
+        internal IEnumerable<PublishedWorkOpposition> GetPublishedWorksOppositions(PublishedWork publishedWork)
+        {
+            return _publishedWorkOppositionService.GetPublishedWorksOppositions(publishedWork);
         }
         internal async Task<Theme> AddTheme(Theme theme)
         {
@@ -98,6 +139,14 @@ namespace BelPomagalo.Controllers
         internal async Task<PublishedWorkTheme> AddPublishedWorkTheme(PublishedWorkTheme publishedWorkTheme)
         {
             return await _publishedWorkThemeService.AddPublishedWorkTheme(publishedWorkTheme);
+        }
+        internal async Task<PublishedWorkCharacter> AddPublishedWorkCharacter(PublishedWorkCharacter publishedWorkCharacter)
+        {
+            return await _publishedWorkCharacterService.AddPublishedWorkCharacter(publishedWorkCharacter);
+        }
+        internal async Task<PublishedWorkOpposition> AddPublishedWorkOpposition(PublishedWorkOpposition publishedWorkOpposition)
+        {
+            return await _publishedWorkOppositionService.AddPublishedWorkOpposition(publishedWorkOpposition);
         }
 
     }
