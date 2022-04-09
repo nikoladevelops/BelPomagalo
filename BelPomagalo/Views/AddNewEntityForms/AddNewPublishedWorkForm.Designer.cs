@@ -40,7 +40,7 @@
             this.characterListBox = new System.Windows.Forms.ListBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.oppositionsListBox = new System.Windows.Forms.ListBox();
+            this.oppositionListBox = new System.Windows.Forms.ListBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -172,13 +172,13 @@
             // 
             // oppositionsListBox
             // 
-            this.oppositionsListBox.FormattingEnabled = true;
-            this.oppositionsListBox.ItemHeight = 15;
-            this.oppositionsListBox.Location = new System.Drawing.Point(209, 313);
-            this.oppositionsListBox.Name = "oppositionsListBox";
-            this.oppositionsListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.oppositionsListBox.Size = new System.Drawing.Size(160, 154);
-            this.oppositionsListBox.TabIndex = 19;
+            this.oppositionListBox.FormattingEnabled = true;
+            this.oppositionListBox.ItemHeight = 15;
+            this.oppositionListBox.Location = new System.Drawing.Point(209, 313);
+            this.oppositionListBox.Name = "oppositionsListBox";
+            this.oppositionListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.oppositionListBox.Size = new System.Drawing.Size(160, 154);
+            this.oppositionListBox.TabIndex = 19;
             // 
             // label7
             // 
@@ -283,7 +283,7 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.oppositionsListBox);
+            this.Controls.Add(this.oppositionListBox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
@@ -320,7 +320,7 @@
         private ListBox characterListBox;
         private Label label5;
         private Label label6;
-        private ListBox oppositionsListBox;
+        private ListBox oppositionListBox;
         private Label label7;
         private Label label8;
         private Label label9;

@@ -6,10 +6,18 @@
         {
             InitializeComponent();
         }
-        public ListBox AuthorsListBox { get => authorListBox; }
+        public TextBox NameTextBox { get => nameTextBox; }
+        public TextBox PublishedDateTextBox { get => publishedDateTextBox; }
+        public ListBox AuthorListBox { get => authorListBox; }
         public ListBox GenreListBox { get => genreListBox; }
         public ListBox ThemeListBox { get => themeListBox; }
+        public ListBox CharacterListBox { get => characterListBox; }
+        public TextBox CompositionTextBox { get => compositionTextBox; }
+        public TextBox MotivesAndFiguresTextBox { get => motivesAndFiguresTextBox; }
+        public ListBox OppositionListBox { get => oppositionListBox; }
+        public TextBox IdeologicalSuggestionsTextBox { get => ideologicalSuggestionsTextBox; }
+        public TextBox RemarksTextBox { get => remarksTextBox; }
         public Button AddPublishedWorkButton { get => addPublishedWorkButton; }
-        public TextBox NameTextBox { get => nameTextBox; }
+
     }
 }
