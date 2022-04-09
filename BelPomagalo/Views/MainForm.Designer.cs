@@ -38,13 +38,14 @@
             this.addNewGenreButton = new System.Windows.Forms.Button();
             this.addNewThemeButton = new System.Windows.Forms.Button();
             this.addNewCharacterButton = new System.Windows.Forms.Button();
+            this.addNewOppositionButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // authorsListBox
             // 
             this.authorsListBox.FormattingEnabled = true;
             this.authorsListBox.ItemHeight = 15;
-            this.authorsListBox.Location = new System.Drawing.Point(12, 116);
+            this.authorsListBox.Location = new System.Drawing.Point(56, 127);
             this.authorsListBox.Name = "authorsListBox";
             this.authorsListBox.Size = new System.Drawing.Size(382, 199);
             this.authorsListBox.TabIndex = 0;
@@ -53,7 +54,7 @@
             // 
             this.publishedWorkListBox.FormattingEnabled = true;
             this.publishedWorkListBox.ItemHeight = 15;
-            this.publishedWorkListBox.Location = new System.Drawing.Point(406, 116);
+            this.publishedWorkListBox.Location = new System.Drawing.Point(450, 127);
             this.publishedWorkListBox.Name = "publishedWorkListBox";
             this.publishedWorkListBox.Size = new System.Drawing.Size(382, 199);
             this.publishedWorkListBox.TabIndex = 1;
@@ -62,7 +63,7 @@
             // 
             this.authorLabel.AutoSize = true;
             this.authorLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.authorLabel.Location = new System.Drawing.Point(12, 92);
+            this.authorLabel.Location = new System.Drawing.Point(56, 103);
             this.authorLabel.Name = "authorLabel";
             this.authorLabel.Size = new System.Drawing.Size(53, 21);
             this.authorLabel.TabIndex = 2;
@@ -72,7 +73,7 @@
             // 
             this.publishedWorkLabel.AutoSize = true;
             this.publishedWorkLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.publishedWorkLabel.Location = new System.Drawing.Point(406, 92);
+            this.publishedWorkLabel.Location = new System.Drawing.Point(450, 103);
             this.publishedWorkLabel.Name = "publishedWorkLabel";
             this.publishedWorkLabel.Size = new System.Drawing.Size(114, 21);
             this.publishedWorkLabel.TabIndex = 3;
@@ -80,7 +81,7 @@
             // 
             // showButton
             // 
-            this.showButton.Location = new System.Drawing.Point(245, 321);
+            this.showButton.Location = new System.Drawing.Point(369, 332);
             this.showButton.Name = "showButton";
             this.showButton.Size = new System.Drawing.Size(149, 61);
             this.showButton.TabIndex = 4;
@@ -132,11 +133,21 @@
             this.addNewCharacterButton.Text = "Добави Герой";
             this.addNewCharacterButton.UseVisualStyleBackColor = true;
             // 
+            // addNewOppositionButton
+            // 
+            this.addNewOppositionButton.Location = new System.Drawing.Point(747, 12);
+            this.addNewOppositionButton.Name = "addNewOppositionButton";
+            this.addNewOppositionButton.Size = new System.Drawing.Size(141, 49);
+            this.addNewOppositionButton.TabIndex = 10;
+            this.addNewOppositionButton.Text = "Добави Опозиция";
+            this.addNewOppositionButton.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(896, 450);
+            this.Controls.Add(this.addNewOppositionButton);
             this.Controls.Add(this.addNewCharacterButton);
             this.Controls.Add(this.addNewThemeButton);
             this.Controls.Add(this.addNewGenreButton);
@@ -167,5 +178,6 @@
         private Button addNewGenreButton;
         private Button addNewThemeButton;
         private Button addNewCharacterButton;
+        private Button addNewOppositionButton;
     }
 }

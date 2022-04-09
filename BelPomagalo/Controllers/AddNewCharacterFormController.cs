@@ -19,7 +19,7 @@ namespace BelPomagalo.Controllers
         }
         public AddNewCharacterForm Form { get => _form; }
 
-        private void HandleAddNeCharacterButtonClick(object? sender, EventArgs e)
+        private async void HandleAddNeCharacterButtonClick(object? sender, EventArgs e)
         {
             var author = _controller.GetAuthor(_form.AuthorListBox.SelectedItem.ToString());
             var character = new Character()
@@ -29,7 +29,7 @@ namespace BelPomagalo.Controllers
                 AuthorId = author.Id
             };
 
-            _controller.AddCharacter(character);
+            await _controller.AddCharacter(character);
         }
 
     }

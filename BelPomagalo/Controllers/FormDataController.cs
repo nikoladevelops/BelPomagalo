@@ -136,6 +136,10 @@ namespace BelPomagalo.Controllers
         {
             return await _publishedWorkService.AddPublishedWork(publishedWork);
         }
+        internal async Task<Opposition> AddOpposition(Opposition opposition)
+        {
+            return await _oppositionService.AddOpposition(opposition);
+        }
         internal async Task<PublishedWorkGenre> AddPublishedWorkGenre(PublishedWorkGenre publishedWorkGenre)
         {
             return await _publishedWorkGenreService.AddPublishedWorkGenre(publishedWorkGenre);

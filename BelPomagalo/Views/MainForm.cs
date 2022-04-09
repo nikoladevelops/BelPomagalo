@@ -12,6 +12,7 @@
         public Button AddNewGenreButton { get => addNewGenreButton; }
         public Button AddNewThemeButton { get => addNewThemeButton; }
         public Button AddNewCharacterButton { get => addNewCharacterButton; }
+        public Button AddNewOppositionButton { get => addNewOppositionButton; }
         public ListBox AuthorsListBox { get => authorsListBox; }
         public ListBox PublishedWorksListBox { get => publishedWorkListBox; }
     }
