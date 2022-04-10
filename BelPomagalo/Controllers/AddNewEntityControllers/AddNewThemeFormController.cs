@@ -1,7 +1,7 @@
 ﻿using BelPomagalo.Models;
-using BelPomagalo.Views;
+using BelPomagalo.Views.AddNewEntityForms;
 
-namespace BelPomagalo.Controllers
+namespace BelPomagalo.Controllers.AddNewEntityControllers
 {
     internal class AddNewThemeFormController
     {

@@ -1,13 +1,13 @@
-﻿namespace BelPomagalo.Views
+﻿namespace BelPomagalo.Views.ShowEntityForms
 {
-    public partial class ShowPublishedWorkDetails : Form
+    public partial class ShowPublishedWorkDetailsForm : Form
     {
-        public ShowPublishedWorkDetails()
+        public ShowPublishedWorkDetailsForm()
         {
             InitializeComponent();
         }
 
-        public ShowPublishedWorkDetails(string name, string authorName, IEnumerable<string> genreNames,IEnumerable<string> themeNames) : this()
+        public ShowPublishedWorkDetailsForm(string name, string authorName, IEnumerable<string> genreNames,IEnumerable<string> themeNames) : this()
         {
             nameLabel.Text = "Произведение: " + name;
             authorLabel.Text = "Автор: " + authorName;

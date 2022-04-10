@@ -1,6 +1,6 @@
-﻿namespace BelPomagalo.Views
+﻿namespace BelPomagalo.Views.ShowEntityForms
 {
-    partial class ShowPublishedWorkDetails
+    partial class ShowPublishedWorkDetailsForm
     {
         /// <summary>
         /// Required designer variable.

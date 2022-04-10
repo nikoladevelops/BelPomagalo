@@ -1,8 +1,8 @@
 ﻿using BelPomagalo.Models;
 using BelPomagalo.Utility;
-using BelPomagalo.Views;
+using BelPomagalo.Views.AddNewEntityForms;
 
-namespace BelPomagalo.Controllers
+namespace BelPomagalo.Controllers.AddNewEntityControllers
 {
     internal class AddNewPublishedWorkFormController
     {
@@ -31,7 +31,7 @@ namespace BelPomagalo.Controllers
             var authorName = _form.AuthorListBox.SelectedItem.ToString();
 
             var author = _controller.GetAuthor(authorName);
-            Helper.LoadListBoxData(_form.CharacterListBox, _controller.GetCharactersNamesOfAuthor(author.Id));
+            Helper.LoadListBoxData(_form.CharacterListBox, _controller.GetCharactersNamesOfAuthor(author.Id), false);
         }
         public async void HandleAddPublishedWorkButtonClick(object? sender, EventArgs e) 
         {

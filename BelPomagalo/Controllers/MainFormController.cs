@@ -1,5 +1,7 @@
-﻿using BelPomagalo.Utility;
-using BelPomagalo.Views;
+﻿using BelPomagalo.Controllers.AddNewEntityControllers;
+using BelPomagalo.Utility;
+using BelPomagalo.Views.AddNewEntityForms;
+using BelPomagalo.Views.ShowEntityForms;
 
 namespace BelPomagalo.Controllers
 {
@@ -56,7 +58,7 @@ namespace BelPomagalo.Controllers
                 themeNames.Add(pwTheme.Name);
             }
 
-            var publishedWorkForm = new ShowPublishedWorkDetails(publishedWork.Name, publishedWork.Author.Name, genreNames, themeNames);
+            var publishedWorkForm = new ShowPublishedWorkDetailsForm(publishedWork.Name, publishedWork.Author.Name, genreNames, themeNames);
             publishedWorkForm.Show();
         }
 

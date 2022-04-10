@@ -1,4 +1,4 @@
-﻿namespace BelPomagalo.Views
+﻿namespace BelPomagalo.Views.AddNewEntityForms
 {
     public partial class AddNewOppositionForm : Form
     {

@@ -1,8 +1,8 @@
 ﻿using BelPomagalo.Models;
 using BelPomagalo.Utility;
-using BelPomagalo.Views;
+using BelPomagalo.Views.AddNewEntityForms;
 
-namespace BelPomagalo.Controllers
+namespace BelPomagalo.Controllers.AddNewEntityControllers
 {
     internal class AddNewAuthorFormController
     {
