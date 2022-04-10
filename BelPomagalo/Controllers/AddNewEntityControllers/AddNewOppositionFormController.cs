@@ -3,19 +3,15 @@ using BelPomagalo.Views.AddNewEntityForms;
 
 namespace BelPomagalo.Controllers.AddNewEntityControllers
 {
-    internal class AddNewOppositionFormController
+    internal class AddNewOppositionFormController:AddEntityController<AddNewOppositionForm>
     {
         private readonly FormDataController _controller;
-        private readonly AddNewOppositionForm _form;
-        public AddNewOppositionFormController(AddNewOppositionForm form)
+        public AddNewOppositionFormController(AddNewOppositionForm form):base(form)
         {
             _controller = new FormDataController();
-            _form = form;
-
-            _form.AddNewOppositionButton.Click += HandleAddNewOppositionButtonClick;
+            _form.AddButton.Click += HandleAddNewEntityButtonClick;
         }
-        public AddNewOppositionForm Form { get => _form; }
-        private async void HandleAddNewOppositionButtonClick(object? sender, EventArgs e)
+        protected override async void HandleAddNewEntityButtonClick(object? sender, EventArgs e)
         {
             var opposition = new Opposition()
             {

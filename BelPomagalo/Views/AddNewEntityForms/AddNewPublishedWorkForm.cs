@@ -1,6 +1,6 @@
 ﻿namespace BelPomagalo.Views.AddNewEntityForms
 {
-    public partial class AddNewPublishedWorkForm : Form
+    public partial class AddNewPublishedWorkForm : Form, IAddForm
     {
         public AddNewPublishedWorkForm()
         {
@@ -17,7 +17,7 @@
         public ListBox OppositionListBox { get => oppositionListBox; }
         public TextBox IdeologicalSuggestionsTextBox { get => ideologicalSuggestionsTextBox; }
         public TextBox RemarksTextBox { get => remarksTextBox; }
-        public Button AddPublishedWorkButton { get => addPublishedWorkButton; }
+        public Button AddButton { get => addPublishedWorkButton; }
 
     }
 }

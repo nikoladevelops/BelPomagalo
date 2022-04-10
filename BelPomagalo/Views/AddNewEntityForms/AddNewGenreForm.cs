@@ -1,6 +1,6 @@
 ﻿namespace BelPomagalo.Views.AddNewEntityForms
 {
-    public partial class AddNewGenreForm : Form
+    public partial class AddNewGenreForm : Form, IAddForm
     {
         public AddNewGenreForm()
         {
@@ -8,6 +8,6 @@
         }
         public TextBox GenreNameTextBox { get => genreNameTextBox; }
         public TextBox GenreDescriptionTextBox { get => descriptionTextBox; }
-        public Button AddNewGenreButton { get => addNewGenreButton; }
+        public Button AddButton { get => addNewGenreButton; }
     }
 }

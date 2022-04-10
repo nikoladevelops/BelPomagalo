@@ -1,6 +1,6 @@
 ﻿namespace BelPomagalo.Views.AddNewEntityForms
 {
-    public partial class AddNewAuthorForm : Form
+    public partial class AddNewAuthorForm : Form, IAddForm
     {
         public AddNewAuthorForm()
         {
@@ -11,6 +11,6 @@
         public TextBox AuthorBornLocationTextBox { get => bornLocationTextBox; }
         public TextBox AuthorBornDateTextBox { get => bornDateTextBox; }
         public TextBox AuthorDiedDateTextBox { get => diedDateTextBox; }
-        public Button AddNewAuthorButton { get => addNewAuthorButton; }
+        public Button AddButton { get => addNewAuthorButton; }
     }
 }

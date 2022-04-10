@@ -1,6 +1,6 @@
 ﻿namespace BelPomagalo.Views.AddNewEntityForms
 {
-    public partial class AddNewThemeForm : Form
+    public partial class AddNewThemeForm : Form,IAddForm
     {
         public AddNewThemeForm()
         {
@@ -8,6 +8,7 @@
         }
         public TextBox ThemeNameTextBox { get => themeNameTextBox; }
         public TextBox ThemeDescriptionTextBox { get => descriptionTextBox; }
-        public Button AddNewThemeButton { get => addNewThemeButton; }
+        public Button AddButton { get => addNewThemeButton; }
+
     }
 }

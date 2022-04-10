@@ -5,42 +5,39 @@ using BelPomagalo.Views.ShowEntityForms;
 
 namespace BelPomagalo.Controllers
 {
-    internal class MainFormController
+    internal class MainFormController:Controller<MainForm>
     {
         private readonly FormDataController _controller;
-        private readonly MainForm _mainForm;
-        public MainFormController(MainForm mainForm)
+        public MainFormController(MainForm mainForm):base(mainForm)
         {
             _controller= new FormDataController();
-            _mainForm = mainForm;
-            _mainForm.Load += HandleFormLoad;
-            _mainForm.AuthorsListBox.SelectedIndexChanged += HandleAuthorsListBoxSelectedIndexChanged;
+            _form.Load += HandleFormLoad;
+            _form.AuthorsListBox.SelectedIndexChanged += HandleAuthorsListBoxSelectedIndexChanged;
 
-            _mainForm.ShowButton.Click += HandleShowFormButtonClicked;
-            _mainForm.AddNewPublishedWorkButton.Click += HandleAddNewPublishedWorkButtonClick;
-            _mainForm.AddNewAuthorButton.Click += HandleAddNewAuthorButtonClick;
-            _mainForm.AddNewGenreButton.Click += HandleAddNewGenreButtonClick;
-            _mainForm.AddNewThemeButton.Click += HandleAddNewThemeButtonClick;
-            _mainForm.AddNewCharacterButton.Click += HandleAddNewCharacterButtonClick;
-            _mainForm.AddNewOppositionButton.Click += HandleAddNewOppositionButtonClick;
+            _form.ShowButton.Click += HandleShowFormButtonClicked;
+            _form.AddNewPublishedWorkButton.Click += HandleAddNewPublishedWorkButtonClick;
+            _form.AddNewAuthorButton.Click += HandleAddNewAuthorButtonClick;
+            _form.AddNewGenreButton.Click += HandleAddNewGenreButtonClick;
+            _form.AddNewThemeButton.Click += HandleAddNewThemeButtonClick;
+            _form.AddNewCharacterButton.Click += HandleAddNewCharacterButtonClick;
+            _form.AddNewOppositionButton.Click += HandleAddNewOppositionButtonClick;
         }
 
-        public MainForm Form { get => _mainForm; }
         public void HandleFormLoad(object? sender, EventArgs e) 
         {
-            Helper.LoadListBoxData(_mainForm.AuthorsListBox, _controller.GetAllAuthorsNames());
+            Helper.LoadListBoxData(_form.AuthorsListBox, _controller.GetAllAuthorsNames());
 
-            if (_mainForm.AuthorsListBox.Items.Count > 0)
+            if (_form.AuthorsListBox.Items.Count > 0)
             {
-                var currentSelectedAuthorName = _mainForm.AuthorsListBox.SelectedItem.ToString();
+                var currentSelectedAuthorName = _form.AuthorsListBox.SelectedItem.ToString();
                 var author = _controller.GetAuthor(currentSelectedAuthorName);
 
-                Helper.LoadListBoxData(_mainForm.PublishedWorksListBox, _controller.GetPublishedWorksNames(author.Id));
+                Helper.LoadListBoxData(_form.PublishedWorksListBox, _controller.GetPublishedWorksNames(author.Id));
             }
         }
         public void HandleShowFormButtonClicked(object? sender, EventArgs e)
         {
-            var publishedWork = _controller.GetPublishedWork(_mainForm.PublishedWorksListBox.SelectedItem.ToString());
+            var publishedWork = _controller.GetPublishedWork(_form.PublishedWorksListBox.SelectedItem.ToString());
             var publishedWorkGenres = _controller.GetPublishedWorksGenres(publishedWork);
             var publishedWorkThemes = _controller.GetPublishedWorksThemes(publishedWork);
 
@@ -64,10 +61,10 @@ namespace BelPomagalo.Controllers
 
         public void HandleAuthorsListBoxSelectedIndexChanged(object? sender, EventArgs e) 
         {
-            var authorName = _mainForm.AuthorsListBox.SelectedItem.ToString();
+            var authorName = _form.AuthorsListBox.SelectedItem.ToString();
 
             var author = _controller.GetAuthor(authorName);
-            Helper.LoadListBoxData(_mainForm.PublishedWorksListBox, _controller.GetPublishedWorksNames(author.Id));
+            Helper.LoadListBoxData(_form.PublishedWorksListBox, _controller.GetPublishedWorksNames(author.Id));
         }
 
         public void HandleAddNewPublishedWorkButtonClick(object? sender, EventArgs e)
@@ -76,7 +73,7 @@ namespace BelPomagalo.Controllers
         }
         public void HandleAddNewAuthorButtonClick(object? sender, EventArgs e)
         {
-            new AddNewAuthorFormController(new AddNewAuthorForm(), _mainForm.AuthorsListBox).Form.Show();
+            new AddNewAuthorFormController(new AddNewAuthorForm(), _form.AuthorsListBox).Form.Show();
         }
         public void HandleAddNewGenreButtonClick(object? sender, EventArgs e)
         {

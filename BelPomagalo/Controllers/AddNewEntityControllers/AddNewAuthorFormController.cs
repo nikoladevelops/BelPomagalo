@@ -4,21 +4,17 @@ using BelPomagalo.Views.AddNewEntityForms;
 
 namespace BelPomagalo.Controllers.AddNewEntityControllers
 {
-    internal class AddNewAuthorFormController
+    internal class AddNewAuthorFormController : AddEntityController<AddNewAuthorForm>
     {
         private readonly FormDataController _controller;
-        private readonly AddNewAuthorForm _form;
         private readonly ListBox _authorsListBox;
-        public AddNewAuthorFormController(AddNewAuthorForm form, ListBox authorsListBox)
+        public AddNewAuthorFormController(AddNewAuthorForm form, ListBox authorsListBox):base(form)
         {
             _controller = new FormDataController();
-            _form = form;
-            _authorsListBox= authorsListBox;
-
-            _form.AddNewAuthorButton.Click += HandleAddNewAuthorButtonClick;
+            _authorsListBox = authorsListBox;
+            _form.AddButton.Click += HandleAddNewEntityButtonClick;
         }
-        public AddNewAuthorForm Form { get => _form; }
-        private async void HandleAddNewAuthorButtonClick(object? sender, EventArgs e)
+        protected override async void HandleAddNewEntityButtonClick(object? sender, EventArgs e)
         {
             var author = new Author()
             {

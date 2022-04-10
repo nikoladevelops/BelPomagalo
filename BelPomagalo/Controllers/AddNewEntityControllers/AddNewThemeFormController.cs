@@ -3,19 +3,15 @@ using BelPomagalo.Views.AddNewEntityForms;
 
 namespace BelPomagalo.Controllers.AddNewEntityControllers
 {
-    internal class AddNewThemeFormController
+    internal class AddNewThemeFormController:AddEntityController<AddNewThemeForm>
     {
         private readonly FormDataController _controller;
-        private readonly AddNewThemeForm _form;
-        public AddNewThemeFormController(AddNewThemeForm form)
+        public AddNewThemeFormController(AddNewThemeForm form):base(form)
         {
             _controller = new FormDataController();
-            _form = form;
-
-            _form.AddNewThemeButton.Click += HandleAddNewThemeButtonClick;
+            _form.AddButton.Click += HandleAddNewEntityButtonClick;
         }
-        public AddNewThemeForm Form { get => _form; }
-        private async void HandleAddNewThemeButtonClick(object? sender, EventArgs e)
+        protected override async void HandleAddNewEntityButtonClick(object? sender, EventArgs e)
         {
             var theme = new Theme()
             {

@@ -4,22 +4,15 @@ using BelPomagalo.Views.AddNewEntityForms;
 
 namespace BelPomagalo.Controllers.AddNewEntityControllers
 {
-    internal class AddNewCharacterFormController
+    internal class AddNewCharacterFormController : AddEntityController<AddNewCharacterForm>
     {
         private readonly FormDataController _controller;
-        private readonly AddNewCharacterForm _form;
-        public AddNewCharacterFormController(AddNewCharacterForm form)
+        public AddNewCharacterFormController(AddNewCharacterForm form):base(form)
         {
             _controller = new FormDataController();
-            _form = form;
-
-            Helper.LoadListBoxData(_form.AuthorListBox, _controller.GetAllAuthorsNames(), true);
-
-            _form.AddNewCharacterButton.Click += HandleAddNeCharacterButtonClick;
+            LoadFormData();
         }
-        public AddNewCharacterForm Form { get => _form; }
-
-        private async void HandleAddNeCharacterButtonClick(object? sender, EventArgs e)
+        protected override async void HandleAddNewEntityButtonClick(object? sender, EventArgs e)
         {
             var author = _controller.GetAuthor(_form.AuthorListBox.SelectedItem.ToString());
             var character = new Character()
@@ -31,6 +24,10 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
 
             await _controller.AddCharacter(character);
         }
-
+        private void LoadFormData()
+        {
+            Helper.LoadListBoxData(_form.AuthorListBox, _controller.GetAllAuthorsNames(), true);
+            _form.AddButton.Click += HandleAddNewEntityButtonClick;
+        }
     }
 }

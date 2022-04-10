@@ -1,6 +1,6 @@
 ﻿namespace BelPomagalo.Views.AddNewEntityForms
 {
-    public partial class AddNewOppositionForm : Form
+    public partial class AddNewOppositionForm : Form, IAddForm
     {
         public AddNewOppositionForm()
         {
@@ -8,6 +8,6 @@
         }
         public TextBox OppositionNameTextBox { get => oppositionNameTextBox; }
         public TextBox OppositionDescriptionTextBox { get => descriptionTextBox; }
-        public Button AddNewOppositionButton { get => addNewOppositionButton; }
+        public Button AddButton { get => addNewOppositionButton; }
     }
 }

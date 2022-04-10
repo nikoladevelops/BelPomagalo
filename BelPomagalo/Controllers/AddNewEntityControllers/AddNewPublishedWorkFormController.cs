@@ -4,15 +4,16 @@ using BelPomagalo.Views.AddNewEntityForms;
 
 namespace BelPomagalo.Controllers.AddNewEntityControllers
 {
-    internal class AddNewPublishedWorkFormController
+    internal class AddNewPublishedWorkFormController:AddEntityController<AddNewPublishedWorkForm>
     {
         private readonly FormDataController _controller;
-        private readonly AddNewPublishedWorkForm _form;
-        public AddNewPublishedWorkFormController(AddNewPublishedWorkForm form)
+        public AddNewPublishedWorkFormController(AddNewPublishedWorkForm form):base(form)
         {
             _controller = new FormDataController();
-            _form = form;
-
+            LoadFormData();
+        }
+        private void LoadFormData()
+        {
             Helper.LoadListBoxData(_form.AuthorListBox, _controller.GetAllAuthorsNames());
             Helper.LoadListBoxData(_form.GenreListBox, _controller.GetAllGenresNames(), false);
             Helper.LoadListBoxData(_form.ThemeListBox, _controller.GetAllThemesNames(), false);
@@ -22,18 +23,10 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
 
             Helper.LoadListBoxData(_form.OppositionListBox, _controller.GetAllOppositionsNames(), false);
 
-            _form.AddPublishedWorkButton.Click += HandleAddPublishedWorkButtonClick;
             _form.AuthorListBox.SelectedIndexChanged += HandleAuthorListBoxSelectedIndexChanged;
+            _form.AddButton.Click += HandleAddNewEntityButtonClick;
         }
-        public AddNewPublishedWorkForm Form { get => _form; }
-        public void HandleAuthorListBoxSelectedIndexChanged(object? sender, EventArgs e)
-        {
-            var authorName = _form.AuthorListBox.SelectedItem.ToString();
-
-            var author = _controller.GetAuthor(authorName);
-            Helper.LoadListBoxData(_form.CharacterListBox, _controller.GetCharactersNamesOfAuthor(author.Id), false);
-        }
-        public async void HandleAddPublishedWorkButtonClick(object? sender, EventArgs e) 
+        protected override async void HandleAddNewEntityButtonClick(object? sender, EventArgs e)
         {
             var name = _form.NameTextBox.Text;
             var author = _controller.GetAuthor(_form.AuthorListBox.SelectedItem.ToString());
@@ -73,8 +66,8 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
                 PublishedDate = _form.PublishedDateTextBox.Text,
                 CompositionDetails = _form.CompositionTextBox.Text,
                 MotivesAndFigures = _form.MotivesAndFiguresTextBox.Text,
-                IdeologicalSuggestions=_form.IdeologicalSuggestionsTextBox.Text,
-                Remarks=_form.RemarksTextBox.Text
+                IdeologicalSuggestions = _form.IdeologicalSuggestionsTextBox.Text,
+                Remarks = _form.RemarksTextBox.Text
             };
 
             publishedWork = await _controller.AddPublishedWork(publishedWork);
@@ -98,6 +91,13 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
             {
                 await _controller.AddPublishedWorkOpposition(new PublishedWorkOpposition() { PublishedWorkId = publishedWork.Id, OppositionId = opposition.Id });
             }
+        }
+        public void HandleAuthorListBoxSelectedIndexChanged(object? sender, EventArgs e)
+        {
+            var authorName = _form.AuthorListBox.SelectedItem.ToString();
+
+            var author = _controller.GetAuthor(authorName);
+            Helper.LoadListBoxData(_form.CharacterListBox, _controller.GetCharactersNamesOfAuthor(author.Id), false);
         }
     }
 }
