@@ -1,14 +1,15 @@
 ﻿using BelPomagalo.Models;
+using BelPomagalo.Services;
 using BelPomagalo.Views.AddNewEntityForms;
 
 namespace BelPomagalo.Controllers.AddNewEntityControllers
 {
     internal class AddNewThemeFormController:AddEntityController<AddNewThemeForm>
     {
-        private readonly FormDataController _controller;
-        public AddNewThemeFormController(AddNewThemeForm form):base(form)
+        private readonly ThemeService _themeService;
+        public AddNewThemeFormController(AddNewThemeForm form, ThemeService themeService):base(form)
         {
-            _controller = new FormDataController();
+            _themeService = themeService;
             _form.AddButton.Click += HandleAddNewEntityButtonClick;
         }
         protected override async void HandleAddNewEntityButtonClick(object? sender, EventArgs e)
@@ -18,7 +19,7 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
                 Name = _form.ThemeNameTextBox.Text,
                 Description = _form.ThemeDescriptionTextBox.Text
             };
-            await _controller.AddTheme(theme);
+            await _themeService.AddTheme(theme);
         }
     }
 }

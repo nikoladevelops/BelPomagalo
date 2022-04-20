@@ -1,4 +1,5 @@
 ﻿using BelPomagalo.Models;
+using BelPomagalo.Services;
 using BelPomagalo.Utility;
 using BelPomagalo.Views.AddNewEntityForms;
 
@@ -6,22 +7,45 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
 {
     internal class AddNewPublishedWorkFormController:AddEntityController<AddNewPublishedWorkForm>
     {
-        private readonly FormDataController _controller;
-        public AddNewPublishedWorkFormController(AddNewPublishedWorkForm form):base(form)
+        private readonly AuthorService _authorService;
+        private readonly GenreService _genreService;
+        private readonly ThemeService _themeService;
+        private readonly CharacterService _characterService;
+        private readonly OppositionService _oppositionService;
+        private readonly PublishedWorkService _publishedWorkService;
+        private readonly PublishedWorkGenreService _publishedWorkGenreService;
+        private readonly PublishedWorkThemeService _publishedWorkThemeService;
+        private readonly PublishedWorkCharacterService _publishedWorkCharacterService;
+        private readonly PublishedWorkOppositionService _publishedWorkOppositionService;
+        public AddNewPublishedWorkFormController(AddNewPublishedWorkForm form, AuthorService authorService,
+            GenreService genreService, ThemeService themeService,CharacterService characterService, OppositionService oppositionService,
+            PublishedWorkService publishedWorkService, PublishedWorkGenreService publishedWorkGenreService, PublishedWorkThemeService publishedWorkThemeService,
+            PublishedWorkCharacterService publishedWorkCharacterService, PublishedWorkOppositionService publishedWorkOppositionService)
+            :base(form)
         {
-            _controller = new FormDataController();
+            _authorService = authorService;
+            _genreService = genreService;
+            _themeService = themeService;
+            _characterService = characterService;
+            _oppositionService = oppositionService;
+            _publishedWorkService = publishedWorkService;
+            _publishedWorkGenreService = publishedWorkGenreService;
+            _publishedWorkThemeService = publishedWorkThemeService;
+            _publishedWorkCharacterService = publishedWorkCharacterService;
+            _publishedWorkOppositionService = publishedWorkOppositionService;
+
             LoadFormData();
         }
         private void LoadFormData()
         {
-            Helper.LoadListBoxData(_form.AuthorListBox, _controller.GetAllAuthorsNames());
-            Helper.LoadListBoxData(_form.GenreListBox, _controller.GetAllGenresNames(), false);
-            Helper.LoadListBoxData(_form.ThemeListBox, _controller.GetAllThemesNames(), false);
+            Helper.LoadListBoxData(_form.AuthorListBox, _authorService.GetAllAuthorsNames());
+            Helper.LoadListBoxData(_form.GenreListBox, _genreService.GetAllGenresNames(), false);
+            Helper.LoadListBoxData(_form.ThemeListBox, _themeService.GetAllThemesNames(), false);
 
-            var currentSelectedAuthor = _controller.GetAuthor(_form.AuthorListBox.SelectedItem.ToString());
-            Helper.LoadListBoxData(_form.CharacterListBox, _controller.GetCharactersNamesOfAuthor(currentSelectedAuthor.Id), false);
+            var currentSelectedAuthor = _authorService.GetAuthor(_form.AuthorListBox.SelectedItem.ToString());
+            Helper.LoadListBoxData(_form.CharacterListBox, _characterService.GetAllCharactersNamesOfAuthor(currentSelectedAuthor.Id), false);
 
-            Helper.LoadListBoxData(_form.OppositionListBox, _controller.GetAllOppositionsNames(), false);
+            Helper.LoadListBoxData(_form.OppositionListBox, _oppositionService.GetAllOppositionsNames(), false);
 
             _form.AuthorListBox.SelectedIndexChanged += HandleAuthorListBoxSelectedIndexChanged;
             _form.AddButton.Click += HandleAddNewEntityButtonClick;
@@ -29,33 +53,33 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
         protected override async void HandleAddNewEntityButtonClick(object? sender, EventArgs e)
         {
             var name = _form.NameTextBox.Text;
-            var author = _controller.GetAuthor(_form.AuthorListBox.SelectedItem.ToString());
+            var author = _authorService.GetAuthor(_form.AuthorListBox.SelectedItem.ToString());
 
             var genres = new List<Genre>();
             foreach (var selectedItem in _form.GenreListBox.SelectedItems)
             {
-                var selectedGenre = _controller.GetGenre(selectedItem.ToString());
+                var selectedGenre = _genreService.GetGenre(selectedItem.ToString());
                 genres.Add(selectedGenre);
             }
 
             var themes = new List<Theme>();
             foreach (var selectedItem in _form.ThemeListBox.SelectedItems)
             {
-                var selectedTheme = _controller.GetTheme(selectedItem.ToString());
+                var selectedTheme = _themeService.GetTheme(selectedItem.ToString());
                 themes.Add(selectedTheme);
             }
 
             var characters = new List<Character>();
             foreach (var selectedItem in _form.CharacterListBox.SelectedItems)
             {
-                var selectedCharacter = _controller.GetCharacter(selectedItem.ToString());
+                var selectedCharacter = _characterService.GetCharacter(selectedItem.ToString());
                 characters.Add(selectedCharacter);
             }
 
             var oppositions = new List<Opposition>();
             foreach (var selectedItem in oppositions)
             {
-                var selectedOpposition = _controller.GetOpposition(selectedItem.ToString());
+                var selectedOpposition = _oppositionService.GetOpposition(selectedItem.ToString());
                 oppositions.Add(selectedOpposition);
             }
 
@@ -70,34 +94,34 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
                 Remarks = _form.RemarksTextBox.Text
             };
 
-            publishedWork = await _controller.AddPublishedWork(publishedWork);
+            publishedWork = await _publishedWorkService.AddPublishedWork(publishedWork);
 
             foreach (var genre in genres)
             {
-                await _controller.AddPublishedWorkGenre(new PublishedWorkGenre() { PublishedWorkId = publishedWork.Id, GenreId = genre.Id });
+                await _publishedWorkGenreService.AddPublishedWorkGenre(new PublishedWorkGenre() { PublishedWorkId = publishedWork.Id, GenreId = genre.Id });
             }
 
             foreach (var theme in themes)
             {
-                await _controller.AddPublishedWorkTheme(new PublishedWorkTheme() { PublishedWorkId = publishedWork.Id, ThemeId = theme.Id });
+                await _publishedWorkThemeService.AddPublishedWorkTheme(new PublishedWorkTheme() { PublishedWorkId = publishedWork.Id, ThemeId = theme.Id });
             }
 
             foreach (var character in characters)
             {
-                await _controller.AddPublishedWorkCharacter(new PublishedWorkCharacter() { PublishedWorkId = publishedWork.Id, CharacterId = character.Id });
+                await _publishedWorkCharacterService.AddPublishedWorkCharacter(new PublishedWorkCharacter() { PublishedWorkId = publishedWork.Id, CharacterId = character.Id });
             }
 
             foreach (var opposition in oppositions)
             {
-                await _controller.AddPublishedWorkOpposition(new PublishedWorkOpposition() { PublishedWorkId = publishedWork.Id, OppositionId = opposition.Id });
+                await _publishedWorkOppositionService.AddPublishedWorkOpposition(new PublishedWorkOpposition() { PublishedWorkId = publishedWork.Id, OppositionId = opposition.Id });
             }
         }
         public void HandleAuthorListBoxSelectedIndexChanged(object? sender, EventArgs e)
         {
             var authorName = _form.AuthorListBox.SelectedItem.ToString();
 
-            var author = _controller.GetAuthor(authorName);
-            Helper.LoadListBoxData(_form.CharacterListBox, _controller.GetCharactersNamesOfAuthor(author.Id), false);
+            var author = _authorService.GetAuthor(authorName);
+            Helper.LoadListBoxData(_form.CharacterListBox, _characterService.GetAllCharactersNamesOfAuthor(author.Id), false);
         }
     }
 }

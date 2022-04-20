@@ -1,14 +1,15 @@
 ﻿using BelPomagalo.Models;
+using BelPomagalo.Services;
 using BelPomagalo.Views.AddNewEntityForms;
 
 namespace BelPomagalo.Controllers.AddNewEntityControllers
 {
     internal class AddNewGenreFormController : AddEntityController<AddNewGenreForm>
     {
-        private readonly FormDataController _controller;
-        public AddNewGenreFormController(AddNewGenreForm form):base(form)
+        private readonly GenreService _genreService;
+        public AddNewGenreFormController(AddNewGenreForm form, GenreService genreService) :base(form)
         {
-            _controller = new FormDataController();
+            _genreService = genreService;
             _form.AddButton.Click += HandleAddNewEntityButtonClick;
         }
         protected override async void HandleAddNewEntityButtonClick(object? sender, EventArgs e)
@@ -18,7 +19,7 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
                 Name = _form.GenreNameTextBox.Text,
                 Description = _form.GenreDescriptionTextBox.Text
             };
-            await _controller.AddGenre(genre);
+            await _genreService.AddGenre(genre);
         }
     }
 }

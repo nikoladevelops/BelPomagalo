@@ -1,4 +1,5 @@
 ﻿using BelPomagalo.Controllers.AddNewEntityControllers;
+using BelPomagalo.Services;
 using BelPomagalo.Utility;
 using BelPomagalo.Views.AddNewEntityForms;
 using BelPomagalo.Views.ShowEntityForms;
@@ -7,10 +8,32 @@ namespace BelPomagalo.Controllers
 {
     internal class MainFormController:Controller<MainForm>
     {
-        private readonly FormDataController _controller;
-        public MainFormController(MainForm mainForm):base(mainForm)
+        private readonly AuthorService _authorService;
+        private readonly GenreService _genreService;
+        private readonly ThemeService _themeService;
+        private readonly CharacterService _characterService;
+        private readonly OppositionService _oppositionService;
+        private readonly PublishedWorkService _publishedWorkService;
+        private readonly PublishedWorkGenreService _publishedWorkGenreService;
+        private readonly PublishedWorkThemeService _publishedWorkThemeService;
+        private readonly PublishedWorkCharacterService _publishedWorkCharacterService;
+        private readonly PublishedWorkOppositionService _publishedWorkOppositionService;
+        public MainFormController(MainForm mainForm, AuthorService authorService, GenreService genreService, ThemeService themeService,
+            CharacterService characterService, OppositionService oppositionService, PublishedWorkService publishedWorkService,
+            PublishedWorkGenreService publishedWorkGenreService, PublishedWorkThemeService publishedWorkThemeService,
+            PublishedWorkCharacterService publishedWorkCharacterService, PublishedWorkOppositionService publishedWorkOppositionService):base(mainForm)
         {
-            _controller= new FormDataController();
+            _authorService = authorService;
+            _genreService = genreService;
+            _themeService = themeService;
+            _characterService = characterService;
+            _oppositionService = oppositionService;
+            _publishedWorkService = publishedWorkService;
+            _publishedWorkGenreService = publishedWorkGenreService;
+            _publishedWorkThemeService = publishedWorkThemeService;
+            _publishedWorkCharacterService = publishedWorkCharacterService;
+            _publishedWorkOppositionService = publishedWorkOppositionService;
+
             _form.Load += HandleFormLoad;
             _form.AuthorsListBox.SelectedIndexChanged += HandleAuthorsListBoxSelectedIndexChanged;
 
@@ -25,33 +48,33 @@ namespace BelPomagalo.Controllers
 
         public void HandleFormLoad(object? sender, EventArgs e) 
         {
-            Helper.LoadListBoxData(_form.AuthorsListBox, _controller.GetAllAuthorsNames());
+            Helper.LoadListBoxData(_form.AuthorsListBox, _authorService.GetAllAuthorsNames());
 
             if (_form.AuthorsListBox.Items.Count > 0)
             {
                 var currentSelectedAuthorName = _form.AuthorsListBox.SelectedItem.ToString();
-                var author = _controller.GetAuthor(currentSelectedAuthorName);
+                var author = _authorService.GetAuthor(currentSelectedAuthorName);
 
-                Helper.LoadListBoxData(_form.PublishedWorksListBox, _controller.GetPublishedWorksNames(author.Id));
+                Helper.LoadListBoxData(_form.PublishedWorksListBox, _publishedWorkService.GetPublishedWorksNames(author.Id));
             }
         }
         public void HandleShowFormButtonClicked(object? sender, EventArgs e)
         {
-            var publishedWork = _controller.GetPublishedWork(_form.PublishedWorksListBox.SelectedItem.ToString());
-            var publishedWorkGenres = _controller.GetPublishedWorksGenres(publishedWork);
-            var publishedWorkThemes = _controller.GetPublishedWorksThemes(publishedWork);
+            var publishedWork = _publishedWorkService.GetPublishedWork(_form.PublishedWorksListBox.SelectedItem.ToString());
+            var publishedWorkGenres = _publishedWorkGenreService.GetPublishedWorksGenres(publishedWork);
+            var publishedWorkThemes = _publishedWorkThemeService.GetPublishedWorksThemes(publishedWork);
 
             var genreNames = new List<string>();
             foreach (var workGenre in publishedWorkGenres)
             {
-                var pwGenre = _controller.GetGenre(workGenre.GenreId);
+                var pwGenre = _genreService.GetGenre(workGenre.GenreId);
                 genreNames.Add(pwGenre.Name);
             }
 
             var themeNames = new List<string>();
             foreach (var workTheme in publishedWorkThemes)
             {
-                var pwTheme = _controller.GetTheme(workTheme.ThemeId);
+                var pwTheme = _themeService.GetTheme(workTheme.ThemeId);
                 themeNames.Add(pwTheme.Name);
             }
 
@@ -63,33 +86,49 @@ namespace BelPomagalo.Controllers
         {
             var authorName = _form.AuthorsListBox.SelectedItem.ToString();
 
-            var author = _controller.GetAuthor(authorName);
-            Helper.LoadListBoxData(_form.PublishedWorksListBox, _controller.GetPublishedWorksNames(author.Id));
+            var author = _authorService.GetAuthor(authorName);
+            Helper.LoadListBoxData(_form.PublishedWorksListBox, _publishedWorkService.GetPublishedWorksNames(author.Id));
         }
 
         public void HandleAddNewPublishedWorkButtonClick(object? sender, EventArgs e)
         {
-            new AddNewPublishedWorkFormController(new AddNewPublishedWorkForm()).Form.Show();
+            new AddNewPublishedWorkFormController(new AddNewPublishedWorkForm(),
+                _authorService,
+                _genreService,
+                _themeService,
+                _characterService,
+                _oppositionService,
+                _publishedWorkService,
+                _publishedWorkGenreService,
+                _publishedWorkThemeService,
+                _publishedWorkCharacterService,
+                _publishedWorkOppositionService).Form.Show();
         }
         public void HandleAddNewAuthorButtonClick(object? sender, EventArgs e)
         {
-            new AddNewAuthorFormController(new AddNewAuthorForm(), _form.AuthorsListBox).Form.Show();
+            new AddNewAuthorFormController(new AddNewAuthorForm(),
+                _form.AuthorsListBox,
+                _authorService).Form.Show();
         }
         public void HandleAddNewGenreButtonClick(object? sender, EventArgs e)
         {
-            new AddNewGenreFormController(new AddNewGenreForm()).Form.Show();
+            new AddNewGenreFormController(new AddNewGenreForm(),
+                _genreService).Form.Show();
         }
         public void HandleAddNewThemeButtonClick(object? sender, EventArgs e)
         {
-            new AddNewThemeFormController(new AddNewThemeForm()).Form.Show();
+            new AddNewThemeFormController(new AddNewThemeForm(),
+                _themeService).Form.Show();
         }
         public void HandleAddNewCharacterButtonClick(object? sender, EventArgs e)
         {
-            new AddNewCharacterFormController(new AddNewCharacterForm()).Form.Show();
+            new AddNewCharacterFormController(new AddNewCharacterForm(),
+                _characterService, _authorService).Form.Show();
         }
         public void HandleAddNewOppositionButtonClick(object? sender, EventArgs e)
         {
-            new AddNewOppositionFormController(new AddNewOppositionForm()).Form.Show();
+            new AddNewOppositionFormController(new AddNewOppositionForm(),
+                _oppositionService).Form.Show();
         }
     }
 }

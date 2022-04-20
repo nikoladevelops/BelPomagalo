@@ -1,4 +1,5 @@
 ﻿using BelPomagalo.Models;
+using BelPomagalo.Services;
 using BelPomagalo.Utility;
 using BelPomagalo.Views.AddNewEntityForms;
 
@@ -6,11 +7,11 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
 {
     internal class AddNewAuthorFormController : AddEntityController<AddNewAuthorForm>
     {
-        private readonly FormDataController _controller;
+        private readonly AuthorService _authorService;
         private readonly ListBox _authorsListBox;
-        public AddNewAuthorFormController(AddNewAuthorForm form, ListBox authorsListBox):base(form)
+        public AddNewAuthorFormController(AddNewAuthorForm form, ListBox authorsListBox, AuthorService authorService):base(form)
         {
-            _controller = new FormDataController();
+            _authorService = authorService;
             _authorsListBox = authorsListBox;
             _form.AddButton.Click += HandleAddNewEntityButtonClick;
         }
@@ -24,8 +25,8 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
                 BornDate=_form.AuthorBornDateTextBox.Text,
                 DiedDate=_form.AuthorDiedDateTextBox.Text
             };
-            await _controller.AddAuthor(author);
-            Helper.LoadListBoxData(_authorsListBox, _controller.GetAllAuthorsNames());
+            await _authorService.AddAuthor(author);
+            Helper.LoadListBoxData(_authorsListBox, _authorService.GetAllAuthorsNames());
         }
     }
 }

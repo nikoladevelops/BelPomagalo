@@ -1,4 +1,5 @@
 ﻿using BelPomagalo.Models;
+using BelPomagalo.Services;
 using BelPomagalo.Utility;
 using BelPomagalo.Views.AddNewEntityForms;
 
@@ -6,15 +7,18 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
 {
     internal class AddNewCharacterFormController : AddEntityController<AddNewCharacterForm>
     {
-        private readonly FormDataController _controller;
-        public AddNewCharacterFormController(AddNewCharacterForm form):base(form)
+        private readonly CharacterService _characterService;
+        private readonly AuthorService _authorService;
+        public AddNewCharacterFormController(AddNewCharacterForm form, CharacterService characterService,
+            AuthorService authorService) :base(form)
         {
-            _controller = new FormDataController();
+            _characterService = characterService;
+            _authorService = authorService;
             LoadFormData();
         }
         protected override async void HandleAddNewEntityButtonClick(object? sender, EventArgs e)
         {
-            var author = _controller.GetAuthor(_form.AuthorListBox.SelectedItem.ToString());
+            var author = _authorService.GetAuthor(_form.AuthorListBox.SelectedItem.ToString());
             var character = new Character()
             {
                 Name = _form.CharacterNameTextBox.Text,
@@ -22,11 +26,11 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
                 AuthorId = author.Id
             };
 
-            await _controller.AddCharacter(character);
+            await _characterService.AddCharacter(character);
         }
         private void LoadFormData()
         {
-            Helper.LoadListBoxData(_form.AuthorListBox, _controller.GetAllAuthorsNames(), true);
+            Helper.LoadListBoxData(_form.AuthorListBox, _authorService.GetAllAuthorsNames(), true);
             _form.AddButton.Click += HandleAddNewEntityButtonClick;
         }
     }
