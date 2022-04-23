@@ -56,19 +56,19 @@
             // addPublishedWorkButton
             // 
             this.addPublishedWorkButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.addPublishedWorkButton.Location = new System.Drawing.Point(388, 695);
+            this.addPublishedWorkButton.Location = new System.Drawing.Point(390, 678);
             this.addPublishedWorkButton.Name = "addPublishedWorkButton";
             this.addPublishedWorkButton.Size = new System.Drawing.Size(160, 50);
-            this.addPublishedWorkButton.TabIndex = 54;
+            this.addPublishedWorkButton.TabIndex = 12;
             this.addPublishedWorkButton.Text = "Добави произведение";
             this.addPublishedWorkButton.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(219, 37);
+            this.label1.Location = new System.Drawing.Point(221, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 25);
             this.label1.TabIndex = 33;
@@ -76,28 +76,28 @@
             // 
             // publishedDateTextBox
             // 
-            this.publishedDateTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.publishedDateTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.publishedDateTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.publishedDateTextBox.Location = new System.Drawing.Point(507, 65);
+            this.publishedDateTextBox.Location = new System.Drawing.Point(509, 37);
             this.publishedDateTextBox.Name = "publishedDateTextBox";
             this.publishedDateTextBox.Size = new System.Drawing.Size(195, 35);
-            this.publishedDateTextBox.TabIndex = 53;
+            this.publishedDateTextBox.TabIndex = 2;
             // 
             // nameTextBox
             // 
-            this.nameTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nameTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.nameTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.nameTextBox.Location = new System.Drawing.Point(219, 65);
+            this.nameTextBox.Location = new System.Drawing.Point(221, 37);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(272, 35);
-            this.nameTextBox.TabIndex = 32;
+            this.nameTextBox.TabIndex = 1;
             // 
             // label10
             // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(507, 37);
+            this.label10.Location = new System.Drawing.Point(509, 9);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(195, 25);
             this.label10.TabIndex = 48;
@@ -105,39 +105,39 @@
             // 
             // remarksTextBox
             // 
-            this.remarksTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.remarksTextBox.Location = new System.Drawing.Point(554, 532);
+            this.remarksTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.remarksTextBox.Location = new System.Drawing.Point(556, 504);
             this.remarksTextBox.Multiline = true;
             this.remarksTextBox.Name = "remarksTextBox";
             this.remarksTextBox.Size = new System.Drawing.Size(160, 154);
-            this.remarksTextBox.TabIndex = 52;
+            this.remarksTextBox.TabIndex = 11;
             // 
             // compositionTextBox
             // 
-            this.compositionTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.compositionTextBox.Location = new System.Drawing.Point(554, 142);
+            this.compositionTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.compositionTextBox.Location = new System.Drawing.Point(556, 114);
             this.compositionTextBox.Multiline = true;
             this.compositionTextBox.Name = "compositionTextBox";
             this.compositionTextBox.Size = new System.Drawing.Size(160, 154);
-            this.compositionTextBox.TabIndex = 49;
+            this.compositionTextBox.TabIndex = 5;
             // 
             // genreListBox
             // 
-            this.genreListBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.genreListBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.genreListBox.FormattingEnabled = true;
             this.genreListBox.ItemHeight = 15;
-            this.genreListBox.Location = new System.Drawing.Point(388, 142);
+            this.genreListBox.Location = new System.Drawing.Point(390, 114);
             this.genreListBox.Name = "genreListBox";
             this.genreListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.genreListBox.Size = new System.Drawing.Size(160, 154);
-            this.genreListBox.TabIndex = 38;
+            this.genreListBox.TabIndex = 4;
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(388, 114);
+            this.label3.Location = new System.Drawing.Point(390, 86);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 25);
             this.label3.TabIndex = 35;
@@ -145,32 +145,32 @@
             // 
             // themeListBox
             // 
-            this.themeListBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.themeListBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.themeListBox.FormattingEnabled = true;
             this.themeListBox.ItemHeight = 15;
-            this.themeListBox.Location = new System.Drawing.Point(388, 337);
+            this.themeListBox.Location = new System.Drawing.Point(390, 309);
             this.themeListBox.Name = "themeListBox";
             this.themeListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.themeListBox.Size = new System.Drawing.Size(160, 154);
-            this.themeListBox.TabIndex = 39;
+            this.themeListBox.TabIndex = 7;
             // 
             // characterListBox
             // 
-            this.characterListBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.characterListBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.characterListBox.FormattingEnabled = true;
             this.characterListBox.ItemHeight = 15;
-            this.characterListBox.Location = new System.Drawing.Point(222, 337);
+            this.characterListBox.Location = new System.Drawing.Point(224, 309);
             this.characterListBox.Name = "characterListBox";
             this.characterListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.characterListBox.Size = new System.Drawing.Size(160, 154);
-            this.characterListBox.TabIndex = 41;
+            this.characterListBox.TabIndex = 6;
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(388, 309);
+            this.label4.Location = new System.Drawing.Point(390, 281);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 25);
             this.label4.TabIndex = 36;
@@ -178,10 +178,10 @@
             // 
             // label5
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(222, 309);
+            this.label5.Location = new System.Drawing.Point(224, 281);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 25);
             this.label5.TabIndex = 40;
@@ -189,29 +189,29 @@
             // 
             // authorListBox
             // 
-            this.authorListBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.authorListBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.authorListBox.FormattingEnabled = true;
             this.authorListBox.ItemHeight = 15;
-            this.authorListBox.Location = new System.Drawing.Point(222, 142);
+            this.authorListBox.Location = new System.Drawing.Point(224, 114);
             this.authorListBox.Name = "authorListBox";
             this.authorListBox.Size = new System.Drawing.Size(160, 154);
-            this.authorListBox.TabIndex = 37;
+            this.authorListBox.TabIndex = 3;
             // 
             // motivesAndFiguresTextBox
             // 
-            this.motivesAndFiguresTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.motivesAndFiguresTextBox.Location = new System.Drawing.Point(554, 337);
+            this.motivesAndFiguresTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.motivesAndFiguresTextBox.Location = new System.Drawing.Point(556, 309);
             this.motivesAndFiguresTextBox.Multiline = true;
             this.motivesAndFiguresTextBox.Name = "motivesAndFiguresTextBox";
             this.motivesAndFiguresTextBox.Size = new System.Drawing.Size(160, 154);
-            this.motivesAndFiguresTextBox.TabIndex = 50;
+            this.motivesAndFiguresTextBox.TabIndex = 8;
             // 
             // label9
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(554, 114);
+            this.label9.Location = new System.Drawing.Point(556, 86);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(120, 25);
             this.label9.TabIndex = 42;
@@ -219,10 +219,10 @@
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(222, 114);
+            this.label2.Location = new System.Drawing.Point(224, 86);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 25);
             this.label2.TabIndex = 34;
@@ -230,19 +230,19 @@
             // 
             // ideologicalSuggestionsTextBox
             // 
-            this.ideologicalSuggestionsTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ideologicalSuggestionsTextBox.Location = new System.Drawing.Point(388, 532);
+            this.ideologicalSuggestionsTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ideologicalSuggestionsTextBox.Location = new System.Drawing.Point(390, 504);
             this.ideologicalSuggestionsTextBox.Multiline = true;
             this.ideologicalSuggestionsTextBox.Name = "ideologicalSuggestionsTextBox";
             this.ideologicalSuggestionsTextBox.Size = new System.Drawing.Size(160, 154);
-            this.ideologicalSuggestionsTextBox.TabIndex = 51;
+            this.ideologicalSuggestionsTextBox.TabIndex = 10;
             // 
             // label11
             // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(553, 504);
+            this.label11.Location = new System.Drawing.Point(555, 476);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(107, 25);
             this.label11.TabIndex = 47;
@@ -250,10 +250,10 @@
             // 
             // label8
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(551, 309);
+            this.label8.Location = new System.Drawing.Point(553, 281);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(163, 25);
             this.label8.TabIndex = 43;
@@ -261,10 +261,10 @@
             // 
             // label6
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(388, 504);
+            this.label6.Location = new System.Drawing.Point(390, 476);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(171, 25);
             this.label6.TabIndex = 46;
@@ -272,21 +272,21 @@
             // 
             // oppositionListBox
             // 
-            this.oppositionListBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.oppositionListBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.oppositionListBox.FormattingEnabled = true;
             this.oppositionListBox.ItemHeight = 15;
-            this.oppositionListBox.Location = new System.Drawing.Point(222, 532);
+            this.oppositionListBox.Location = new System.Drawing.Point(224, 504);
             this.oppositionListBox.Name = "oppositionListBox";
             this.oppositionListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.oppositionListBox.Size = new System.Drawing.Size(160, 154);
-            this.oppositionListBox.TabIndex = 45;
+            this.oppositionListBox.TabIndex = 9;
             // 
             // label7
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(222, 504);
+            this.label7.Location = new System.Drawing.Point(224, 476);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(100, 25);
             this.label7.TabIndex = 44;
