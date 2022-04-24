@@ -39,16 +39,18 @@
             // 
             // addNewCharacterButton
             // 
+            this.addNewCharacterButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.addNewCharacterButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.addNewCharacterButton.Location = new System.Drawing.Point(23, 280);
             this.addNewCharacterButton.Name = "addNewCharacterButton";
             this.addNewCharacterButton.Size = new System.Drawing.Size(295, 59);
-            this.addNewCharacterButton.TabIndex = 5;
+            this.addNewCharacterButton.TabIndex = 4;
             this.addNewCharacterButton.Text = "Добави";
             this.addNewCharacterButton.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(23, 24);
@@ -59,14 +61,16 @@
             // 
             // characterNameTextBox
             // 
+            this.characterNameTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.characterNameTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.characterNameTextBox.Location = new System.Drawing.Point(23, 52);
             this.characterNameTextBox.Name = "characterNameTextBox";
             this.characterNameTextBox.Size = new System.Drawing.Size(295, 35);
-            this.characterNameTextBox.TabIndex = 3;
+            this.characterNameTextBox.TabIndex = 1;
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(23, 102);
@@ -77,24 +81,27 @@
             // 
             // descriptionTextBox
             // 
+            this.descriptionTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.descriptionTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.descriptionTextBox.Location = new System.Drawing.Point(23, 130);
             this.descriptionTextBox.Multiline = true;
             this.descriptionTextBox.Name = "descriptionTextBox";
             this.descriptionTextBox.Size = new System.Drawing.Size(295, 144);
-            this.descriptionTextBox.TabIndex = 6;
+            this.descriptionTextBox.TabIndex = 2;
             // 
             // authorListBox
             // 
+            this.authorListBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.authorListBox.FormattingEnabled = true;
             this.authorListBox.ItemHeight = 15;
             this.authorListBox.Location = new System.Drawing.Point(340, 52);
             this.authorListBox.Name = "authorListBox";
             this.authorListBox.Size = new System.Drawing.Size(187, 214);
-            this.authorListBox.TabIndex = 8;
+            this.authorListBox.TabIndex = 3;
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(340, 24);
