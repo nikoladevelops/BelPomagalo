@@ -43,6 +43,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(29, 97);
@@ -53,25 +54,28 @@
             // 
             // descriptionTextBox
             // 
+            this.descriptionTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.descriptionTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.descriptionTextBox.Location = new System.Drawing.Point(29, 125);
             this.descriptionTextBox.Multiline = true;
             this.descriptionTextBox.Name = "descriptionTextBox";
             this.descriptionTextBox.Size = new System.Drawing.Size(295, 155);
-            this.descriptionTextBox.TabIndex = 11;
+            this.descriptionTextBox.TabIndex = 2;
             // 
             // addNewAuthorButton
             // 
+            this.addNewAuthorButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.addNewAuthorButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.addNewAuthorButton.Location = new System.Drawing.Point(210, 286);
             this.addNewAuthorButton.Name = "addNewAuthorButton";
             this.addNewAuthorButton.Size = new System.Drawing.Size(295, 59);
-            this.addNewAuthorButton.TabIndex = 10;
+            this.addNewAuthorButton.TabIndex = 6;
             this.addNewAuthorButton.Text = "Добави";
             this.addNewAuthorButton.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(29, 19);
@@ -82,14 +86,16 @@
             // 
             // authorNameTextBox
             // 
+            this.authorNameTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.authorNameTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.authorNameTextBox.Location = new System.Drawing.Point(29, 47);
             this.authorNameTextBox.Name = "authorNameTextBox";
             this.authorNameTextBox.Size = new System.Drawing.Size(295, 35);
-            this.authorNameTextBox.TabIndex = 8;
+            this.authorNameTextBox.TabIndex = 1;
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(362, 19);
@@ -100,14 +106,16 @@
             // 
             // bornLocationTextBox
             // 
+            this.bornLocationTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bornLocationTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.bornLocationTextBox.Location = new System.Drawing.Point(362, 47);
             this.bornLocationTextBox.Name = "bornLocationTextBox";
             this.bornLocationTextBox.Size = new System.Drawing.Size(295, 35);
-            this.bornLocationTextBox.TabIndex = 13;
+            this.bornLocationTextBox.TabIndex = 3;
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(362, 97);
@@ -118,14 +126,16 @@
             // 
             // bornDateTextBox
             // 
+            this.bornDateTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bornDateTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.bornDateTextBox.Location = new System.Drawing.Point(362, 125);
             this.bornDateTextBox.Name = "bornDateTextBox";
             this.bornDateTextBox.Size = new System.Drawing.Size(167, 35);
-            this.bornDateTextBox.TabIndex = 15;
+            this.bornDateTextBox.TabIndex = 4;
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.Location = new System.Drawing.Point(362, 184);
@@ -136,11 +146,12 @@
             // 
             // diedDateTextBox
             // 
+            this.diedDateTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.diedDateTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.diedDateTextBox.Location = new System.Drawing.Point(362, 212);
             this.diedDateTextBox.Name = "diedDateTextBox";
             this.diedDateTextBox.Size = new System.Drawing.Size(167, 35);
-            this.diedDateTextBox.TabIndex = 17;
+            this.diedDateTextBox.TabIndex = 5;
             // 
             // AddNewAuthorForm
             // 
