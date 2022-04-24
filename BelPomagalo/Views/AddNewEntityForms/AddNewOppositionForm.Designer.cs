@@ -37,16 +37,18 @@
             // 
             // addNewOppositionButton
             // 
+            this.addNewOppositionButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.addNewOppositionButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.addNewOppositionButton.Location = new System.Drawing.Point(23, 280);
             this.addNewOppositionButton.Name = "addNewOppositionButton";
             this.addNewOppositionButton.Size = new System.Drawing.Size(295, 59);
-            this.addNewOppositionButton.TabIndex = 5;
+            this.addNewOppositionButton.TabIndex = 3;
             this.addNewOppositionButton.Text = "Добави";
             this.addNewOppositionButton.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(23, 24);
@@ -57,14 +59,16 @@
             // 
             // oppositionNameTextBox
             // 
+            this.oppositionNameTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.oppositionNameTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.oppositionNameTextBox.Location = new System.Drawing.Point(23, 52);
             this.oppositionNameTextBox.Name = "oppositionNameTextBox";
             this.oppositionNameTextBox.Size = new System.Drawing.Size(295, 35);
-            this.oppositionNameTextBox.TabIndex = 3;
+            this.oppositionNameTextBox.TabIndex = 1;
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(23, 102);
@@ -75,12 +79,13 @@
             // 
             // descriptionTextBox
             // 
+            this.descriptionTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.descriptionTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.descriptionTextBox.Location = new System.Drawing.Point(23, 130);
             this.descriptionTextBox.Multiline = true;
             this.descriptionTextBox.Name = "descriptionTextBox";
             this.descriptionTextBox.Size = new System.Drawing.Size(295, 144);
-            this.descriptionTextBox.TabIndex = 6;
+            this.descriptionTextBox.TabIndex = 2;
             // 
             // AddNewOppositionForm
             // 

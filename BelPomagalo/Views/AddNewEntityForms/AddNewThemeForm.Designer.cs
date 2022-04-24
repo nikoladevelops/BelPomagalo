@@ -37,14 +37,16 @@
             // 
             // themeNameTextBox
             // 
+            this.themeNameTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.themeNameTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.themeNameTextBox.Location = new System.Drawing.Point(23, 54);
             this.themeNameTextBox.Name = "themeNameTextBox";
             this.themeNameTextBox.Size = new System.Drawing.Size(295, 35);
-            this.themeNameTextBox.TabIndex = 0;
+            this.themeNameTextBox.TabIndex = 1;
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(23, 26);
@@ -55,16 +57,18 @@
             // 
             // addNewThemeButton
             // 
+            this.addNewThemeButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.addNewThemeButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.addNewThemeButton.Location = new System.Drawing.Point(23, 265);
             this.addNewThemeButton.Name = "addNewThemeButton";
             this.addNewThemeButton.Size = new System.Drawing.Size(295, 59);
-            this.addNewThemeButton.TabIndex = 2;
+            this.addNewThemeButton.TabIndex = 3;
             this.addNewThemeButton.Text = "Добави";
             this.addNewThemeButton.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(23, 100);
@@ -75,12 +79,13 @@
             // 
             // descriptionTextBox
             // 
+            this.descriptionTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.descriptionTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.descriptionTextBox.Location = new System.Drawing.Point(23, 128);
             this.descriptionTextBox.Multiline = true;
             this.descriptionTextBox.Name = "descriptionTextBox";
             this.descriptionTextBox.Size = new System.Drawing.Size(295, 131);
-            this.descriptionTextBox.TabIndex = 3;
+            this.descriptionTextBox.TabIndex = 2;
             // 
             // AddNewThemeForm
             // 
