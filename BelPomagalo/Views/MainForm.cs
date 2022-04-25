@@ -6,6 +6,9 @@
         {
             InitializeComponent();
         }
+        public Button HomeMenuButton { get => homeMenuButton; }
+        public Button GamesMenuButton { get => gamesMenuButton; }
+        public Button LibraryMenuButton { get => libraryMenuButton; }
         public Button ShowButton { get => showButton; }
         public Button AddNewPublishedWorkButton { get => addNewPublishedWorkButton; }
         public Button AddNewAuthorButton { get => addNewAuthorButton; }

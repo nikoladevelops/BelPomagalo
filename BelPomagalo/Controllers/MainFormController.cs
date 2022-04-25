@@ -18,6 +18,8 @@ namespace BelPomagalo.Controllers
         private readonly PublishedWorkThemeService _publishedWorkThemeService;
         private readonly PublishedWorkCharacterService _publishedWorkCharacterService;
         private readonly PublishedWorkOppositionService _publishedWorkOppositionService;
+
+        private Button activeButton;
         public MainFormController(MainForm mainForm, AuthorService authorService, GenreService genreService, ThemeService themeService,
             CharacterService characterService, OppositionService oppositionService, PublishedWorkService publishedWorkService,
             PublishedWorkGenreService publishedWorkGenreService, PublishedWorkThemeService publishedWorkThemeService,
@@ -34,6 +36,11 @@ namespace BelPomagalo.Controllers
             _publishedWorkCharacterService = publishedWorkCharacterService;
             _publishedWorkOppositionService = publishedWorkOppositionService;
 
+            activeButton = new Button();
+            _form.HomeMenuButton.Click += MakeMenuButtonActiveOnClick;
+            _form.GamesMenuButton.Click += MakeMenuButtonActiveOnClick;
+            _form.LibraryMenuButton.Click += MakeMenuButtonActiveOnClick;
+
             _form.Load += HandleFormLoad;
             _form.AuthorsListBox.SelectedIndexChanged += HandleAuthorsListBoxSelectedIndexChanged;
 
@@ -44,6 +51,25 @@ namespace BelPomagalo.Controllers
             _form.AddNewThemeButton.Click += HandleAddNewThemeButtonClick;
             _form.AddNewCharacterButton.Click += HandleAddNewCharacterButtonClick;
             _form.AddNewOppositionButton.Click += HandleAddNewOppositionButtonClick;
+        }
+
+        private void MakeMenuButtonActiveOnClick(object? sender, EventArgs e)
+        {
+            activeButton.BackColor = Color.FromArgb(241, 144, 102);
+            activeButton = sender as Button;
+            activeButton.BackColor= Color.FromArgb(231, 127, 103);
+
+            switch (activeButton.Name)
+            {
+                case "homeMenuButton":
+                    break;
+                case "gamesMenuButton":
+                    break;
+                case "libraryMenuButton":
+                    break;
+                default:
+                    break;
+            }
         }
 
         public void HandleFormLoad(object? sender, EventArgs e) 

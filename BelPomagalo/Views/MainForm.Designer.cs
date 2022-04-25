@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.menuPanel = new System.Windows.Forms.Panel();
+            this.libraryMenuButton = new System.Windows.Forms.Button();
+            this.gamesMenuButton = new System.Windows.Forms.Button();
+            this.homeMenuButton = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.contentPanel = new System.Windows.Forms.Panel();
             this.publishedWorkLabel = new System.Windows.Forms.Label();
             this.addNewOppositionButton = new System.Windows.Forms.Button();
             this.authorsListBox = new System.Windows.Forms.ListBox();
@@ -45,48 +46,59 @@
             this.addNewAuthorButton = new System.Windows.Forms.Button();
             this.showButton = new System.Windows.Forms.Button();
             this.addNewPublishedWorkButton = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.menuPanel.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.contentPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // menuPanel
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(144)))), ((int)(((byte)(102)))));
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(194, 488);
-            this.panel1.TabIndex = 0;
+            this.menuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(144)))), ((int)(((byte)(102)))));
+            this.menuPanel.Controls.Add(this.libraryMenuButton);
+            this.menuPanel.Controls.Add(this.gamesMenuButton);
+            this.menuPanel.Controls.Add(this.homeMenuButton);
+            this.menuPanel.Controls.Add(this.panel3);
+            this.menuPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.menuPanel.Location = new System.Drawing.Point(0, 0);
+            this.menuPanel.Name = "menuPanel";
+            this.menuPanel.Size = new System.Drawing.Size(194, 488);
+            this.menuPanel.TabIndex = 0;
             // 
-            // button2
+            // libraryMenuButton
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(0, 149);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(194, 49);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "Игри";
-            this.button2.UseVisualStyleBackColor = true;
+            this.libraryMenuButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.libraryMenuButton.FlatAppearance.BorderSize = 0;
+            this.libraryMenuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.libraryMenuButton.Location = new System.Drawing.Point(0, 198);
+            this.libraryMenuButton.Name = "libraryMenuButton";
+            this.libraryMenuButton.Size = new System.Drawing.Size(194, 49);
+            this.libraryMenuButton.TabIndex = 24;
+            this.libraryMenuButton.Text = "Библиотека";
+            this.libraryMenuButton.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // gamesMenuButton
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(0, 100);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(194, 49);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Начало";
-            this.button1.UseVisualStyleBackColor = true;
+            this.gamesMenuButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gamesMenuButton.FlatAppearance.BorderSize = 0;
+            this.gamesMenuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.gamesMenuButton.Location = new System.Drawing.Point(0, 149);
+            this.gamesMenuButton.Name = "gamesMenuButton";
+            this.gamesMenuButton.Size = new System.Drawing.Size(194, 49);
+            this.gamesMenuButton.TabIndex = 23;
+            this.gamesMenuButton.Text = "Игри";
+            this.gamesMenuButton.UseVisualStyleBackColor = true;
+            // 
+            // homeMenuButton
+            // 
+            this.homeMenuButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.homeMenuButton.FlatAppearance.BorderSize = 0;
+            this.homeMenuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.homeMenuButton.Location = new System.Drawing.Point(0, 100);
+            this.homeMenuButton.Name = "homeMenuButton";
+            this.homeMenuButton.Size = new System.Drawing.Size(194, 49);
+            this.homeMenuButton.TabIndex = 22;
+            this.homeMenuButton.Text = "Начало";
+            this.homeMenuButton.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
@@ -109,25 +121,25 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Помагало";
             // 
-            // panel2
+            // contentPanel
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(166)))), ((int)(((byte)(131)))));
-            this.panel2.Controls.Add(this.publishedWorkLabel);
-            this.panel2.Controls.Add(this.addNewOppositionButton);
-            this.panel2.Controls.Add(this.authorsListBox);
-            this.panel2.Controls.Add(this.addNewCharacterButton);
-            this.panel2.Controls.Add(this.addNewThemeButton);
-            this.panel2.Controls.Add(this.authorLabel);
-            this.panel2.Controls.Add(this.addNewGenreButton);
-            this.panel2.Controls.Add(this.publishedWorkListBox);
-            this.panel2.Controls.Add(this.addNewAuthorButton);
-            this.panel2.Controls.Add(this.showButton);
-            this.panel2.Controls.Add(this.addNewPublishedWorkButton);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(194, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(702, 488);
-            this.panel2.TabIndex = 1;
+            this.contentPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(166)))), ((int)(((byte)(131)))));
+            this.contentPanel.Controls.Add(this.publishedWorkLabel);
+            this.contentPanel.Controls.Add(this.addNewOppositionButton);
+            this.contentPanel.Controls.Add(this.authorsListBox);
+            this.contentPanel.Controls.Add(this.addNewCharacterButton);
+            this.contentPanel.Controls.Add(this.addNewThemeButton);
+            this.contentPanel.Controls.Add(this.authorLabel);
+            this.contentPanel.Controls.Add(this.addNewGenreButton);
+            this.contentPanel.Controls.Add(this.publishedWorkListBox);
+            this.contentPanel.Controls.Add(this.addNewAuthorButton);
+            this.contentPanel.Controls.Add(this.showButton);
+            this.contentPanel.Controls.Add(this.addNewPublishedWorkButton);
+            this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contentPanel.Location = new System.Drawing.Point(194, 0);
+            this.contentPanel.Name = "contentPanel";
+            this.contentPanel.Size = new System.Drawing.Size(702, 488);
+            this.contentPanel.TabIndex = 1;
             // 
             // publishedWorkLabel
             // 
@@ -241,41 +253,29 @@
             this.addNewPublishedWorkButton.Text = "Добави Произведение";
             this.addNewPublishedWorkButton.UseVisualStyleBackColor = true;
             // 
-            // button3
-            // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(0, 198);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(194, 49);
-            this.button3.TabIndex = 24;
-            this.button3.Text = "Библиотека";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(896, 488);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.contentPanel);
+            this.Controls.Add(this.menuPanel);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Помагало";
-            this.panel1.ResumeLayout(false);
+            this.menuPanel.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.contentPanel.ResumeLayout(false);
+            this.contentPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Panel panel1;
-        private Panel panel2;
+        private Panel menuPanel;
+        private Panel contentPanel;
         private Label publishedWorkLabel;
         private Button addNewOppositionButton;
         private ListBox authorsListBox;
@@ -287,10 +287,10 @@
         private Button addNewAuthorButton;
         private Button showButton;
         private Button addNewPublishedWorkButton;
-        private Button button2;
-        private Button button1;
+        private Button gamesMenuButton;
+        private Button homeMenuButton;
         private Panel panel3;
         private Label label1;
-        private Button button3;
+        private Button libraryMenuButton;
     }
 }
