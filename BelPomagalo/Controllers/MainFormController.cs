@@ -1,6 +1,7 @@
 ﻿using BelPomagalo.Controllers.AddNewEntityControllers;
 using BelPomagalo.Services;
 using BelPomagalo.Utility;
+using BelPomagalo.Views;
 using BelPomagalo.Views.AddNewEntityForms;
 using BelPomagalo.Views.ShowEntityForms;
 
@@ -20,6 +21,8 @@ namespace BelPomagalo.Controllers
         private readonly PublishedWorkOppositionService _publishedWorkOppositionService;
 
         private Button activeButton;
+        private Form activeForm;
+
         public MainFormController(MainForm mainForm, AuthorService authorService, GenreService genreService, ThemeService themeService,
             CharacterService characterService, OppositionService oppositionService, PublishedWorkService publishedWorkService,
             PublishedWorkGenreService publishedWorkGenreService, PublishedWorkThemeService publishedWorkThemeService,
@@ -36,7 +39,6 @@ namespace BelPomagalo.Controllers
             _publishedWorkCharacterService = publishedWorkCharacterService;
             _publishedWorkOppositionService = publishedWorkOppositionService;
 
-            activeButton = new Button();
             _form.HomeMenuButton.Click += MakeMenuButtonActiveOnClick;
             _form.GamesMenuButton.Click += MakeMenuButtonActiveOnClick;
             _form.LibraryMenuButton.Click += MakeMenuButtonActiveOnClick;
@@ -55,23 +57,55 @@ namespace BelPomagalo.Controllers
 
         private void MakeMenuButtonActiveOnClick(object? sender, EventArgs e)
         {
-            activeButton.BackColor = Color.FromArgb(241, 144, 102);
+            if (activeButton != null) 
+            {
+                activeButton.BackColor = Color.FromArgb(241, 144, 102);
+            }
             activeButton = sender as Button;
             activeButton.BackColor= Color.FromArgb(231, 127, 103);
 
+            Form formToMakeActive = null;
             switch (activeButton.Name)
             {
                 case "homeMenuButton":
+                    formToMakeActive = new HomeForm();
                     break;
                 case "gamesMenuButton":
+                    //formToMakeActive = new GamesForm();
+                    throw new NotImplementedException();
                     break;
                 case "libraryMenuButton":
+                    //formToMakeActive = new LibraryForm();
+                    throw new NotImplementedException();
                     break;
                 default:
                     break;
             }
+            MakeFormActive(formToMakeActive);
         }
-
+        private void MakeFormActive(Form childForm)
+        {
+            if (activeForm != null) 
+            {
+                // no need to load the form again, if we are trying to load the same form
+                if (childForm.Name == activeForm.Name)
+                {
+                    return;
+                }
+                // make sure the old form is closed and doesn't use any resources
+                activeForm.Close();
+                activeForm.Dispose();
+            }
+            activeForm = childForm;
+            _form.ContentPanel.Controls.Clear(); // just in case, remove any elements in the content panel
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            childForm.AutoScroll = true;
+            _form.ContentPanel.Controls.Add(childForm);
+            childForm.BringToFront();
+            childForm.Show();
+        }
         public void HandleFormLoad(object? sender, EventArgs e) 
         {
             Helper.LoadListBoxData(_form.AuthorsListBox, _authorService.GetAllAuthorsNames());
