@@ -61,7 +61,7 @@
             this.menuPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuPanel.Location = new System.Drawing.Point(0, 0);
             this.menuPanel.Name = "menuPanel";
-            this.menuPanel.Size = new System.Drawing.Size(194, 488);
+            this.menuPanel.Size = new System.Drawing.Size(194, 490);
             this.menuPanel.TabIndex = 0;
             // 
             // libraryMenuButton
@@ -138,7 +138,7 @@
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentPanel.Location = new System.Drawing.Point(194, 0);
             this.contentPanel.Name = "contentPanel";
-            this.contentPanel.Size = new System.Drawing.Size(702, 488);
+            this.contentPanel.Size = new System.Drawing.Size(702, 490);
             this.contentPanel.TabIndex = 1;
             // 
             // publishedWorkLabel
@@ -146,7 +146,7 @@
             this.publishedWorkLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.publishedWorkLabel.AutoSize = true;
             this.publishedWorkLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.publishedWorkLabel.Location = new System.Drawing.Point(169, 252);
+            this.publishedWorkLabel.Location = new System.Drawing.Point(169, 253);
             this.publishedWorkLabel.Name = "publishedWorkLabel";
             this.publishedWorkLabel.Size = new System.Drawing.Size(114, 21);
             this.publishedWorkLabel.TabIndex = 14;
@@ -155,7 +155,7 @@
             // addNewOppositionButton
             // 
             this.addNewOppositionButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.addNewOppositionButton.Location = new System.Drawing.Point(6, 296);
+            this.addNewOppositionButton.Location = new System.Drawing.Point(6, 297);
             this.addNewOppositionButton.Name = "addNewOppositionButton";
             this.addNewOppositionButton.Size = new System.Drawing.Size(141, 49);
             this.addNewOppositionButton.TabIndex = 21;
@@ -167,7 +167,7 @@
             this.authorsListBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.authorsListBox.FormattingEnabled = true;
             this.authorsListBox.ItemHeight = 15;
-            this.authorsListBox.Location = new System.Drawing.Point(169, 49);
+            this.authorsListBox.Location = new System.Drawing.Point(169, 50);
             this.authorsListBox.Name = "authorsListBox";
             this.authorsListBox.Size = new System.Drawing.Size(382, 199);
             this.authorsListBox.TabIndex = 11;
@@ -175,7 +175,7 @@
             // addNewCharacterButton
             // 
             this.addNewCharacterButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.addNewCharacterButton.Location = new System.Drawing.Point(6, 241);
+            this.addNewCharacterButton.Location = new System.Drawing.Point(6, 242);
             this.addNewCharacterButton.Name = "addNewCharacterButton";
             this.addNewCharacterButton.Size = new System.Drawing.Size(141, 49);
             this.addNewCharacterButton.TabIndex = 20;
@@ -185,7 +185,7 @@
             // addNewThemeButton
             // 
             this.addNewThemeButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.addNewThemeButton.Location = new System.Drawing.Point(6, 186);
+            this.addNewThemeButton.Location = new System.Drawing.Point(6, 187);
             this.addNewThemeButton.Name = "addNewThemeButton";
             this.addNewThemeButton.Size = new System.Drawing.Size(141, 49);
             this.addNewThemeButton.TabIndex = 19;
@@ -197,7 +197,7 @@
             this.authorLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.authorLabel.AutoSize = true;
             this.authorLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.authorLabel.Location = new System.Drawing.Point(169, 25);
+            this.authorLabel.Location = new System.Drawing.Point(169, 26);
             this.authorLabel.Name = "authorLabel";
             this.authorLabel.Size = new System.Drawing.Size(53, 21);
             this.authorLabel.TabIndex = 13;
@@ -206,7 +206,7 @@
             // addNewGenreButton
             // 
             this.addNewGenreButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.addNewGenreButton.Location = new System.Drawing.Point(6, 132);
+            this.addNewGenreButton.Location = new System.Drawing.Point(6, 133);
             this.addNewGenreButton.Name = "addNewGenreButton";
             this.addNewGenreButton.Size = new System.Drawing.Size(141, 49);
             this.addNewGenreButton.TabIndex = 18;
@@ -218,7 +218,7 @@
             this.publishedWorkListBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.publishedWorkListBox.FormattingEnabled = true;
             this.publishedWorkListBox.ItemHeight = 15;
-            this.publishedWorkListBox.Location = new System.Drawing.Point(169, 276);
+            this.publishedWorkListBox.Location = new System.Drawing.Point(169, 277);
             this.publishedWorkListBox.Name = "publishedWorkListBox";
             this.publishedWorkListBox.Size = new System.Drawing.Size(382, 199);
             this.publishedWorkListBox.TabIndex = 12;
@@ -226,7 +226,7 @@
             // addNewAuthorButton
             // 
             this.addNewAuthorButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.addNewAuthorButton.Location = new System.Drawing.Point(6, 77);
+            this.addNewAuthorButton.Location = new System.Drawing.Point(6, 78);
             this.addNewAuthorButton.Name = "addNewAuthorButton";
             this.addNewAuthorButton.Size = new System.Drawing.Size(141, 49);
             this.addNewAuthorButton.TabIndex = 17;
@@ -236,7 +236,7 @@
             // showButton
             // 
             this.showButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.showButton.Location = new System.Drawing.Point(557, 229);
+            this.showButton.Location = new System.Drawing.Point(557, 230);
             this.showButton.Name = "showButton";
             this.showButton.Size = new System.Drawing.Size(142, 61);
             this.showButton.TabIndex = 15;
@@ -246,7 +246,7 @@
             // addNewPublishedWorkButton
             // 
             this.addNewPublishedWorkButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.addNewPublishedWorkButton.Location = new System.Drawing.Point(6, 22);
+            this.addNewPublishedWorkButton.Location = new System.Drawing.Point(6, 23);
             this.addNewPublishedWorkButton.Name = "addNewPublishedWorkButton";
             this.addNewPublishedWorkButton.Size = new System.Drawing.Size(141, 49);
             this.addNewPublishedWorkButton.TabIndex = 16;
@@ -257,7 +257,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(896, 488);
+            this.ClientSize = new System.Drawing.Size(896, 490);
             this.Controls.Add(this.contentPanel);
             this.Controls.Add(this.menuPanel);
             this.Name = "MainForm";
