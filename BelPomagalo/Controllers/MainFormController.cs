@@ -71,8 +71,7 @@ namespace BelPomagalo.Controllers
                     formToMakeActive = new HomeForm();
                     break;
                 case "gamesMenuButton":
-                    //formToMakeActive = new GamesForm();
-                    throw new NotImplementedException();
+                    formToMakeActive = new GamesForm();
                     break;
                 case "libraryMenuButton":
                     //formToMakeActive = new LibraryForm();
