@@ -75,6 +75,7 @@ namespace BelPomagalo.Controllers
                     break;
                 case "libraryMenuButton":
                     formToMakeActive = new LibraryFormController(new LibraryForm(),
+                        (x) => MakeFormActive(x), // pass the method responsible for opening a child form inside the contentPanel
                         _authorService,
                         _genreService,
                         _themeService,

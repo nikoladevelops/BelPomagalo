@@ -8,6 +8,7 @@ namespace BelPomagalo.Controllers
 {
     internal class LibraryFormController : Controller<LibraryForm>
     {
+        private readonly Action<Form> _openChildFormMethod;
         private readonly AuthorService _authorService;
         private readonly GenreService _genreService;
         private readonly ThemeService _themeService;
@@ -22,11 +23,12 @@ namespace BelPomagalo.Controllers
         private readonly string[] literatureComboBoxItems = new string[] { "автор", "герой", "жанр", "опозиция", "произведение", "тема" };
         private readonly string[] bulgarianComboBoxItems = new string[] {  }; // TODO
 
-        public LibraryFormController(LibraryForm form, AuthorService authorService, GenreService genreService, ThemeService themeService,
+        public LibraryFormController(LibraryForm form, Action<Form> openChildFormMethod, AuthorService authorService, GenreService genreService, ThemeService themeService,
             CharacterService characterService, OppositionService oppositionService, PublishedWorkService publishedWorkService,
             PublishedWorkGenreService publishedWorkGenreService, PublishedWorkThemeService publishedWorkThemeService,
             PublishedWorkCharacterService publishedWorkCharacterService, PublishedWorkOppositionService publishedWorkOppositionService) : base(form)
         {
+            _openChildFormMethod = openChildFormMethod;
             _authorService = authorService;
             _genreService = genreService;
             _themeService = themeService;
@@ -129,21 +131,21 @@ namespace BelPomagalo.Controllers
         {
             if (formType == "add")
             {
-                addEntityForm.Show();
+                _openChildFormMethod(addEntityForm);
 
                 editEntityForm.Dispose();
                 deleteEntityForm.Dispose();
             }
             else if (formType == "edit")
             {
-                editEntityForm.Show();
+                _openChildFormMethod(editEntityForm);
 
                 addEntityForm.Dispose();
                 deleteEntityForm.Dispose();
             }
             else if (formType == "delete")
             {
-                deleteEntityForm.Show();
+                _openChildFormMethod(deleteEntityForm);
 
                 editEntityForm.Dispose();
                 addEntityForm.Dispose();
