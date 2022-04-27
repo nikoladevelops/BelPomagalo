@@ -85,14 +85,7 @@ namespace BelPomagalo.Controllers
 
         private void OpenLiteratureFormDependingOnSelectedEntity(string formType)
         {
-            var selectedLiteratureEntity = _form.LiteratureComboBox.SelectedItem.ToString();
-            if (selectedLiteratureEntity == null)
-            {
-                MessageBox.Show("Трябва да изберете какво искате да промените.");
-                return;
-            }
-
-            switch (selectedLiteratureEntity)
+            switch (_form.LiteratureComboBox.SelectedItem)
             {
                 case "автор":
                     OpenChildFormDependingOnFormType(formType,
