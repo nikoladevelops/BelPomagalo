@@ -16,5 +16,14 @@ namespace BelPomagalo.Views
         {
             InitializeComponent();
         }
+        public ComboBox LiteratureComboBox { get => literatureComboBox; }
+        public Button LiteratureAddButton { get => literatureAddButton; }
+        public Button LiteratureEditButton { get => literatureEditButton; }
+        public Button LiteratureDeleteButton { get => literatureDeleteButton; }
+
+        public ComboBox BulgarianComboBox { get => bulgarianComboBox; }
+        public Button BulgarianAddButton { get => bulgarianAddButton; }
+        public Button BulgarianEditButton { get => bulgarianEditButton; }
+        public Button BulgarianDeleteButton { get => bulgarianDeleteButton; }
     }
 }

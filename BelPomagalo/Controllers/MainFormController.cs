@@ -74,7 +74,17 @@ namespace BelPomagalo.Controllers
                     formToMakeActive = new GamesForm();
                     break;
                 case "libraryMenuButton":
-                    formToMakeActive = new LibraryForm();
+                    formToMakeActive = new LibraryFormController(new LibraryForm(),
+                        _authorService,
+                        _genreService,
+                        _themeService,
+                        _characterService,
+                        _oppositionService,
+                        _publishedWorkService,
+                        _publishedWorkGenreService,
+                        _publishedWorkThemeService,
+                        _publishedWorkCharacterService,
+                        _publishedWorkOppositionService).Form;
                     break;
                 default:
                     break;
@@ -165,7 +175,6 @@ namespace BelPomagalo.Controllers
         public void HandleAddNewAuthorButtonClick(object? sender, EventArgs e)
         {
             new AddNewAuthorFormController(new AddNewAuthorForm(),
-                _form.AuthorsListBox,
                 _authorService).Form.Show();
         }
         public void HandleAddNewGenreButtonClick(object? sender, EventArgs e)

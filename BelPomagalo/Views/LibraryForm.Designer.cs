@@ -39,17 +39,17 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.literatureDeleteButton = new System.Windows.Forms.Button();
+            this.literatureComboBox = new System.Windows.Forms.ComboBox();
+            this.literatureEditButton = new System.Windows.Forms.Button();
+            this.literatureAddButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.bulgarianDeleteButton = new System.Windows.Forms.Button();
+            this.bulgarianComboBox = new System.Windows.Forms.ComboBox();
+            this.bulgarianEditButton = new System.Windows.Forms.Button();
+            this.bulgarianAddButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -212,70 +212,70 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.button9);
-            this.panel1.Controls.Add(this.button10);
+            this.panel1.Controls.Add(this.literatureDeleteButton);
+            this.panel1.Controls.Add(this.literatureComboBox);
+            this.panel1.Controls.Add(this.literatureEditButton);
+            this.panel1.Controls.Add(this.literatureAddButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 68);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 146);
             this.panel1.TabIndex = 4;
             // 
-            // button8
+            // literatureDeleteButton
             // 
-            this.button8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button8.BackColor = System.Drawing.Color.Red;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button8.Location = new System.Drawing.Point(458, 94);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(115, 37);
-            this.button8.TabIndex = 3;
-            this.button8.Text = "Изтрий";
-            this.button8.UseVisualStyleBackColor = false;
+            this.literatureDeleteButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.literatureDeleteButton.BackColor = System.Drawing.Color.Red;
+            this.literatureDeleteButton.FlatAppearance.BorderSize = 0;
+            this.literatureDeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.literatureDeleteButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.literatureDeleteButton.Location = new System.Drawing.Point(458, 94);
+            this.literatureDeleteButton.Name = "literatureDeleteButton";
+            this.literatureDeleteButton.Size = new System.Drawing.Size(115, 37);
+            this.literatureDeleteButton.TabIndex = 3;
+            this.literatureDeleteButton.Text = "Изтрий";
+            this.literatureDeleteButton.UseVisualStyleBackColor = false;
             // 
-            // comboBox2
+            // literatureComboBox
             // 
-            this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(260, 54);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(178, 29);
-            this.comboBox2.TabIndex = 0;
-            this.comboBox2.Tag = "";
+            this.literatureComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.literatureComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.literatureComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.literatureComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.literatureComboBox.FormattingEnabled = true;
+            this.literatureComboBox.Location = new System.Drawing.Point(260, 54);
+            this.literatureComboBox.Name = "literatureComboBox";
+            this.literatureComboBox.Size = new System.Drawing.Size(178, 29);
+            this.literatureComboBox.TabIndex = 0;
+            this.literatureComboBox.Tag = "";
             // 
-            // button9
+            // literatureEditButton
             // 
-            this.button9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button9.BackColor = System.Drawing.Color.Yellow;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button9.Location = new System.Drawing.Point(458, 51);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(115, 37);
-            this.button9.TabIndex = 2;
-            this.button9.Text = "Редактирай";
-            this.button9.UseVisualStyleBackColor = false;
+            this.literatureEditButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.literatureEditButton.BackColor = System.Drawing.Color.Yellow;
+            this.literatureEditButton.FlatAppearance.BorderSize = 0;
+            this.literatureEditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.literatureEditButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.literatureEditButton.Location = new System.Drawing.Point(458, 51);
+            this.literatureEditButton.Name = "literatureEditButton";
+            this.literatureEditButton.Size = new System.Drawing.Size(115, 37);
+            this.literatureEditButton.TabIndex = 2;
+            this.literatureEditButton.Text = "Редактирай";
+            this.literatureEditButton.UseVisualStyleBackColor = false;
             // 
-            // button10
+            // literatureAddButton
             // 
-            this.button10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button10.BackColor = System.Drawing.Color.SpringGreen;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button10.Location = new System.Drawing.Point(458, 8);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(115, 37);
-            this.button10.TabIndex = 1;
-            this.button10.Text = "Добави";
-            this.button10.UseVisualStyleBackColor = false;
+            this.literatureAddButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.literatureAddButton.BackColor = System.Drawing.Color.SpringGreen;
+            this.literatureAddButton.FlatAppearance.BorderSize = 0;
+            this.literatureAddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.literatureAddButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.literatureAddButton.Location = new System.Drawing.Point(458, 8);
+            this.literatureAddButton.Name = "literatureAddButton";
+            this.literatureAddButton.Size = new System.Drawing.Size(115, 37);
+            this.literatureAddButton.TabIndex = 1;
+            this.literatureAddButton.Text = "Добави";
+            this.literatureAddButton.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel4
             // 
@@ -319,70 +319,70 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.bulgarianDeleteButton);
+            this.panel2.Controls.Add(this.bulgarianComboBox);
+            this.panel2.Controls.Add(this.bulgarianEditButton);
+            this.panel2.Controls.Add(this.bulgarianAddButton);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 282);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(800, 146);
             this.panel2.TabIndex = 6;
             // 
-            // button1
+            // bulgarianDeleteButton
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(458, 96);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 37);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Изтрий";
-            this.button1.UseVisualStyleBackColor = false;
+            this.bulgarianDeleteButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bulgarianDeleteButton.BackColor = System.Drawing.Color.Red;
+            this.bulgarianDeleteButton.FlatAppearance.BorderSize = 0;
+            this.bulgarianDeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bulgarianDeleteButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.bulgarianDeleteButton.Location = new System.Drawing.Point(458, 96);
+            this.bulgarianDeleteButton.Name = "bulgarianDeleteButton";
+            this.bulgarianDeleteButton.Size = new System.Drawing.Size(115, 37);
+            this.bulgarianDeleteButton.TabIndex = 3;
+            this.bulgarianDeleteButton.Text = "Изтрий";
+            this.bulgarianDeleteButton.UseVisualStyleBackColor = false;
             // 
-            // comboBox1
+            // bulgarianComboBox
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(260, 56);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(178, 29);
-            this.comboBox1.TabIndex = 0;
-            this.comboBox1.Tag = "";
+            this.bulgarianComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bulgarianComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.bulgarianComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bulgarianComboBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bulgarianComboBox.FormattingEnabled = true;
+            this.bulgarianComboBox.Location = new System.Drawing.Point(260, 56);
+            this.bulgarianComboBox.Name = "bulgarianComboBox";
+            this.bulgarianComboBox.Size = new System.Drawing.Size(178, 29);
+            this.bulgarianComboBox.TabIndex = 0;
+            this.bulgarianComboBox.Tag = "";
             // 
-            // button2
+            // bulgarianEditButton
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.BackColor = System.Drawing.Color.Yellow;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(458, 53);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(115, 37);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Редактирай";
-            this.button2.UseVisualStyleBackColor = false;
+            this.bulgarianEditButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bulgarianEditButton.BackColor = System.Drawing.Color.Yellow;
+            this.bulgarianEditButton.FlatAppearance.BorderSize = 0;
+            this.bulgarianEditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bulgarianEditButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.bulgarianEditButton.Location = new System.Drawing.Point(458, 53);
+            this.bulgarianEditButton.Name = "bulgarianEditButton";
+            this.bulgarianEditButton.Size = new System.Drawing.Size(115, 37);
+            this.bulgarianEditButton.TabIndex = 2;
+            this.bulgarianEditButton.Text = "Редактирай";
+            this.bulgarianEditButton.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // bulgarianAddButton
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.BackColor = System.Drawing.Color.SpringGreen;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button3.Location = new System.Drawing.Point(458, 10);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(115, 37);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Добави";
-            this.button3.UseVisualStyleBackColor = false;
+            this.bulgarianAddButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bulgarianAddButton.BackColor = System.Drawing.Color.SpringGreen;
+            this.bulgarianAddButton.FlatAppearance.BorderSize = 0;
+            this.bulgarianAddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bulgarianAddButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.bulgarianAddButton.Location = new System.Drawing.Point(458, 10);
+            this.bulgarianAddButton.Name = "bulgarianAddButton";
+            this.bulgarianAddButton.Size = new System.Drawing.Size(115, 37);
+            this.bulgarianAddButton.TabIndex = 1;
+            this.bulgarianAddButton.Text = "Добави";
+            this.bulgarianAddButton.UseVisualStyleBackColor = false;
             // 
             // LibraryForm
             // 
@@ -421,16 +421,16 @@
         private Button button6;
         private Button button7;
         private Panel panel1;
-        private Button button8;
-        private Button button9;
-        private ComboBox comboBox2;
-        private Button button10;
+        private Button literatureDeleteButton;
+        private Button literatureEditButton;
+        private ComboBox literatureComboBox;
+        private Button literatureAddButton;
         private TableLayoutPanel tableLayoutPanel4;
         private Label label3;
         private Panel panel2;
-        private Button button1;
-        private ComboBox comboBox1;
-        private Button button2;
-        private Button button3;
+        private Button bulgarianDeleteButton;
+        private ComboBox bulgarianComboBox;
+        private Button bulgarianEditButton;
+        private Button bulgarianAddButton;
     }
 }
