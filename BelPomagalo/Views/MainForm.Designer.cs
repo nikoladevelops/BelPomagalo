@@ -35,20 +35,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.contentPanel = new System.Windows.Forms.Panel();
-            this.publishedWorkLabel = new System.Windows.Forms.Label();
-            this.addNewOppositionButton = new System.Windows.Forms.Button();
-            this.authorsListBox = new System.Windows.Forms.ListBox();
-            this.addNewCharacterButton = new System.Windows.Forms.Button();
-            this.addNewThemeButton = new System.Windows.Forms.Button();
-            this.authorLabel = new System.Windows.Forms.Label();
-            this.addNewGenreButton = new System.Windows.Forms.Button();
-            this.publishedWorkListBox = new System.Windows.Forms.ListBox();
-            this.addNewAuthorButton = new System.Windows.Forms.Button();
-            this.showButton = new System.Windows.Forms.Button();
-            this.addNewPublishedWorkButton = new System.Windows.Forms.Button();
             this.menuPanel.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.contentPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuPanel
@@ -124,134 +112,11 @@
             // contentPanel
             // 
             this.contentPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(166)))), ((int)(((byte)(131)))));
-            this.contentPanel.Controls.Add(this.publishedWorkLabel);
-            this.contentPanel.Controls.Add(this.addNewOppositionButton);
-            this.contentPanel.Controls.Add(this.authorsListBox);
-            this.contentPanel.Controls.Add(this.addNewCharacterButton);
-            this.contentPanel.Controls.Add(this.addNewThemeButton);
-            this.contentPanel.Controls.Add(this.authorLabel);
-            this.contentPanel.Controls.Add(this.addNewGenreButton);
-            this.contentPanel.Controls.Add(this.publishedWorkListBox);
-            this.contentPanel.Controls.Add(this.addNewAuthorButton);
-            this.contentPanel.Controls.Add(this.showButton);
-            this.contentPanel.Controls.Add(this.addNewPublishedWorkButton);
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentPanel.Location = new System.Drawing.Point(194, 0);
             this.contentPanel.Name = "contentPanel";
             this.contentPanel.Size = new System.Drawing.Size(702, 490);
             this.contentPanel.TabIndex = 1;
-            // 
-            // publishedWorkLabel
-            // 
-            this.publishedWorkLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.publishedWorkLabel.AutoSize = true;
-            this.publishedWorkLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.publishedWorkLabel.Location = new System.Drawing.Point(169, 253);
-            this.publishedWorkLabel.Name = "publishedWorkLabel";
-            this.publishedWorkLabel.Size = new System.Drawing.Size(114, 21);
-            this.publishedWorkLabel.TabIndex = 14;
-            this.publishedWorkLabel.Text = "Произведения";
-            // 
-            // addNewOppositionButton
-            // 
-            this.addNewOppositionButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.addNewOppositionButton.Location = new System.Drawing.Point(6, 297);
-            this.addNewOppositionButton.Name = "addNewOppositionButton";
-            this.addNewOppositionButton.Size = new System.Drawing.Size(141, 49);
-            this.addNewOppositionButton.TabIndex = 21;
-            this.addNewOppositionButton.Text = "Добави Опозиция";
-            this.addNewOppositionButton.UseVisualStyleBackColor = true;
-            // 
-            // authorsListBox
-            // 
-            this.authorsListBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.authorsListBox.FormattingEnabled = true;
-            this.authorsListBox.ItemHeight = 15;
-            this.authorsListBox.Location = new System.Drawing.Point(169, 50);
-            this.authorsListBox.Name = "authorsListBox";
-            this.authorsListBox.Size = new System.Drawing.Size(382, 199);
-            this.authorsListBox.TabIndex = 11;
-            // 
-            // addNewCharacterButton
-            // 
-            this.addNewCharacterButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.addNewCharacterButton.Location = new System.Drawing.Point(6, 242);
-            this.addNewCharacterButton.Name = "addNewCharacterButton";
-            this.addNewCharacterButton.Size = new System.Drawing.Size(141, 49);
-            this.addNewCharacterButton.TabIndex = 20;
-            this.addNewCharacterButton.Text = "Добави Герой";
-            this.addNewCharacterButton.UseVisualStyleBackColor = true;
-            // 
-            // addNewThemeButton
-            // 
-            this.addNewThemeButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.addNewThemeButton.Location = new System.Drawing.Point(6, 187);
-            this.addNewThemeButton.Name = "addNewThemeButton";
-            this.addNewThemeButton.Size = new System.Drawing.Size(141, 49);
-            this.addNewThemeButton.TabIndex = 19;
-            this.addNewThemeButton.Text = "Добави Тема";
-            this.addNewThemeButton.UseVisualStyleBackColor = true;
-            // 
-            // authorLabel
-            // 
-            this.authorLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.authorLabel.AutoSize = true;
-            this.authorLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.authorLabel.Location = new System.Drawing.Point(169, 26);
-            this.authorLabel.Name = "authorLabel";
-            this.authorLabel.Size = new System.Drawing.Size(53, 21);
-            this.authorLabel.TabIndex = 13;
-            this.authorLabel.Text = "Автор";
-            // 
-            // addNewGenreButton
-            // 
-            this.addNewGenreButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.addNewGenreButton.Location = new System.Drawing.Point(6, 133);
-            this.addNewGenreButton.Name = "addNewGenreButton";
-            this.addNewGenreButton.Size = new System.Drawing.Size(141, 49);
-            this.addNewGenreButton.TabIndex = 18;
-            this.addNewGenreButton.Text = "Добави Жанр";
-            this.addNewGenreButton.UseVisualStyleBackColor = true;
-            // 
-            // publishedWorkListBox
-            // 
-            this.publishedWorkListBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.publishedWorkListBox.FormattingEnabled = true;
-            this.publishedWorkListBox.ItemHeight = 15;
-            this.publishedWorkListBox.Location = new System.Drawing.Point(169, 277);
-            this.publishedWorkListBox.Name = "publishedWorkListBox";
-            this.publishedWorkListBox.Size = new System.Drawing.Size(382, 199);
-            this.publishedWorkListBox.TabIndex = 12;
-            // 
-            // addNewAuthorButton
-            // 
-            this.addNewAuthorButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.addNewAuthorButton.Location = new System.Drawing.Point(6, 78);
-            this.addNewAuthorButton.Name = "addNewAuthorButton";
-            this.addNewAuthorButton.Size = new System.Drawing.Size(141, 49);
-            this.addNewAuthorButton.TabIndex = 17;
-            this.addNewAuthorButton.Text = "Добави Автор";
-            this.addNewAuthorButton.UseVisualStyleBackColor = true;
-            // 
-            // showButton
-            // 
-            this.showButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.showButton.Location = new System.Drawing.Point(557, 230);
-            this.showButton.Name = "showButton";
-            this.showButton.Size = new System.Drawing.Size(142, 61);
-            this.showButton.TabIndex = 15;
-            this.showButton.Text = "Покажи";
-            this.showButton.UseVisualStyleBackColor = true;
-            // 
-            // addNewPublishedWorkButton
-            // 
-            this.addNewPublishedWorkButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.addNewPublishedWorkButton.Location = new System.Drawing.Point(6, 23);
-            this.addNewPublishedWorkButton.Name = "addNewPublishedWorkButton";
-            this.addNewPublishedWorkButton.Size = new System.Drawing.Size(141, 49);
-            this.addNewPublishedWorkButton.TabIndex = 16;
-            this.addNewPublishedWorkButton.Text = "Добави Произведение";
-            this.addNewPublishedWorkButton.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -266,8 +131,6 @@
             this.menuPanel.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.contentPanel.ResumeLayout(false);
-            this.contentPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -276,17 +139,6 @@
 
         private Panel menuPanel;
         private Panel contentPanel;
-        private Label publishedWorkLabel;
-        private Button addNewOppositionButton;
-        private ListBox authorsListBox;
-        private Button addNewCharacterButton;
-        private Button addNewThemeButton;
-        private Label authorLabel;
-        private Button addNewGenreButton;
-        private ListBox publishedWorkListBox;
-        private Button addNewAuthorButton;
-        private Button showButton;
-        private Button addNewPublishedWorkButton;
         private Button gamesMenuButton;
         private Button homeMenuButton;
         private Panel panel3;
