@@ -95,15 +95,15 @@ namespace BelPomagalo.Controllers
                     break;
                 case "герой":
                     OpenChildFormDependingOnFormType(formType,
-                        new AddNewCharacterFormController(new AddNewCharacterForm(), _characterService, _authorService).Form, new Form(), new Form());
+                        new AddNewCharacterFormController(new AddNewCharacterForm(), _characterService, _authorService).Form, new EditFormController(new EditForm(), new AddNewCharacterForm()).Form, new Form());
                     break;
                 case "жанр":
                     OpenChildFormDependingOnFormType(formType,
-                        new AddNewGenreFormController(new AddNewGenreForm(), _genreService).Form, new Form(), new Form());
+                        new AddNewGenreFormController(new AddNewGenreForm(), _genreService).Form, new EditFormController(new EditForm(), new AddNewGenreForm()).Form, new Form());
                     break;
                 case "опозиция":
                     OpenChildFormDependingOnFormType(formType,
-                        new AddNewOppositionFormController(new AddNewOppositionForm(), _oppositionService).Form, new Form(), new Form());
+                        new AddNewOppositionFormController(new AddNewOppositionForm(), _oppositionService).Form, new EditFormController(new EditForm(), new AddNewOppositionForm()).Form, new Form());
                     break;
                 case "произведение":
                     OpenChildFormDependingOnFormType(formType,
@@ -117,11 +117,11 @@ namespace BelPomagalo.Controllers
                         _publishedWorkGenreService,
                         _publishedWorkThemeService,
                         _publishedWorkCharacterService,
-                        _publishedWorkOppositionService).Form, new Form(), new Form());
+                        _publishedWorkOppositionService).Form, new EditFormController(new EditForm(), new AddNewPublishedWorkForm()).Form, new Form());
                     break;
                 case "тема":
                     OpenChildFormDependingOnFormType(formType,
-                        new AddNewThemeFormController(new AddNewThemeForm(), _themeService).Form, new Form(), new Form());
+                        new AddNewThemeFormController(new AddNewThemeForm(), _themeService).Form, new EditFormController(new EditForm(), new AddNewThemeForm()).Form, new Form());
                     break;
                 default:
                     break;

@@ -37,7 +37,7 @@
             // 
             // addNewGenreButton
             // 
-            this.addNewGenreButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.addNewGenreButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.addNewGenreButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.addNewGenreButton.Location = new System.Drawing.Point(23, 280);
             this.addNewGenreButton.Name = "addNewGenreButton";
@@ -48,7 +48,7 @@
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(23, 24);
@@ -59,7 +59,7 @@
             // 
             // genreNameTextBox
             // 
-            this.genreNameTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.genreNameTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.genreNameTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.genreNameTextBox.Location = new System.Drawing.Point(23, 52);
             this.genreNameTextBox.Name = "genreNameTextBox";
@@ -68,7 +68,7 @@
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(23, 102);
@@ -79,7 +79,7 @@
             // 
             // descriptionTextBox
             // 
-            this.descriptionTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.descriptionTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.descriptionTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.descriptionTextBox.Location = new System.Drawing.Point(23, 130);
             this.descriptionTextBox.Multiline = true;

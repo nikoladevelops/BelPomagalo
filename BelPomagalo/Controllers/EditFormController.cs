@@ -20,7 +20,7 @@ namespace BelPomagalo.Controllers
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            childForm.AutoScroll = true;
+            _form.AutoScroll = true;
             _form.EditPanel.Size = childForm.Size;
             _form.EditPanel.Controls.Add(childForm);
             childForm.BringToFront();
