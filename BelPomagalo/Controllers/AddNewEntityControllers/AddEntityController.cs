@@ -1,6 +1,8 @@
-﻿namespace BelPomagalo.Controllers.AddNewEntityControllers
+﻿using BelPomagalo.Views.AddNewEntityForms;
+
+namespace BelPomagalo.Controllers.AddNewEntityControllers
 {
-    internal abstract class AddEntityController<T> : Controller<T> where T : Form
+    internal abstract class AddEntityController<T> : Controller<T> where T : Form, IAddForm
     {
         public AddEntityController(T form) : base(form)
         {

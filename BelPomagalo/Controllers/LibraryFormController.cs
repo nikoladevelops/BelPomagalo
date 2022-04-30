@@ -91,7 +91,7 @@ namespace BelPomagalo.Controllers
             {
                 case "автор":
                     OpenChildFormDependingOnFormType(formType,
-                        new AddNewAuthorFormController(new AddNewAuthorForm(), _authorService).Form, new Form(), new Form());
+                        new AddNewAuthorFormController(new AddNewAuthorForm(), _authorService).Form, new EditFormController(new EditForm(),new AddNewAuthorForm()).Form, new Form());
                     break;
                 case "герой":
                     OpenChildFormDependingOnFormType(formType,
