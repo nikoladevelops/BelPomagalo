@@ -19,7 +19,7 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
             if (result == DialogResult.Yes)
             {
                 AddNewEntity();
-                MessageBox.Show("Редакцията беше успешна!", "Успешна редакция.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Новият запис беше добавен успешно!", "Успешно запаметен запис.", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
