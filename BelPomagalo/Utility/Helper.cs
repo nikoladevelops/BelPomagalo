@@ -36,5 +36,29 @@
                 }
             }
         }
+
+        public static bool CheckIfTextBoxesFilled(params TextBox[] textBoxes) 
+        {
+            foreach (var textbox in textBoxes)
+            {
+                if (string.IsNullOrWhiteSpace(textbox.Text)) 
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        public static bool CheckIfListBoxesHaveSelectedIndex(params ListBox[] listBoxes)
+        {
+            foreach (var listBox in listBoxes)
+            {
+                if (listBox.SelectedIndex == -1)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
     }
 }

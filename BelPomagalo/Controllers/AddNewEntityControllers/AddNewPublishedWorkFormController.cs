@@ -48,9 +48,34 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
             Helper.LoadListBoxData(_form.OppositionListBox, _oppositionService.GetAllOppositionsNames(), false);
 
             _form.AuthorListBox.SelectedIndexChanged += HandleAuthorListBoxSelectedIndexChanged;
-            _form.AddButton.Click += HandleAddNewEntityButtonClick;
         }
-        protected override async void HandleAddNewEntityButtonClick(object? sender, EventArgs e)
+        public void HandleAuthorListBoxSelectedIndexChanged(object? sender, EventArgs e)
+        {
+            var authorName = _form.AuthorListBox.SelectedItem.ToString();
+
+            var author = _authorService.GetAuthor(authorName);
+            Helper.LoadListBoxData(_form.CharacterListBox, _characterService.GetAllCharactersNamesOfAuthor(author.Id), false);
+        }
+
+        protected override bool ValidateEntityData()
+        {
+            var result = Helper.CheckIfListBoxesHaveSelectedIndex(
+                _form.GenreListBox,
+                _form.ThemeListBox,
+                _form.CharacterListBox,
+                _form.OppositionListBox
+                );
+            return result && Helper.CheckIfTextBoxesFilled(
+                _form.NameTextBox,
+                _form.PublishedDateTextBox,
+                _form.CompositionTextBox,
+                _form.MotivesAndFiguresTextBox,
+                _form.IdeologicalSuggestionsTextBox,
+                _form.RemarksTextBox
+                );
+        }
+
+        protected override async void AddNewEntity()
         {
             var name = _form.NameTextBox.Text;
             var author = _authorService.GetAuthor(_form.AuthorListBox.SelectedItem.ToString());
@@ -77,7 +102,7 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
             }
 
             var oppositions = new List<Opposition>();
-            foreach (var selectedItem in oppositions)
+            foreach (var selectedItem in _form.OppositionListBox.SelectedItems)
             {
                 var selectedOpposition = _oppositionService.GetOpposition(selectedItem.ToString());
                 oppositions.Add(selectedOpposition);
@@ -115,13 +140,6 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
             {
                 await _publishedWorkOppositionService.AddPublishedWorkOpposition(new PublishedWorkOpposition() { PublishedWorkId = publishedWork.Id, OppositionId = opposition.Id });
             }
-        }
-        public void HandleAuthorListBoxSelectedIndexChanged(object? sender, EventArgs e)
-        {
-            var authorName = _form.AuthorListBox.SelectedItem.ToString();
-
-            var author = _authorService.GetAuthor(authorName);
-            Helper.LoadListBoxData(_form.CharacterListBox, _characterService.GetAllCharactersNamesOfAuthor(author.Id), false);
         }
     }
 }

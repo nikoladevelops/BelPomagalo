@@ -16,7 +16,8 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
             _authorService = authorService;
             LoadFormData();
         }
-        protected override async void HandleAddNewEntityButtonClick(object? sender, EventArgs e)
+
+        protected override async void AddNewEntity()
         {
             var author = _authorService.GetAuthor(_form.AuthorListBox.SelectedItem.ToString());
             var character = new Character()
@@ -28,10 +29,19 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
 
             await _characterService.AddCharacter(character);
         }
+
+        protected override bool ValidateEntityData()
+        {
+            if (_form.AuthorListBox.SelectedIndex == -1)
+            {
+                return false;
+            }
+            return Helper.CheckIfTextBoxesFilled(_form.CharacterNameTextBox, _form.CharacterDescriptionTextBox);
+        }
+
         private void LoadFormData()
         {
             Helper.LoadListBoxData(_form.AuthorListBox, _authorService.GetAllAuthorsNames(), true);
-            _form.AddButton.Click += HandleAddNewEntityButtonClick;
         }
     }
 }

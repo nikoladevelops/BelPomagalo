@@ -9,7 +9,23 @@ namespace BelPomagalo.Controllers.EditEntityControllers
         {
             entityLabel.Text += "автор";
         }
-        protected override void HandleEditButtonClick(object? sender, EventArgs e)
+
+        protected override void EditEntityData()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void LoadEntityDataInAppropriateControls()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void LoadEntityListbox()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override bool ValidateEntityData()
         {
             throw new NotImplementedException();
         }

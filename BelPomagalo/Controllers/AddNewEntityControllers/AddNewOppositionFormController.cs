@@ -1,5 +1,6 @@
 ﻿using BelPomagalo.Models;
 using BelPomagalo.Services;
+using BelPomagalo.Utility;
 using BelPomagalo.Views.AddNewEntityForms;
 
 namespace BelPomagalo.Controllers.AddNewEntityControllers
@@ -10,9 +11,9 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
         public AddNewOppositionFormController(AddNewOppositionForm form, OppositionService oppositionService) :base(form)
         {
             _oppositionService = oppositionService;
-            _form.AddButton.Click += HandleAddNewEntityButtonClick;
         }
-        protected override async void HandleAddNewEntityButtonClick(object? sender, EventArgs e)
+
+        protected override async void AddNewEntity()
         {
             var opposition = new Opposition()
             {
@@ -20,6 +21,11 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
                 Description = _form.OppositionDescriptionTextBox.Text
             };
             await _oppositionService.AddOpposition(opposition);
+        }
+
+        protected override bool ValidateEntityData()
+        {
+            return Helper.CheckIfTextBoxesFilled(_form.OppositionNameTextBox, _form.OppositionDescriptionTextBox);
         }
     }
 }

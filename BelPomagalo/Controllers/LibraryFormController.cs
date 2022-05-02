@@ -85,7 +85,7 @@ namespace BelPomagalo.Controllers
         {
             OpenLiteratureFormDependingOnSelectedEntity("delete");
         }
-
+        // TODO refactor this method
         private void OpenLiteratureFormDependingOnSelectedEntity(string formType)
         {
             switch (_form.LiteratureComboBox.SelectedItem)
@@ -128,6 +128,7 @@ namespace BelPomagalo.Controllers
                     break;
             }
         }
+        // TODO refactor this as well
         private void OpenChildFormDependingOnFormType(string formType, Form addEntityForm, Form editEntityForm, Form deleteEntityForm) 
         {
             if (formType == "add")

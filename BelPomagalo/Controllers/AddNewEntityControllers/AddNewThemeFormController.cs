@@ -1,5 +1,6 @@
 ﻿using BelPomagalo.Models;
 using BelPomagalo.Services;
+using BelPomagalo.Utility;
 using BelPomagalo.Views.AddNewEntityForms;
 
 namespace BelPomagalo.Controllers.AddNewEntityControllers
@@ -10,9 +11,9 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
         public AddNewThemeFormController(AddNewThemeForm form, ThemeService themeService):base(form)
         {
             _themeService = themeService;
-            _form.AddButton.Click += HandleAddNewEntityButtonClick;
         }
-        protected override async void HandleAddNewEntityButtonClick(object? sender, EventArgs e)
+
+        protected override async void AddNewEntity()
         {
             var theme = new Theme()
             {
@@ -20,6 +21,11 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
                 Description = _form.ThemeDescriptionTextBox.Text
             };
             await _themeService.AddTheme(theme);
+        }
+
+        protected override bool ValidateEntityData()
+        {
+            return Helper.CheckIfTextBoxesFilled(_form.ThemeNameTextBox, _form.ThemeDescriptionTextBox);
         }
     }
 }
