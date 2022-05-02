@@ -7,8 +7,8 @@ namespace BelPomagalo.Controllers.EditEntityControllers
     {
         public EditOppositionFormController(EditForm form, AddNewOppositionForm innerForm) : base(form, innerForm)
         {
+            entityLabel.Text += "опозиция";
         }
-
         protected override void HandleEditButtonClick(object? sender, EventArgs e)
         {
             throw new NotImplementedException();

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.entityLabel = new System.Windows.Forms.Label();
             this.entityListBox = new System.Windows.Forms.ListBox();
             this.editPanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -37,19 +38,31 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(166)))), ((int)(((byte)(131)))));
+            this.panel1.Controls.Add(this.entityLabel);
             this.panel1.Controls.Add(this.entityListBox);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(646, 163);
+            this.panel1.Size = new System.Drawing.Size(646, 239);
             this.panel1.TabIndex = 3;
+            // 
+            // entityLabel
+            // 
+            this.entityLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.entityLabel.AutoSize = true;
+            this.entityLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.entityLabel.Location = new System.Drawing.Point(236, 27);
+            this.entityLabel.Name = "entityLabel";
+            this.entityLabel.Size = new System.Drawing.Size(82, 25);
+            this.entityLabel.TabIndex = 1;
+            this.entityLabel.Text = "Избери ";
             // 
             // entityListBox
             // 
             this.entityListBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.entityListBox.FormattingEnabled = true;
             this.entityListBox.ItemHeight = 15;
-            this.entityListBox.Location = new System.Drawing.Point(236, 3);
+            this.entityListBox.Location = new System.Drawing.Point(236, 55);
             this.entityListBox.Name = "entityListBox";
             this.entityListBox.Size = new System.Drawing.Size(196, 154);
             this.entityListBox.TabIndex = 0;
@@ -58,9 +71,9 @@
             // 
             this.editPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(166)))), ((int)(((byte)(131)))));
             this.editPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.editPanel.Location = new System.Drawing.Point(0, 163);
+            this.editPanel.Location = new System.Drawing.Point(0, 239);
             this.editPanel.Name = "editPanel";
-            this.editPanel.Size = new System.Drawing.Size(646, 339);
+            this.editPanel.Size = new System.Drawing.Size(646, 229);
             this.editPanel.TabIndex = 4;
             // 
             // EditForm
@@ -68,12 +81,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(166)))), ((int)(((byte)(131)))));
-            this.ClientSize = new System.Drawing.Size(646, 502);
+            this.ClientSize = new System.Drawing.Size(646, 528);
             this.Controls.Add(this.editPanel);
             this.Controls.Add(this.panel1);
             this.Name = "EditForm";
             this.Text = "EditForm";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -83,5 +97,6 @@
         private Panel panel1;
         private ListBox entityListBox;
         private Panel editPanel;
+        private Label entityLabel;
     }
 }

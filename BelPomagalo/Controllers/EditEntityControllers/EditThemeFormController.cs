@@ -7,8 +7,8 @@ namespace BelPomagalo.Controllers.EditEntityControllers
     {
         public EditThemeFormController(EditForm form, AddNewThemeForm innerForm) : base(form, innerForm)
         {
+            entityLabel.Text += "тема";
         }
-
         protected override void HandleEditButtonClick(object? sender, EventArgs e)
         {
             throw new NotImplementedException();

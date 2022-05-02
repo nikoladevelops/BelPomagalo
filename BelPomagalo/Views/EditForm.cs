@@ -18,5 +18,6 @@ namespace BelPomagalo.Views
         }
         public ListBox EntityListBox { get => entityListBox; }
         public Panel EditPanel { get => editPanel; }
+        public Label EntityLabel { get => entityLabel; }
     }
 }

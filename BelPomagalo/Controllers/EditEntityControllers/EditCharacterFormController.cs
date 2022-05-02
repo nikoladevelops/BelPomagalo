@@ -7,8 +7,8 @@ namespace BelPomagalo.Controllers.EditEntityControllers
     {
         public EditCharacterFormController(EditForm form, AddNewCharacterForm innerForm) : base(form, innerForm)
         {
+            entityLabel.Text += "герой";
         }
-
         protected override void HandleEditButtonClick(object? sender, EventArgs e)
         {
             throw new NotImplementedException();

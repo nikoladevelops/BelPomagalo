@@ -7,8 +7,8 @@ namespace BelPomagalo.Controllers.EditEntityControllers
     {
         public EditPublishedWorkFormController(EditForm form, AddNewPublishedWorkForm innerForm) : base(form, innerForm)
         {
+            entityLabel.Text += "произведение";
         }
-
         protected override void HandleEditButtonClick(object? sender, EventArgs e)
         {
             throw new NotImplementedException();
