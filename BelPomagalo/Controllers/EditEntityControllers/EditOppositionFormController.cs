@@ -7,7 +7,7 @@ namespace BelPomagalo.Controllers.EditEntityControllers
     {
         public EditOppositionFormController(EditForm form, AddNewOppositionForm innerForm) : base(form, innerForm)
         {
-            entityLabel.Text += "опозиция";
+            _entityLabel.Text += "опозиция";
         }
 
         protected override void EditEntityData()
@@ -20,7 +20,7 @@ namespace BelPomagalo.Controllers.EditEntityControllers
             throw new NotImplementedException();
         }
 
-        protected override void LoadEntityListbox()
+        protected override void LoadEntityListBox(int selectedIndex)
         {
             throw new NotImplementedException();
         }

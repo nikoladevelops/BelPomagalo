@@ -19,6 +19,30 @@
                 }
             }
         }
+        public static void LoadListBoxData(ListBox listBox, IEnumerable<string> data, int selectIndex)
+        {
+            listBox.Items.Clear();
+
+            if (data != null && data.Count() != 0)
+            {
+                foreach (var item in data)
+                {
+                    listBox.Items.Add(item);
+                }
+
+                if (listBox.Items.Count == 0)
+                {
+                    return;
+                }
+
+                if (listBox.Items.Count <= selectIndex)
+                {
+                    return;
+                }
+
+                listBox.SelectedIndex = selectIndex;
+            }
+        }
         public static void LoadComboBoxData(ComboBox comboBox, IEnumerable<string> data, bool selectTheFirstItem = true)
         {
             comboBox.Items.Clear();

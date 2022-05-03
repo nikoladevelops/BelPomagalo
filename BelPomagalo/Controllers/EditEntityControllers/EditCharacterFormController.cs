@@ -7,7 +7,7 @@ namespace BelPomagalo.Controllers.EditEntityControllers
     {
         public EditCharacterFormController(EditForm form, AddNewCharacterForm innerForm) : base(form, innerForm)
         {
-            entityLabel.Text += "герой";
+            _entityLabel.Text += "герой";
         }
 
         protected override void EditEntityData()
@@ -20,7 +20,7 @@ namespace BelPomagalo.Controllers.EditEntityControllers
             throw new NotImplementedException();
         }
 
-        protected override void LoadEntityListbox()
+        protected override void LoadEntityListBox(int selectedIndex)
         {
             throw new NotImplementedException();
         }

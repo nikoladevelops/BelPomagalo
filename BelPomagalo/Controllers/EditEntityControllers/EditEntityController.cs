@@ -5,19 +5,11 @@ namespace BelPomagalo.Controllers.EditEntityControllers
 {
     internal abstract class EditEntityController : Controller<EditForm>
     {
-        protected Label entityLabel;
+        protected Label _entityLabel;
+        protected ListBox _entityListBox;
         public EditEntityController(EditForm form, IAddForm innerForm) : base(form)
         {
-            // todo pass all services for each edit entity form
-            // todo make a label Edit "Entities"
-            // todo assign a value to that label based on the type of form that is passed as parameter innerForm
-            // todo load all entities based on that inner form type inside the entityListBox
-            // todo when you select a different entity onSelectIndexChanged
-            // load the different entity's info in the correct fields / again based on type of the form
-
-            // todo when you click edit button, edit that particular entity's info and save it
-            // display a message that it was successful
-            entityLabel = _form.EntityLabel;
+            _entityLabel = _form.EntityLabel;
             innerForm.AddButton.Click += HandleEditButtonClick;
             innerForm.AddButton.Text = "Редактирай";
 
@@ -32,6 +24,7 @@ namespace BelPomagalo.Controllers.EditEntityControllers
             childForm.Show();
             _form.Disposed += (x, y) => { childForm.Close(); childForm.Dispose(); };
             _form.EntityListBox.SelectedIndexChanged += HandleEntityListBoxSelectedIndexChanged;
+            _entityListBox = _form.EntityListBox;
         }
 
         private void HandleEntityListBoxSelectedIndexChanged(object? sender, EventArgs e)
@@ -56,7 +49,8 @@ namespace BelPomagalo.Controllers.EditEntityControllers
         /// <summary>
         /// Loads all entities in the entityListBox.
         /// </summary>
-        protected abstract void LoadEntityListbox();
+        /// <param name="selectedIndex">The index to be selected in the listbox.</param>
+        protected abstract void LoadEntityListBox(int selectedIndex = -1);
         /// <summary>
         /// Loads a selected entity's data in the appropriate controls.
         /// This method is automatically called when the selected index event of

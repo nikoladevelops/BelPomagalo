@@ -7,7 +7,7 @@ namespace BelPomagalo.Controllers.EditEntityControllers
     {
         public EditGenreFormController(EditForm form, AddNewGenreForm innerForm) : base(form, innerForm)
         {
-            entityLabel.Text += "жанр";
+            _entityLabel.Text += "жанр";
         }
 
         protected override void EditEntityData()
@@ -20,7 +20,7 @@ namespace BelPomagalo.Controllers.EditEntityControllers
             throw new NotImplementedException();
         }
 
-        protected override void LoadEntityListbox()
+        protected override void LoadEntityListBox(int selectedIndex)
         {
             throw new NotImplementedException();
         }
