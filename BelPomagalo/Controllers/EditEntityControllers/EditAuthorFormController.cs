@@ -23,6 +23,12 @@ namespace BelPomagalo.Controllers.EditEntityControllers
             var authorName = _entityListBox.SelectedItem.ToString();
             var author = _authorService.GetAuthor(authorName);
 
+            if (_authorService.Exists(_innerForm.AuthorNameTextBox.Text))
+            {
+                MessageBox.Show("Вече съществува автор с такова име. Моля пробвайте друго.", "Грешка.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             var changesToApply = new Author()
             {
                 Name = _innerForm.AuthorNameTextBox.Text,

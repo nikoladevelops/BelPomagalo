@@ -17,9 +17,16 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
             LoadFormData();
         }
 
-        protected override async void AddNewEntity()
+        protected override async Task<bool> AddNewEntity()
         {
             var author = _authorService.GetAuthor(_form.AuthorListBox.SelectedItem.ToString());
+
+            if (_characterService.IsOwnedByAuthor(_form.CharacterNameTextBox.Text, author))
+            {
+                MessageBox.Show("Вече съществува герой с такова име и този автор.", "Грешка.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
             var character = new Character()
             {
                 Name = _form.CharacterNameTextBox.Text,
@@ -28,6 +35,7 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
             };
 
             await _characterService.AddCharacter(character);
+            return true;
         }
 
         protected override bool ValidateEntityData()

@@ -75,7 +75,7 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
                 );
         }
 
-        protected override async void AddNewEntity()
+        protected override async Task<bool> AddNewEntity()
         {
             var name = _form.NameTextBox.Text;
             var author = _authorService.GetAuthor(_form.AuthorListBox.SelectedItem.ToString());
@@ -140,6 +140,7 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
             {
                 await _publishedWorkOppositionService.AddPublishedWorkOpposition(new PublishedWorkOpposition() { PublishedWorkId = publishedWork.Id, OppositionId = opposition.Id });
             }
+            return true;
         }
     }
 }

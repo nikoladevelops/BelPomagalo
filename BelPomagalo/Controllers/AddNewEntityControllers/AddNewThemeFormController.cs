@@ -13,7 +13,7 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
             _themeService = themeService;
         }
 
-        protected override async void AddNewEntity()
+        protected override async Task<bool> AddNewEntity()
         {
             var theme = new Theme()
             {
@@ -21,6 +21,7 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
                 Description = _form.ThemeDescriptionTextBox.Text
             };
             await _themeService.AddTheme(theme);
+            return true;
         }
 
         protected override bool ValidateEntityData()

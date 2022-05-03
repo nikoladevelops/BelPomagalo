@@ -13,8 +13,14 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
             _authorService = authorService;
         }
 
-        protected override async void AddNewEntity()
+        protected override async Task<bool> AddNewEntity()
         {
+            if (_authorService.Exists(_form.AuthorNameTextBox.Text))
+            {
+                MessageBox.Show("Вече съществува автор с такова име. Моля пробвайте друго.", "Грешка.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
             var author = new Author()
             {
                 Name = _form.AuthorNameTextBox.Text,
@@ -24,6 +30,7 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
                 DiedDate = _form.AuthorDiedDateTextBox.Text
             };
             await _authorService.AddAuthor(author);
+            return true;
         }
 
         protected override bool ValidateEntityData()

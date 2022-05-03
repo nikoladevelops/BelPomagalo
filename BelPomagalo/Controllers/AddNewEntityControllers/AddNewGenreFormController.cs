@@ -13,7 +13,7 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
             _genreService = genreService;
         }
 
-        protected override async void AddNewEntity()
+        protected override async Task<bool> AddNewEntity()
         {
             var genre = new Genre()
             {
@@ -21,6 +21,7 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
                 Description = _form.GenreDescriptionTextBox.Text
             };
             await _genreService.AddGenre(genre);
+            return true;
         }
 
         protected override bool ValidateEntityData()

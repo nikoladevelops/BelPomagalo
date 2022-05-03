@@ -8,7 +8,7 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
         {
             _form.AddButton.Click += HandleAddNewEntityButtonClick;
         }
-        private void HandleAddNewEntityButtonClick(object? sender, EventArgs e) 
+        private async void HandleAddNewEntityButtonClick(object? sender, EventArgs e) 
         {
             if (!ValidateEntityData())
             {
@@ -18,8 +18,11 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
             var result = MessageBox.Show("Сигурни ли сте че искате да направите нов запис?", "Сигурни ли сте?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                AddNewEntity();
-                MessageBox.Show("Новият запис беше добавен успешно!", "Успешно запаметен запис.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                var isSuccessful = await AddNewEntity();
+                if (isSuccessful)
+                {
+                    MessageBox.Show("Новият запис беше добавен успешно!", "Успешно запаметен запис.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 
@@ -31,7 +34,7 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
         /// <summary>
         /// This method is called automatically when the add button is clicked and only if ValidateEntityData() returns true.
         /// </summary>
-        protected abstract void AddNewEntity();
+        protected abstract Task<bool> AddNewEntity();
         
     }
 }

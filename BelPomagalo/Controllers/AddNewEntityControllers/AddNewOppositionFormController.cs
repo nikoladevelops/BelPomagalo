@@ -13,7 +13,7 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
             _oppositionService = oppositionService;
         }
 
-        protected override async void AddNewEntity()
+        protected override async Task<bool> AddNewEntity()
         {
             var opposition = new Opposition()
             {
@@ -21,6 +21,7 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
                 Description = _form.OppositionDescriptionTextBox.Text
             };
             await _oppositionService.AddOpposition(opposition);
+            return true;
         }
 
         protected override bool ValidateEntityData()

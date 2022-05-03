@@ -58,5 +58,10 @@ namespace BelPomagalo.Services
 
             await _context.SaveChangesAsync();
         }
+
+        internal bool Exists(string authorName)
+        {
+            return _context.Authors.SingleOrDefault(x => x.Name == authorName) != null;
+        }
     }
 }
