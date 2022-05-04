@@ -32,7 +32,7 @@ namespace BelPomagalo.Controllers.EditEntityControllers
             LoadEntityDataInAppropriateControls();
         }
 
-        private void HandleEditButtonClick(object? sender, EventArgs e) 
+        private async void HandleEditButtonClick(object? sender, EventArgs e) 
         {
             if (!ValidateEntityData())
             {
@@ -42,8 +42,11 @@ namespace BelPomagalo.Controllers.EditEntityControllers
             var result = MessageBox.Show("Сигурни ли сте че искате да приложите промените?", "Сигурни ли сте?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                EditEntityData();
-                MessageBox.Show("Редакцията беше успешна!", "Успешна редакция.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                var isSuccessful = await EditEntityData();
+                if (isSuccessful)
+                {
+                    MessageBox.Show("Редакцията беше успешна!", "Успешна редакция.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
         /// <summary>
@@ -68,6 +71,6 @@ namespace BelPomagalo.Controllers.EditEntityControllers
         /// This method is automatically called when the edit button is clicked and only if
         /// ValidateEntityData() returns true.
         /// </summary>
-        protected abstract void EditEntityData();
+        protected abstract Task<bool> EditEntityData();
     }
 }

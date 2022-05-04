@@ -10,7 +10,7 @@ namespace BelPomagalo.Controllers.EditEntityControllers
             _entityLabel.Text += "опозиция";
         }
 
-        protected override void EditEntityData()
+        protected override async Task<bool> EditEntityData()
         {
             throw new NotImplementedException();
         }

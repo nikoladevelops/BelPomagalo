@@ -18,15 +18,22 @@ namespace BelPomagalo.Controllers.EditEntityControllers
             LoadEntityListBox(0);
         }
 
-        protected override void EditEntityData()
+        protected override async Task<bool> EditEntityData()
         {
             var authorName = _entityListBox.SelectedItem.ToString();
             var author = _authorService.GetAuthor(authorName);
 
-            if (_authorService.Exists(_innerForm.AuthorNameTextBox.Text))
+            // Check if an author with that name already exists
+            // If an author with that name exists
+            // check if that author is actually the author you are currently trying to edit
+            // if its not the author you're currently trying to edit, then you should't save the changes
+            // if it is the author you are editing, then continue and save the changes
+
+            if (_authorService.Exists(_innerForm.AuthorNameTextBox.Text) &&
+                author.Id != _authorService.GetAuthor(_innerForm.AuthorNameTextBox.Text).Id)
             {
                 MessageBox.Show("Вече съществува автор с такова име. Моля пробвайте друго.", "Грешка.", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                return false;
             }
 
             var changesToApply = new Author()
@@ -41,6 +48,7 @@ namespace BelPomagalo.Controllers.EditEntityControllers
             _authorService.EditAuthor(author, changesToApply);
 
             LoadEntityListBox(_entityListBox.SelectedIndex);
+            return true;
         }
 
         protected override void LoadEntityDataInAppropriateControls()
