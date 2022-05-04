@@ -12,27 +12,55 @@ namespace BelPomagalo.Services
         public GenreService(ApplicationDbContext context) : base(context)
         {
         }
+        /// <summary>
+        /// Gets all Genres' names.
+        /// </summary>
+        /// <returns></returns>
         internal IEnumerable<string> GetAllGenresNames()
         {
             return _context.Genres
                 .Select(x => x.Name)
                 .ToList();
         }
+        /// <summary>
+        /// Gets the Genre with this name.
+        /// </summary>
+        /// <param name="genreName">The Genre's name.</param>
+        /// <returns></returns>
         internal Genre GetGenre(string genreName)
         {
             return _context.Genres
-                .FirstOrDefault(x=>x.Name==genreName);
+                .SingleOrDefault(x=>x.Name==genreName);
         }
+        /// <summary>
+        /// Gets the Genre with this id.
+        /// </summary>
+        /// <param name="genreId">The Genre's id.</param>
+        /// <returns></returns>
         internal Genre GetGenre(int genreId)
         {
             return _context.Genres
-                .FirstOrDefault(x => x.Id == genreId);
+                .SingleOrDefault(x => x.Id == genreId);
         }
+        /// <summary>
+        /// Adds a Genre.
+        /// </summary>
+        /// <param name="genre">The Genre to add.</param>
+        /// <returns></returns>
         internal async Task<Genre> AddGenre(Genre genre)
         {
             var addedGenre = await _context.Genres.AddAsync(genre);
             await _context.SaveChangesAsync();
             return addedGenre.Entity;
+        }
+        /// <summary>
+        /// Checks if a Genre with this name already exists.
+        /// </summary>
+        /// <param name="genreName">The Genre's name.</param>
+        /// <returns></returns>
+        internal bool Exists(string genreName)
+        {
+            return _context.Genres.SingleOrDefault(x => x.Name == genreName) != null;
         }
     }
 }

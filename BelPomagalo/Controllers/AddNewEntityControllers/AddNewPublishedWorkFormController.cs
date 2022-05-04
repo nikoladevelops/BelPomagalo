@@ -79,6 +79,14 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
         {
             var name = _form.NameTextBox.Text;
             var author = _authorService.GetAuthor(_form.AuthorListBox.SelectedItem.ToString());
+            
+            // Check if a published work with this name already belongs to this author
+            // if it is, show an error message
+            if (_publishedWorkService.IsOwnedByAuthor(name, author))
+            {
+                MessageBox.Show("Този автор има произведение с такова име.", "Грешка.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
 
             var genres = new List<Genre>();
             foreach (var selectedItem in _form.GenreListBox.SelectedItems)
@@ -97,7 +105,7 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
             var characters = new List<Character>();
             foreach (var selectedItem in _form.CharacterListBox.SelectedItems)
             {
-                var selectedCharacter = _characterService.GetCharacter(selectedItem.ToString());
+                var selectedCharacter = _characterService.GetCharacter(selectedItem.ToString(), author);
                 characters.Add(selectedCharacter);
             }
 

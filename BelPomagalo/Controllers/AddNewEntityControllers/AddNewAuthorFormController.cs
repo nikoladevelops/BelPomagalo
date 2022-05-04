@@ -15,6 +15,8 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
 
         protected override async Task<bool> AddNewEntity()
         {
+            // Check if an author with this name already exists
+            // if it does, show an error message
             if (_authorService.Exists(_form.AuthorNameTextBox.Text))
             {
                 MessageBox.Show("Вече съществува автор с такова име. Моля пробвайте друго.", "Грешка.", MessageBoxButtons.OK, MessageBoxIcon.Error);

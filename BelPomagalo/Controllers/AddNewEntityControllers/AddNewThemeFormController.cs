@@ -15,6 +15,14 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
 
         protected override async Task<bool> AddNewEntity()
         {
+            // Check if a theme with this name already exists
+            // if it does, show an error message
+            if (_themeService.Exists(_form.ThemeNameTextBox.Text))
+            {
+                MessageBox.Show("Вече съществува такава тема.", "Грешка.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
             var theme = new Theme()
             {
                 Name = _form.ThemeNameTextBox.Text,

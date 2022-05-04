@@ -15,6 +15,14 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
 
         protected override async Task<bool> AddNewEntity()
         {
+            // Check if a genre with this name already exists
+            // if it does, show an error message
+            if (_genreService.Exists(_form.GenreNameTextBox.Text))
+            {
+                MessageBox.Show("Вече съществува такъв жанр.", "Грешка.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
             var genre = new Genre()
             {
                 Name = _form.GenreNameTextBox.Text,

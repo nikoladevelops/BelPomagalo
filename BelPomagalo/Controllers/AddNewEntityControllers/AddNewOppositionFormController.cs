@@ -15,6 +15,14 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
 
         protected override async Task<bool> AddNewEntity()
         {
+            // Check if an opposition with this name already exists
+            // if it does, show an error message
+            if (_oppositionService.Exists(_form.OppositionNameTextBox.Text))
+            {
+                MessageBox.Show("Вече съществува такава опозиция.", "Грешка.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
             var opposition = new Opposition()
             {
                 Name = _form.OppositionNameTextBox.Text,

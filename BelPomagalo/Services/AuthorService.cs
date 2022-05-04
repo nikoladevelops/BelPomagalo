@@ -26,7 +26,7 @@ namespace BelPomagalo.Services
         /// Gets an Author with the specified name.
         /// </summary>
         /// <param name="authorName"></param>
-        /// <returns>Author</returns>
+        /// <returns></returns>
         internal Author GetAuthor(string authorName)
         {
             return _context.Authors
@@ -35,7 +35,7 @@ namespace BelPomagalo.Services
         /// <summary>
         /// Adds an Author.
         /// </summary>
-        /// <param name="author"></param>
+        /// <param name="author">The Author to add.</param>
         /// <returns></returns>
         internal async Task<Author> AddAuthor(Author author)
         {
@@ -44,10 +44,10 @@ namespace BelPomagalo.Services
             return addedAuthor.Entity;
         }
         /// <summary>
-        /// Edits an author with the specified changes to apply.
+        /// Edits an Author with the specified changes to apply.
         /// </summary>
-        /// <param name="authorToEdit">Needs to be tracked by the db context.</param>
-        /// <param name="changesToApply">The changes to apply to the author.</param>
+        /// <param name="authorToEdit">The Author to edit. Needs to be tracked by the db context.</param>
+        /// <param name="changesToApply">The changes to apply to the Author.</param>
         internal async void EditAuthor(Author authorToEdit, Author changesToApply)
         {
             authorToEdit.Name = changesToApply.Name;
@@ -59,6 +59,11 @@ namespace BelPomagalo.Services
             await _context.SaveChangesAsync();
         }
 
+        /// <summary>
+        /// Checks if an Author that has this name already exists.
+        /// </summary>
+        /// <param name="authorName">The name that the Author has.</param>
+        /// <returns></returns>
         internal bool Exists(string authorName)
         {
             return _context.Authors.SingleOrDefault(x => x.Name == authorName) != null;

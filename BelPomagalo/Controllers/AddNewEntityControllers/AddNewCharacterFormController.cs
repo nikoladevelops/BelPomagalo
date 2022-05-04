@@ -20,7 +20,8 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
         protected override async Task<bool> AddNewEntity()
         {
             var author = _authorService.GetAuthor(_form.AuthorListBox.SelectedItem.ToString());
-
+            // Check if the selected author already has a character with this name
+            // if he does, show an error message
             if (_characterService.IsOwnedByAuthor(_form.CharacterNameTextBox.Text, author))
             {
                 MessageBox.Show("Вече съществува герой с такова име и този автор.", "Грешка.", MessageBoxButtons.OK, MessageBoxIcon.Error);
