@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace BelPomagalo.Views
+﻿namespace BelPomagalo.Views
 {
     public partial class EditForm : Form
     {
@@ -17,7 +7,9 @@ namespace BelPomagalo.Views
             InitializeComponent();
         }
         public ListBox EntityListBox { get => entityListBox; }
+        public ListBox AdditionalListBox { get => additionalListBox; }
         public Panel EditPanel { get => editPanel; }
         public Label EntityLabel { get => entityLabel; }
+        public Label AdditionalLabel { get => additionalLabel; }
     }
 }

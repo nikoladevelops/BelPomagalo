@@ -66,5 +66,21 @@ namespace BelPomagalo.Services
             }
             return false;
         }
+        /// <summary>
+        /// Edits a Character with the specified changes to apply.
+        /// </summary>
+        /// <param name="character">The Character you wish to change.</param>
+        /// <param name="changesToApply">The changes to apply for the Character.</param>
+        /// <returns></returns>
+        internal async Task EditCharacter(Character character, Character changesToApply)
+        {
+            character.AuthorId = changesToApply.AuthorId;
+            character.Name = changesToApply.Name;
+            character.Description = changesToApply.Description;
+            await _context.SaveChangesAsync();
+        }
+
+
+
     }
 }

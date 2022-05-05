@@ -32,12 +32,16 @@
             this.entityLabel = new System.Windows.Forms.Label();
             this.entityListBox = new System.Windows.Forms.ListBox();
             this.editPanel = new System.Windows.Forms.Panel();
+            this.additionalListBox = new System.Windows.Forms.ListBox();
+            this.additionalLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(166)))), ((int)(((byte)(131)))));
+            this.panel1.Controls.Add(this.additionalLabel);
+            this.panel1.Controls.Add(this.additionalListBox);
             this.panel1.Controls.Add(this.entityLabel);
             this.panel1.Controls.Add(this.entityListBox);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -76,6 +80,29 @@
             this.editPanel.Size = new System.Drawing.Size(646, 229);
             this.editPanel.TabIndex = 4;
             // 
+            // additionalListBox
+            // 
+            this.additionalListBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.additionalListBox.FormattingEnabled = true;
+            this.additionalListBox.ItemHeight = 15;
+            this.additionalListBox.Location = new System.Drawing.Point(34, 55);
+            this.additionalListBox.Name = "additionalListBox";
+            this.additionalListBox.Size = new System.Drawing.Size(196, 154);
+            this.additionalListBox.TabIndex = 2;
+            this.additionalListBox.Visible = false;
+            // 
+            // additionalLabel
+            // 
+            this.additionalLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.additionalLabel.AutoSize = true;
+            this.additionalLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.additionalLabel.Location = new System.Drawing.Point(34, 27);
+            this.additionalLabel.Name = "additionalLabel";
+            this.additionalLabel.Size = new System.Drawing.Size(82, 25);
+            this.additionalLabel.TabIndex = 3;
+            this.additionalLabel.Text = "Избери ";
+            this.additionalLabel.Visible = false;
+            // 
             // EditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -98,5 +125,7 @@
         private ListBox entityListBox;
         private Panel editPanel;
         private Label entityLabel;
+        private Label additionalLabel;
+        private ListBox additionalListBox;
     }
 }
