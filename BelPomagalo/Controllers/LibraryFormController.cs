@@ -100,7 +100,7 @@ namespace BelPomagalo.Controllers
                     break;
                 case "жанр":
                     OpenChildFormDependingOnFormType(formType,
-                        new AddNewGenreFormController(new AddNewGenreForm(), _genreService).Form, new EditGenreFormController(new EditForm(), new AddNewGenreForm()).Form, new Form());
+                        new AddNewGenreFormController(new AddNewGenreForm(), _genreService).Form, new EditGenreFormController(new EditForm(), new AddNewGenreForm(),_genreService).Form, new Form());
                     break;
                 case "опозиция":
                     OpenChildFormDependingOnFormType(formType,

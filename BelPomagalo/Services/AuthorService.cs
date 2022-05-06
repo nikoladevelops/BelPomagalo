@@ -48,7 +48,7 @@ namespace BelPomagalo.Services
         /// </summary>
         /// <param name="authorToEdit">The Author to edit. Needs to be tracked by the db context.</param>
         /// <param name="changesToApply">The changes to apply to the Author.</param>
-        internal async void EditAuthor(Author authorToEdit, Author changesToApply)
+        internal async Task EditAuthor(Author authorToEdit, Author changesToApply)
         {
             authorToEdit.Name = changesToApply.Name;
             authorToEdit.Description = changesToApply.Description;

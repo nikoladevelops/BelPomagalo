@@ -62,5 +62,18 @@ namespace BelPomagalo.Services
         {
             return _context.Genres.SingleOrDefault(x => x.Name == genreName) != null;
         }
+
+        /// <summary>
+        /// Edits a Genre with the specified changes to apply.
+        /// </summary>
+        /// <param name="genre">The Genre you wish to change.</param>
+        /// <param name="changesToApply">The changes to apply for the Genre.</param>
+        /// <returns></returns>
+        internal async Task EditGenre(Genre genre, Genre changesToApply)
+        {
+            genre.Name = changesToApply.Name;
+            genre.Description = changesToApply.Description;
+            await _context.SaveChangesAsync();
+        }
     }
 }

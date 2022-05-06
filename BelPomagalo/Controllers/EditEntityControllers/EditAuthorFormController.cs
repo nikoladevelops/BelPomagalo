@@ -45,7 +45,7 @@ namespace BelPomagalo.Controllers.EditEntityControllers
                 BornLocation = _innerForm.AuthorBornLocationTextBox.Text
             };
 
-            _authorService.EditAuthor(author, changesToApply);
+            await _authorService.EditAuthor(author, changesToApply);
 
             LoadEntityListBox(_entityListBox.SelectedIndex);
             return true;

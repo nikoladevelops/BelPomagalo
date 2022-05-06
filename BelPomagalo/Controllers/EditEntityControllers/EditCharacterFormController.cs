@@ -32,12 +32,12 @@ namespace BelPomagalo.Controllers.EditEntityControllers
             var characterToEdit = _characterService.GetCharacter(characterName, authorToEdit);
 
             var newAuthor = _authorService.GetAuthor(_innerForm.AuthorListBox.SelectedItem.ToString());
-            
+            var newCharacterName = _innerForm.CharacterNameTextBox.Text;
             // if the author is not changed
             if (newAuthor.Id == authorToEdit.Id)
             {
                 // make sure to display an error if the current author already owns a character with this name
-                if (characterName != _innerForm.CharacterNameTextBox.Text && _entityListBox.Items.Contains(_innerForm.CharacterNameTextBox.Text))
+                if (characterName != newCharacterName && _characterService.IsOwnedByAuthor(newCharacterName, newAuthor))
                 {
                     MessageBox.Show("Вече съществува герой с такова име, направен от този автор.", "Грешка.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
@@ -47,7 +47,7 @@ namespace BelPomagalo.Controllers.EditEntityControllers
             else
             {
                 // make sure to display an error if the new author already owns a character with this name
-                if (_characterService.IsOwnedByAuthor(_innerForm.CharacterNameTextBox.Text, newAuthor))
+                if (_characterService.IsOwnedByAuthor(newCharacterName, newAuthor))
                 {
                     MessageBox.Show("Вече съществува герой с такова име, направен от този автор.", "Грешка.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
