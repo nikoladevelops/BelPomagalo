@@ -24,7 +24,7 @@ namespace BelPomagalo.Services
         internal Opposition GetOpposition(string oppositionName)
         {
             return _context.Oppositions
-                .FirstOrDefault(x => x.Name == oppositionName);
+                .SingleOrDefault(x => x.Name == oppositionName);
         }
         /// <summary>
         /// Gets the Opposition with this id.
@@ -34,7 +34,7 @@ namespace BelPomagalo.Services
         internal Opposition GetOpposition(int oppositionId)
         {
             return _context.Oppositions
-                .FirstOrDefault(x => x.Id == oppositionId);
+                .SingleOrDefault(x => x.Id == oppositionId);
         }
         /// <summary>
         /// Adds an Opposition.
@@ -55,6 +55,19 @@ namespace BelPomagalo.Services
         internal bool Exists(string oppositionName)
         {
             return _context.Oppositions.SingleOrDefault(x => x.Name == oppositionName) != null;
+        }
+
+        /// <summary>
+        /// Edits an Opposition with the specified changes to apply.
+        /// </summary>
+        /// <param name="opposition">The Opposition you wish to change.</param>
+        /// <param name="changesToApply">The changes to apply for the Opposition.</param>
+        /// <returns></returns>
+        internal async Task EditOpposition(Opposition opposition, Opposition changesToApply)
+        {
+            opposition.Name = changesToApply.Name;
+            opposition.Description = changesToApply.Description;
+            await _context.SaveChangesAsync();
         }
     }
 }
