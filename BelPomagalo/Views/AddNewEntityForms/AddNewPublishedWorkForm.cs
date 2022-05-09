@@ -19,5 +19,9 @@
         public TextBox RemarksTextBox { get => remarksTextBox; }
         public Button AddButton { get => addPublishedWorkButton; }
 
+        public Label AuthorLabel { get => authorLabel; }
+        public Label GenreLabel { get => genreLabel; }
+        public Label CompositionLabel { get => compositionLabel; }
+
     }
 }

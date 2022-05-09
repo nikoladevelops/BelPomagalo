@@ -63,5 +63,23 @@ namespace BelPomagalo.Services
             }
             return false;
         }
+
+        /// <summary>
+        /// Edits a PublishedWork with the specified changes to apply.
+        /// </summary>
+        /// <param name="publishedWork">The PublishedWork you wish to change.</param>
+        /// <param name="changesToApply">The changes to apply for the Character.</param>
+        /// <returns></returns>
+        internal async Task EditPublishedWork(PublishedWork publishedWork, PublishedWork changesToApply)
+        {
+            publishedWork.Name = changesToApply.Name;
+            publishedWork.PublishedDate = changesToApply.PublishedDate;
+            publishedWork.CompositionDetails = changesToApply.CompositionDetails;
+            publishedWork.MotivesAndFigures = changesToApply.MotivesAndFigures;
+            publishedWork.IdeologicalSuggestions = changesToApply.IdeologicalSuggestions;
+            publishedWork.Remarks = changesToApply.Remarks;
+            publishedWork.AuthorId = changesToApply.AuthorId;
+            await _context.SaveChangesAsync();
+        }
     }
 }

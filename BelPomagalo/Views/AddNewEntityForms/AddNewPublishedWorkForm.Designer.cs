@@ -36,15 +36,15 @@
             this.remarksTextBox = new System.Windows.Forms.TextBox();
             this.compositionTextBox = new System.Windows.Forms.TextBox();
             this.genreListBox = new System.Windows.Forms.ListBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.genreLabel = new System.Windows.Forms.Label();
             this.themeListBox = new System.Windows.Forms.ListBox();
             this.characterListBox = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.authorListBox = new System.Windows.Forms.ListBox();
             this.motivesAndFiguresTextBox = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.compositionLabel = new System.Windows.Forms.Label();
+            this.authorLabel = new System.Windows.Forms.Label();
             this.ideologicalSuggestionsTextBox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -132,16 +132,16 @@
             this.genreListBox.Size = new System.Drawing.Size(160, 154);
             this.genreListBox.TabIndex = 4;
             // 
-            // label3
+            // genreLabel
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(390, 86);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 25);
-            this.label3.TabIndex = 35;
-            this.label3.Text = "Жанр";
+            this.genreLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.genreLabel.AutoSize = true;
+            this.genreLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.genreLabel.Location = new System.Drawing.Point(390, 86);
+            this.genreLabel.Name = "genreLabel";
+            this.genreLabel.Size = new System.Drawing.Size(60, 25);
+            this.genreLabel.TabIndex = 35;
+            this.genreLabel.Text = "Жанр";
             // 
             // themeListBox
             // 
@@ -206,27 +206,27 @@
             this.motivesAndFiguresTextBox.Size = new System.Drawing.Size(160, 154);
             this.motivesAndFiguresTextBox.TabIndex = 8;
             // 
-            // label9
+            // compositionLabel
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(556, 86);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(120, 25);
-            this.label9.TabIndex = 42;
-            this.label9.Text = "Композиция";
+            this.compositionLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.compositionLabel.AutoSize = true;
+            this.compositionLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.compositionLabel.Location = new System.Drawing.Point(556, 86);
+            this.compositionLabel.Name = "compositionLabel";
+            this.compositionLabel.Size = new System.Drawing.Size(120, 25);
+            this.compositionLabel.TabIndex = 42;
+            this.compositionLabel.Text = "Композиция";
             // 
-            // label2
+            // authorLabel
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(224, 86);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 25);
-            this.label2.TabIndex = 34;
-            this.label2.Text = "Автор";
+            this.authorLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.authorLabel.AutoSize = true;
+            this.authorLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.authorLabel.Location = new System.Drawing.Point(224, 86);
+            this.authorLabel.Name = "authorLabel";
+            this.authorLabel.Size = new System.Drawing.Size(64, 25);
+            this.authorLabel.TabIndex = 34;
+            this.authorLabel.Text = "Автор";
             // 
             // ideologicalSuggestionsTextBox
             // 
@@ -306,15 +306,15 @@
             this.Controls.Add(this.remarksTextBox);
             this.Controls.Add(this.compositionTextBox);
             this.Controls.Add(this.genreListBox);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.genreLabel);
             this.Controls.Add(this.themeListBox);
             this.Controls.Add(this.characterListBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.authorListBox);
             this.Controls.Add(this.motivesAndFiguresTextBox);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.compositionLabel);
+            this.Controls.Add(this.authorLabel);
             this.Controls.Add(this.ideologicalSuggestionsTextBox);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label8);
@@ -339,15 +339,15 @@
         private TextBox remarksTextBox;
         private TextBox compositionTextBox;
         private ListBox genreListBox;
-        private Label label3;
+        private Label genreLabel;
         private ListBox themeListBox;
         private ListBox characterListBox;
         private Label label4;
         private Label label5;
         private ListBox authorListBox;
         private TextBox motivesAndFiguresTextBox;
-        private Label label9;
-        private Label label2;
+        private Label compositionLabel;
+        private Label authorLabel;
         private TextBox ideologicalSuggestionsTextBox;
         private Label label11;
         private Label label8;

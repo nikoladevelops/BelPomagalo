@@ -104,7 +104,7 @@ namespace BelPomagalo.Controllers
                     break;
                 case "опозиция":
                     OpenChildFormDependingOnFormType(formType,
-                        new AddNewOppositionFormController(new AddNewOppositionForm(), _oppositionService).Form, new EditOppositionFormController(new EditForm(), new AddNewOppositionForm()).Form, new Form());
+                        new AddNewOppositionFormController(new AddNewOppositionForm(), _oppositionService).Form, new EditOppositionFormController(new EditForm(), new AddNewOppositionForm(), _oppositionService).Form, new Form());
                     break;
                 case "произведение":
                     OpenChildFormDependingOnFormType(formType,
@@ -118,7 +118,18 @@ namespace BelPomagalo.Controllers
                         _publishedWorkGenreService,
                         _publishedWorkThemeService,
                         _publishedWorkCharacterService,
-                        _publishedWorkOppositionService).Form, new EditPublishedWorkFormController(new EditForm(), new AddNewPublishedWorkForm()).Form, new Form());
+                        _publishedWorkOppositionService).Form, 
+                        new EditPublishedWorkFormController(new EditForm(), new AddNewPublishedWorkForm(), 
+                        _authorService,
+                        _genreService,
+                        _themeService,
+                        _characterService,
+                        _oppositionService,
+                        _publishedWorkService,
+                        _publishedWorkGenreService,
+                        _publishedWorkThemeService,
+                        _publishedWorkCharacterService,
+                        _publishedWorkOppositionService).Form, new Form());
                     break;
                 case "тема":
                     OpenChildFormDependingOnFormType(formType,

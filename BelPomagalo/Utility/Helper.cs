@@ -43,6 +43,23 @@
                 listBox.SelectedIndex = selectIndex;
             }
         }
+        public static void LoadListBoxData(ListBox listBox, IEnumerable<string> data, IEnumerable<string> elementsToSelect)
+        {
+            listBox.Items.Clear();
+
+            if (data != null && data.Count() != 0)
+            {
+                foreach (var item in data)
+                {
+                    listBox.Items.Add(item);
+                }
+
+                foreach (var element in elementsToSelect)
+                {
+                    listBox.SelectedIndex = listBox.Items.IndexOf(element);
+                }
+            }
+        }
         public static void LoadComboBoxData(ComboBox comboBox, IEnumerable<string> data, bool selectTheFirstItem = true)
         {
             comboBox.Items.Clear();

@@ -63,7 +63,8 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
                 _form.GenreListBox,
                 _form.ThemeListBox,
                 _form.CharacterListBox,
-                _form.OppositionListBox
+                _form.OppositionListBox,
+                _form.AuthorListBox
                 );
             return result && Helper.CheckIfTextBoxesFilled(
                 _form.NameTextBox,
