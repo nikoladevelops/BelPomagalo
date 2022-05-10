@@ -8,36 +8,11 @@ namespace BelPomagalo.Controllers
 {
     internal class MainFormController:Controller<MainForm>
     {
-        private readonly AuthorService _authorService;
-        private readonly GenreService _genreService;
-        private readonly ThemeService _themeService;
-        private readonly CharacterService _characterService;
-        private readonly OppositionService _oppositionService;
-        private readonly PublishedWorkService _publishedWorkService;
-        private readonly PublishedWorkGenreService _publishedWorkGenreService;
-        private readonly PublishedWorkThemeService _publishedWorkThemeService;
-        private readonly PublishedWorkCharacterService _publishedWorkCharacterService;
-        private readonly PublishedWorkOppositionService _publishedWorkOppositionService;
-
         private Button activeButton;
         private Form activeForm;
 
-        public MainFormController(MainForm mainForm, AuthorService authorService, GenreService genreService, ThemeService themeService,
-            CharacterService characterService, OppositionService oppositionService, PublishedWorkService publishedWorkService,
-            PublishedWorkGenreService publishedWorkGenreService, PublishedWorkThemeService publishedWorkThemeService,
-            PublishedWorkCharacterService publishedWorkCharacterService, PublishedWorkOppositionService publishedWorkOppositionService):base(mainForm)
+        public MainFormController(MainForm mainForm):base(mainForm)
         {
-            _authorService = authorService;
-            _genreService = genreService;
-            _themeService = themeService;
-            _characterService = characterService;
-            _oppositionService = oppositionService;
-            _publishedWorkService = publishedWorkService;
-            _publishedWorkGenreService = publishedWorkGenreService;
-            _publishedWorkThemeService = publishedWorkThemeService;
-            _publishedWorkCharacterService = publishedWorkCharacterService;
-            _publishedWorkOppositionService = publishedWorkOppositionService;
-
             _form.HomeMenuButton.Click += MakeMenuButtonActiveOnClick;
             _form.GamesMenuButton.Click += MakeMenuButtonActiveOnClick;
             _form.LibraryMenuButton.Click += MakeMenuButtonActiveOnClick;
@@ -69,16 +44,7 @@ namespace BelPomagalo.Controllers
                 case "libraryMenuButton":
                     formToMakeActive = new LibraryFormController(new LibraryForm(),
                         (x) => MakeFormActive(x), // pass the method responsible for opening a child form inside the contentPanel
-                        _authorService,
-                        _genreService,
-                        _themeService,
-                        _characterService,
-                        _oppositionService,
-                        _publishedWorkService,
-                        _publishedWorkGenreService,
-                        _publishedWorkThemeService,
-                        _publishedWorkCharacterService,
-                        _publishedWorkOppositionService).Form;
+                        new ApplicationDbContext()).Form;
                     break;
                 default:
                     break;

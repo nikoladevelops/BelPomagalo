@@ -10,36 +10,15 @@ namespace BelPomagalo.Controllers
     internal class LibraryFormController : Controller<LibraryForm>
     {
         private readonly Action<Form> _openChildFormMethod;
-        private readonly AuthorService _authorService;
-        private readonly GenreService _genreService;
-        private readonly ThemeService _themeService;
-        private readonly CharacterService _characterService;
-        private readonly OppositionService _oppositionService;
-        private readonly PublishedWorkService _publishedWorkService;
-        private readonly PublishedWorkGenreService _publishedWorkGenreService;
-        private readonly PublishedWorkThemeService _publishedWorkThemeService;
-        private readonly PublishedWorkCharacterService _publishedWorkCharacterService;
-        private readonly PublishedWorkOppositionService _publishedWorkOppositionService;
+        private readonly ApplicationDbContext _context;
 
         private readonly string[] literatureComboBoxItems = new string[] { "автор", "герой", "жанр", "опозиция", "произведение", "тема" };
         private readonly string[] bulgarianComboBoxItems = new string[] {  }; // TODO
 
-        public LibraryFormController(LibraryForm form, Action<Form> openChildFormMethod, AuthorService authorService, GenreService genreService, ThemeService themeService,
-            CharacterService characterService, OppositionService oppositionService, PublishedWorkService publishedWorkService,
-            PublishedWorkGenreService publishedWorkGenreService, PublishedWorkThemeService publishedWorkThemeService,
-            PublishedWorkCharacterService publishedWorkCharacterService, PublishedWorkOppositionService publishedWorkOppositionService) : base(form)
+        public LibraryFormController(LibraryForm form, Action<Form> openChildFormMethod, ApplicationDbContext context) : base(form)
         {
-            _openChildFormMethod = openChildFormMethod;
-            _authorService = authorService;
-            _genreService = genreService;
-            _themeService = themeService;
-            _characterService = characterService;
-            _oppositionService = oppositionService;
-            _publishedWorkService = publishedWorkService;
-            _publishedWorkGenreService = publishedWorkGenreService;
-            _publishedWorkThemeService = publishedWorkThemeService;
-            _publishedWorkCharacterService = publishedWorkCharacterService;
-            _publishedWorkOppositionService = publishedWorkOppositionService;
+            _context = context;
+            _openChildFormMethod=openChildFormMethod;
 
             _form.Load += HandleFormLoad;
 
@@ -75,94 +54,137 @@ namespace BelPomagalo.Controllers
 
         private void HandleAddNewLiteratureEntity(object? sender, EventArgs e)
         {
-            OpenLiteratureFormDependingOnSelectedEntity("add");
+            ShowAddEntityForm();
         }
         private void HandleEditLiteratureEntity(object? sender, EventArgs e)
         {
-            OpenLiteratureFormDependingOnSelectedEntity("edit");
+            ShowEditEntityForm();
         }
         private void HandleDeleteLiteratureEntity(object? sender, EventArgs e)
         {
-            OpenLiteratureFormDependingOnSelectedEntity("delete");
+            ShowDeleteEntityForm();
         }
-        // TODO refactor this method
-        private void OpenLiteratureFormDependingOnSelectedEntity(string formType)
+        private void ShowAddEntityForm()
         {
+            Form formToOpen = null;
             switch (_form.LiteratureComboBox.SelectedItem)
             {
                 case "автор":
-                    OpenChildFormDependingOnFormType(formType,
-                        new AddNewAuthorFormController(new AddNewAuthorForm(), _authorService).Form, new EditAuthorFormController(new EditForm(), new AddNewAuthorForm(), _authorService).Form, new Form());
+                    formToOpen = new AddNewAuthorFormController(
+                        new AddNewAuthorForm(),
+                        new AuthorService(_context)
+                        ).Form;
                     break;
                 case "герой":
-                    OpenChildFormDependingOnFormType(formType,
-                        new AddNewCharacterFormController(new AddNewCharacterForm(), _characterService, _authorService).Form, new EditCharacterFormController(new EditForm(), new AddNewCharacterForm(), _characterService, _authorService).Form, new Form());
+                    formToOpen = new AddNewCharacterFormController(
+                        new AddNewCharacterForm(),
+                        new CharacterService(_context),
+                        new AuthorService(_context)
+                        ).Form;
                     break;
                 case "жанр":
-                    OpenChildFormDependingOnFormType(formType,
-                        new AddNewGenreFormController(new AddNewGenreForm(), _genreService).Form, new EditGenreFormController(new EditForm(), new AddNewGenreForm(),_genreService).Form, new Form());
+                    formToOpen = new AddNewGenreFormController(
+                        new AddNewGenreForm(),
+                        new GenreService(_context)
+                        ).Form;
                     break;
                 case "опозиция":
-                    OpenChildFormDependingOnFormType(formType,
-                        new AddNewOppositionFormController(new AddNewOppositionForm(), _oppositionService).Form, new EditOppositionFormController(new EditForm(), new AddNewOppositionForm(), _oppositionService).Form, new Form());
+                    formToOpen = new AddNewOppositionFormController(
+                        new AddNewOppositionForm(),
+                        new OppositionService(_context)
+                        ).Form;
                     break;
                 case "произведение":
-                    OpenChildFormDependingOnFormType(formType,
-                        new AddNewPublishedWorkFormController(new AddNewPublishedWorkForm(),
-                        _authorService,
-                        _genreService,
-                        _themeService,
-                        _characterService,
-                        _oppositionService,
-                        _publishedWorkService,
-                        _publishedWorkGenreService,
-                        _publishedWorkThemeService,
-                        _publishedWorkCharacterService,
-                        _publishedWorkOppositionService).Form, 
-                        new EditPublishedWorkFormController(new EditForm(), new AddNewPublishedWorkForm(), 
-                        _authorService,
-                        _genreService,
-                        _themeService,
-                        _characterService,
-                        _oppositionService,
-                        _publishedWorkService,
-                        _publishedWorkGenreService,
-                        _publishedWorkThemeService,
-                        _publishedWorkCharacterService,
-                        _publishedWorkOppositionService).Form, new Form());
+                    formToOpen = new AddNewPublishedWorkFormController(
+                        new AddNewPublishedWorkForm(),
+                        new AuthorService(_context),
+                        new GenreService(_context),
+                        new ThemeService(_context),
+                        new CharacterService(_context),
+                        new OppositionService(_context),
+                        new PublishedWorkService(_context),
+                        new PublishedWorkGenreService(_context),
+                        new PublishedWorkThemeService(_context),
+                        new PublishedWorkCharacterService(_context),
+                        new PublishedWorkOppositionService(_context)
+                        ).Form;
                     break;
                 case "тема":
-                    OpenChildFormDependingOnFormType(formType,
-                        new AddNewThemeFormController(new AddNewThemeForm(), _themeService).Form, new EditThemeFormController(new EditForm(), new AddNewThemeForm(), _themeService).Form, new Form());
+                    formToOpen = new AddNewThemeFormController(
+                        new AddNewThemeForm(),
+                        new ThemeService(_context)
+                        ).Form;
                     break;
                 default:
                     break;
             }
+            _openChildFormMethod(formToOpen);
         }
-        // TODO refactor this as well
-        private void OpenChildFormDependingOnFormType(string formType, Form addEntityForm, Form editEntityForm, Form deleteEntityForm) 
+        private void ShowEditEntityForm() 
         {
-            if (formType == "add")
+            Form formToOpen = null;
+            switch (_form.LiteratureComboBox.SelectedItem)
             {
-                _openChildFormMethod(addEntityForm);
-
-                editEntityForm.Dispose();
-                deleteEntityForm.Dispose();
+                case "автор":
+                    formToOpen = new EditAuthorFormController(
+                        new EditForm(),
+                        new AddNewAuthorForm(),
+                        new AuthorService(_context)
+                        ).Form;
+                    break;
+                case "герой":
+                    formToOpen = new EditCharacterFormController(
+                        new EditForm(),
+                        new AddNewCharacterForm(),
+                        new CharacterService(_context),
+                        new AuthorService(_context)
+                        ).Form;
+                    break;
+                case "жанр":
+                    formToOpen = new EditGenreFormController(
+                        new EditForm(),
+                        new AddNewGenreForm(),
+                        new GenreService(_context)
+                        ).Form;
+                    break;
+                case "опозиция":
+                    formToOpen = new EditOppositionFormController(
+                        new EditForm(),
+                        new AddNewOppositionForm(),
+                        new OppositionService(_context)
+                        ).Form;
+                    break;
+                case "произведение":
+                    formToOpen = new EditPublishedWorkFormController(
+                        new EditForm(),
+                        new AddNewPublishedWorkForm(),
+                        new AuthorService(_context),
+                        new GenreService(_context),
+                        new ThemeService(_context),
+                        new CharacterService(_context),
+                        new OppositionService(_context),
+                        new PublishedWorkService(_context),
+                        new PublishedWorkGenreService(_context),
+                        new PublishedWorkThemeService(_context),
+                        new PublishedWorkCharacterService(_context),
+                        new PublishedWorkOppositionService(_context)
+                        ).Form;
+                    break;
+                case "тема":
+                    formToOpen = new EditThemeFormController(
+                        new EditForm(),
+                        new AddNewThemeForm(),
+                        new ThemeService(_context)
+                        ).Form;
+                    break;
+                default:
+                    break;
             }
-            else if (formType == "edit")
-            {
-                _openChildFormMethod(editEntityForm);
+            _openChildFormMethod(formToOpen);
+        }
+        private void ShowDeleteEntityForm()
+        {
 
-                addEntityForm.Dispose();
-                deleteEntityForm.Dispose();
-            }
-            else if (formType == "delete")
-            {
-                _openChildFormMethod(deleteEntityForm);
-
-                editEntityForm.Dispose();
-                addEntityForm.Dispose();
-            }
         }
     }
 }

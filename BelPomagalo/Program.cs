@@ -22,17 +22,7 @@ namespace BelPomagalo
         {
             var db = new ApplicationDbContext();
             await db.Database.MigrateAsync();
-            var form = new MainFormController(new MainForm(),
-                new AuthorService(db),
-                new GenreService(db),
-                new ThemeService(db),
-                new CharacterService(db),
-                new OppositionService(db),
-                new PublishedWorkService(db),
-                new PublishedWorkGenreService(db),
-                new PublishedWorkThemeService(db),
-                new PublishedWorkCharacterService(db),
-                new PublishedWorkOppositionService(db)).Form;
+            var form = new MainFormController(new MainForm()).Form;
 
             Application.Run(form);
         }
