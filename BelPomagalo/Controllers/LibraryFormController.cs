@@ -133,7 +133,7 @@ namespace BelPomagalo.Controllers
                     break;
                 case "тема":
                     OpenChildFormDependingOnFormType(formType,
-                        new AddNewThemeFormController(new AddNewThemeForm(), _themeService).Form, new EditThemeFormController(new EditForm(), new AddNewThemeForm()).Form, new Form());
+                        new AddNewThemeFormController(new AddNewThemeForm(), _themeService).Form, new EditThemeFormController(new EditForm(), new AddNewThemeForm(), _themeService).Form, new Form());
                     break;
                 default:
                     break;

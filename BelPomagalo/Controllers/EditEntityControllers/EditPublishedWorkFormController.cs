@@ -66,7 +66,7 @@ namespace BelPomagalo.Controllers.EditEntityControllers
             // make sure to display an error if the current author already owns a published work with this name
             if (publishedWorkName != newPublishedWorkName && _publishedWorkService.IsOwnedByAuthor(newPublishedWorkName, currentAuthor))
             {
-                MessageBox.Show("Вече съществува прозиведение с такова име, направен от този автор.", "Грешка.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Вече съществува произведение с такова име, направен от този автор.", "Грешка.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 

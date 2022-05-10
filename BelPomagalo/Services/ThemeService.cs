@@ -62,5 +62,18 @@ namespace BelPomagalo.Services
         {
             return _context.Themes.SingleOrDefault(x => x.Name == themeName) != null;
         }
+
+        /// <summary>
+        /// Edits a Theme with the specified changes to apply.
+        /// </summary>
+        /// <param name="theme">The Theme you wish to change.</param>
+        /// <param name="changesToApply">The changes to apply for the Theme.</param>
+        /// <returns></returns>
+        internal async Task EditTheme(Theme theme, Theme changesToApply)
+        {
+            theme.Name = changesToApply.Name;
+            theme.Description = changesToApply.Description;
+            await _context.SaveChangesAsync();
+        }
     }
 }
