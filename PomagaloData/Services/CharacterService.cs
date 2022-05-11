@@ -2,7 +2,7 @@
 
 namespace BelPomagalo.Services
 {
-    internal class CharacterService:Service
+    public class CharacterService:Service
     {
         public CharacterService(ApplicationDbContext context) : base(context)
         {
@@ -12,7 +12,7 @@ namespace BelPomagalo.Services
         /// </summary>
         /// <param name="authorId">The Author's id, whose Characters you want to get.</param>
         /// <returns></returns>
-        internal IEnumerable<string> GetAllCharactersNamesOfAuthor(int authorId)
+        public IEnumerable<string> GetAllCharactersNamesOfAuthor(int authorId)
         {
             return _context.Characters
                 .Where(x => x.AuthorId == authorId)
@@ -25,7 +25,7 @@ namespace BelPomagalo.Services
         /// <param name="characterName">The Character's name.</param>
         /// <param name="authorThatOwnsCharacter">The Author that owns the Character.</param>
         /// <returns>The Character owned by the Author or NULL if no such character is owned by that author.</returns>
-        internal Character GetCharacter(string characterName, Author authorThatOwnsCharacter)
+        public Character GetCharacter(string characterName, Author authorThatOwnsCharacter)
         {
             return _context.Characters
                 .SingleOrDefault(x => x.Name == characterName && x.AuthorId == authorThatOwnsCharacter.Id);
@@ -35,7 +35,7 @@ namespace BelPomagalo.Services
         /// </summary>
         /// <param name="characterId">The id of the Character.</param>
         /// <returns></returns>
-        internal Character GetCharacter(int characterId)
+        public Character GetCharacter(int characterId)
         {
             return _context.Characters
                 .SingleOrDefault(x => x.Id == characterId);
@@ -45,7 +45,7 @@ namespace BelPomagalo.Services
         /// </summary>
         /// <param name="character">The Character to add.</param>
         /// <returns></returns>
-        internal async Task<Character> AddCharacter(Character character)
+        public async Task<Character> AddCharacter(Character character)
         {
             var addedCharacter = await _context.Characters.AddAsync(character);
             await _context.SaveChangesAsync();
@@ -57,7 +57,7 @@ namespace BelPomagalo.Services
         /// <param name="characterName">The name of the Character.</param>
         /// <param name="authorThatOwnsCharacter">The Author who may or may not own the Character.</param>
         /// <returns></returns>
-        internal bool IsOwnedByAuthor(string characterName, Author authorThatOwnsCharacter)
+        public bool IsOwnedByAuthor(string characterName, Author authorThatOwnsCharacter)
         {
             var character = GetCharacter(characterName, authorThatOwnsCharacter);
             if (character != null && character.AuthorId == authorThatOwnsCharacter.Id)
@@ -72,7 +72,7 @@ namespace BelPomagalo.Services
         /// <param name="character">The Character you wish to change.</param>
         /// <param name="changesToApply">The changes to apply for the Character.</param>
         /// <returns></returns>
-        internal async Task EditCharacter(Character character, Character changesToApply)
+        public async Task EditCharacter(Character character, Character changesToApply)
         {
             character.AuthorId = changesToApply.AuthorId;
             character.Name = changesToApply.Name;

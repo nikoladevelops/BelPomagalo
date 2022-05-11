@@ -8,18 +8,18 @@ using System.Threading.Tasks;
 
 namespace BelPomagalo.Services
 {
-    internal class PublishedWorkGenreService : Service
+    public class PublishedWorkGenreService : Service
     {
         public PublishedWorkGenreService(ApplicationDbContext context) : base(context)
         {
         }
-        internal IEnumerable<PublishedWorkGenre> GetPublishedWorkGenres(PublishedWork publishedWork)
+        public IEnumerable<PublishedWorkGenre> GetPublishedWorkGenres(PublishedWork publishedWork)
         {
             return _context.PublishedWorkGenres
                 .Where(x => x.PublishedWorkId == publishedWork.Id)
                 .ToList();
         }
-        internal IEnumerable<string> GetPublishedWorkGenresNames(PublishedWork publishedWork)
+        public IEnumerable<string> GetPublishedWorkGenresNames(PublishedWork publishedWork)
         {
             return _context.PublishedWorkGenres
                 .Include(x => x.Genre)
@@ -27,14 +27,14 @@ namespace BelPomagalo.Services
                 .Select(x => x.Genre.Name)
                 .ToList();
         }
-        internal async Task<PublishedWorkGenre> AddPublishedWorkGenre(PublishedWorkGenre publishedWorkGenre)
+        public async Task<PublishedWorkGenre> AddPublishedWorkGenre(PublishedWorkGenre publishedWorkGenre)
         {
             var result = await _context.PublishedWorkGenres.AddAsync(publishedWorkGenre);
             await _context.SaveChangesAsync();
             return result.Entity;
         }
 
-        internal async Task ChangeGenres(PublishedWork publishedWork, IEnumerable<Genre> newGenres)
+        public async Task ChangeGenres(PublishedWork publishedWork, IEnumerable<Genre> newGenres)
         {
             var publishedWorkGenres = _context.PublishedWorkGenres
                 .Where(x => x.PublishedWorkId == publishedWork.Id)

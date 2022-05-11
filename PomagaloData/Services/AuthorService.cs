@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BelPomagalo.Services
 {
-    internal class AuthorService : Service
+    public class AuthorService : Service
     {
         public AuthorService(ApplicationDbContext context) : base(context)
         {
@@ -16,7 +16,7 @@ namespace BelPomagalo.Services
         /// Gets all Authors' names.
         /// </summary>
         /// <returns></returns>
-        internal IEnumerable<string> GetAllAuthorsNames()
+        public IEnumerable<string> GetAllAuthorsNames()
         {
             return _context.Authors
                 .Select(x => x.Name)
@@ -27,7 +27,7 @@ namespace BelPomagalo.Services
         /// </summary>
         /// <param name="authorName"></param>
         /// <returns></returns>
-        internal Author GetAuthor(string authorName)
+        public Author GetAuthor(string authorName)
         {
             return _context.Authors
                 .SingleOrDefault(x => x.Name == authorName);
@@ -37,7 +37,7 @@ namespace BelPomagalo.Services
         /// </summary>
         /// <param name="author">The Author to add.</param>
         /// <returns></returns>
-        internal async Task<Author> AddAuthor(Author author)
+        public async Task<Author> AddAuthor(Author author)
         {
             var addedAuthor = await _context.Authors.AddAsync(author);
             await _context.SaveChangesAsync();
@@ -48,7 +48,7 @@ namespace BelPomagalo.Services
         /// </summary>
         /// <param name="authorToEdit">The Author to edit. Needs to be tracked by the db context.</param>
         /// <param name="changesToApply">The changes to apply to the Author.</param>
-        internal async Task EditAuthor(Author authorToEdit, Author changesToApply)
+        public async Task EditAuthor(Author authorToEdit, Author changesToApply)
         {
             authorToEdit.Name = changesToApply.Name;
             authorToEdit.Description = changesToApply.Description;
@@ -64,7 +64,7 @@ namespace BelPomagalo.Services
         /// </summary>
         /// <param name="authorName">The name that the Author has.</param>
         /// <returns></returns>
-        internal bool Exists(string authorName)
+        public bool Exists(string authorName)
         {
             return _context.Authors.SingleOrDefault(x => x.Name == authorName) != null;
         }

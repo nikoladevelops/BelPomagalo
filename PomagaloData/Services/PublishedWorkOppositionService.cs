@@ -3,18 +3,18 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BelPomagalo.Services
 {
-    internal class PublishedWorkOppositionService : Service
+    public class PublishedWorkOppositionService : Service
     {
         public PublishedWorkOppositionService(ApplicationDbContext context) : base(context)
         {
         }
-        internal IEnumerable<PublishedWorkOpposition> GetPublishedWorkOppositions(PublishedWork publishedWork)
+        public IEnumerable<PublishedWorkOpposition> GetPublishedWorkOppositions(PublishedWork publishedWork)
         {
             return _context.PublishedWorkOppositions
                 .Where(x => x.PublishedWorkId == publishedWork.Id)
                 .ToList();
         }
-        internal IEnumerable<string> GetPublishedWorkOppositionsNames(PublishedWork publishedWork)
+        public IEnumerable<string> GetPublishedWorkOppositionsNames(PublishedWork publishedWork)
         {
             return _context.PublishedWorkOppositions
                 .Include(x => x.Opposition)
@@ -22,14 +22,14 @@ namespace BelPomagalo.Services
                 .Select(x => x.Opposition.Name)
                 .ToList();
         }
-        internal async Task<PublishedWorkOpposition> AddPublishedWorkOpposition(PublishedWorkOpposition publishedWorkOpposition)
+        public async Task<PublishedWorkOpposition> AddPublishedWorkOpposition(PublishedWorkOpposition publishedWorkOpposition)
         {
             var result = await _context.PublishedWorkOppositions.AddAsync(publishedWorkOpposition);
             await _context.SaveChangesAsync();
             return result.Entity;
         }
 
-        internal async Task ChangeOppositions(PublishedWork publishedWork, IEnumerable<Opposition> newOppositions)
+        public async Task ChangeOppositions(PublishedWork publishedWork, IEnumerable<Opposition> newOppositions)
         {
             var publishedWorkOppositions = _context.PublishedWorkOppositions
                 .Where(x => x.PublishedWorkId == publishedWork.Id)

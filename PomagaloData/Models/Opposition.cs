@@ -1,6 +1,6 @@
 ﻿namespace BelPomagalo.Models
 {
-    internal class Opposition
+    public class Opposition
     {
         public int Id { get; set; }
         public string Name { get; set; }

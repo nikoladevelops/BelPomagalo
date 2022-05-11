@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BelPomagalo.Services
 {
-    internal class GenreService : Service
+    public class GenreService : Service
     {
         public GenreService(ApplicationDbContext context) : base(context)
         {
@@ -16,7 +16,7 @@ namespace BelPomagalo.Services
         /// Gets all Genres' names.
         /// </summary>
         /// <returns></returns>
-        internal IEnumerable<string> GetAllGenresNames()
+        public IEnumerable<string> GetAllGenresNames()
         {
             return _context.Genres
                 .Select(x => x.Name)
@@ -27,7 +27,7 @@ namespace BelPomagalo.Services
         /// </summary>
         /// <param name="genreName">The Genre's name.</param>
         /// <returns></returns>
-        internal Genre GetGenre(string genreName)
+        public Genre GetGenre(string genreName)
         {
             return _context.Genres
                 .SingleOrDefault(x=>x.Name==genreName);
@@ -37,7 +37,7 @@ namespace BelPomagalo.Services
         /// </summary>
         /// <param name="genreId">The Genre's id.</param>
         /// <returns></returns>
-        internal Genre GetGenre(int genreId)
+        public Genre GetGenre(int genreId)
         {
             return _context.Genres
                 .SingleOrDefault(x => x.Id == genreId);
@@ -47,7 +47,7 @@ namespace BelPomagalo.Services
         /// </summary>
         /// <param name="genre">The Genre to add.</param>
         /// <returns></returns>
-        internal async Task<Genre> AddGenre(Genre genre)
+        public async Task<Genre> AddGenre(Genre genre)
         {
             var addedGenre = await _context.Genres.AddAsync(genre);
             await _context.SaveChangesAsync();
@@ -58,7 +58,7 @@ namespace BelPomagalo.Services
         /// </summary>
         /// <param name="genreName">The Genre's name.</param>
         /// <returns></returns>
-        internal bool Exists(string genreName)
+        public bool Exists(string genreName)
         {
             return _context.Genres.SingleOrDefault(x => x.Name == genreName) != null;
         }
@@ -69,7 +69,7 @@ namespace BelPomagalo.Services
         /// <param name="genre">The Genre you wish to change.</param>
         /// <param name="changesToApply">The changes to apply for the Genre.</param>
         /// <returns></returns>
-        internal async Task EditGenre(Genre genre, Genre changesToApply)
+        public async Task EditGenre(Genre genre, Genre changesToApply)
         {
             genre.Name = changesToApply.Name;
             genre.Description = changesToApply.Description;

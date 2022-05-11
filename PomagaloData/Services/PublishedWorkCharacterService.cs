@@ -3,18 +3,18 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BelPomagalo.Services
 {
-    internal class PublishedWorkCharacterService:Service
+    public class PublishedWorkCharacterService:Service
     {
         public PublishedWorkCharacterService(ApplicationDbContext context) : base(context)
         {
         }
-        internal IEnumerable<PublishedWorkCharacter> GetPublishedWorkCharacters(PublishedWork publishedWork)
+        public IEnumerable<PublishedWorkCharacter> GetPublishedWorkCharacters(PublishedWork publishedWork)
         {
             return _context.PublishedWorkCharacters
                 .Where(x => x.PublishedWorkId == publishedWork.Id)
                 .ToList();
         }
-        internal IEnumerable<string> GetPublishedWorkCharactersNames(PublishedWork publishedWork)
+        public IEnumerable<string> GetPublishedWorkCharactersNames(PublishedWork publishedWork)
         {
             return _context.PublishedWorkCharacters
                 .Include(x => x.Character)
@@ -22,13 +22,13 @@ namespace BelPomagalo.Services
                 .Select(x => x.Character.Name)
                 .ToList();
         }
-        internal async Task<PublishedWorkCharacter> AddPublishedWorkCharacter(PublishedWorkCharacter publishedWorkCharacter)
+        public async Task<PublishedWorkCharacter> AddPublishedWorkCharacter(PublishedWorkCharacter publishedWorkCharacter)
         {
             var result = await _context.PublishedWorkCharacters.AddAsync(publishedWorkCharacter);
             await _context.SaveChangesAsync();
             return result.Entity;
         }
-        internal async Task ChangeCharacters(PublishedWork publishedWork, IEnumerable<Character> newCharacters)
+        public async Task ChangeCharacters(PublishedWork publishedWork, IEnumerable<Character> newCharacters)
         {
             var publishedWorkCharacters = _context.PublishedWorkCharacters
                 .Where(x => x.PublishedWorkId == publishedWork.Id)

@@ -1,6 +1,6 @@
 ﻿namespace BelPomagalo.Models
 {
-    internal class PublishedWorkTheme
+    public class PublishedWorkTheme
     {
         public int Id { get; set; }
 

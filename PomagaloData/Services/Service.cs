@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BelPomagalo.Services
 {
-    internal abstract class Service
+    public abstract class Service
     {
         protected readonly ApplicationDbContext _context;
         protected Service(ApplicationDbContext context)

@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BelPomagalo", "BelPomagalo\BelPomagalo.csproj", "{12E50088-2E94-4271-9CE9-39150BCF3BBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BelPomagalo", "BelPomagalo\BelPomagalo.csproj", "{12E50088-2E94-4271-9CE9-39150BCF3BBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PomagaloData", "PomagaloData\PomagaloData.csproj", "{D1B54888-BDE9-4712-B754-ED33EE2D07FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{12E50088-2E94-4271-9CE9-39150BCF3BBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12E50088-2E94-4271-9CE9-39150BCF3BBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12E50088-2E94-4271-9CE9-39150BCF3BBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1B54888-BDE9-4712-B754-ED33EE2D07FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1B54888-BDE9-4712-B754-ED33EE2D07FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1B54888-BDE9-4712-B754-ED33EE2D07FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1B54888-BDE9-4712-B754-ED33EE2D07FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

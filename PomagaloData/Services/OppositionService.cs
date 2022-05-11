@@ -1,7 +1,7 @@
 ﻿using BelPomagalo.Models;
 namespace BelPomagalo.Services
 {
-    internal class OppositionService : Service
+    public class OppositionService : Service
     {
         public OppositionService(ApplicationDbContext context) : base(context)
         {
@@ -10,7 +10,7 @@ namespace BelPomagalo.Services
         /// Gets all Oppositions' names.
         /// </summary>
         /// <returns></returns>
-        internal IEnumerable<string> GetAllOppositionsNames()
+        public IEnumerable<string> GetAllOppositionsNames()
         {
             return _context.Oppositions
                 .Select(x => x.Name)
@@ -21,7 +21,7 @@ namespace BelPomagalo.Services
         /// </summary>
         /// <param name="oppositionName">The Opposition's name.</param>
         /// <returns></returns>
-        internal Opposition GetOpposition(string oppositionName)
+        public Opposition GetOpposition(string oppositionName)
         {
             return _context.Oppositions
                 .SingleOrDefault(x => x.Name == oppositionName);
@@ -31,7 +31,7 @@ namespace BelPomagalo.Services
         /// </summary>
         /// <param name="oppositionId">The Opposition's id.</param>
         /// <returns></returns>
-        internal Opposition GetOpposition(int oppositionId)
+        public Opposition GetOpposition(int oppositionId)
         {
             return _context.Oppositions
                 .SingleOrDefault(x => x.Id == oppositionId);
@@ -41,7 +41,7 @@ namespace BelPomagalo.Services
         /// </summary>
         /// <param name="opposition">The Opposition to add.</param>
         /// <returns></returns>
-        internal async Task<Opposition> AddOpposition(Opposition opposition)
+        public async Task<Opposition> AddOpposition(Opposition opposition)
         {
             var addedOpposition = await _context.Oppositions.AddAsync(opposition);
             await _context.SaveChangesAsync();
@@ -52,7 +52,7 @@ namespace BelPomagalo.Services
         /// </summary>
         /// <param name="oppositionName">The Opposition's name.</param>
         /// <returns></returns>
-        internal bool Exists(string oppositionName)
+        public bool Exists(string oppositionName)
         {
             return _context.Oppositions.SingleOrDefault(x => x.Name == oppositionName) != null;
         }
@@ -63,7 +63,7 @@ namespace BelPomagalo.Services
         /// <param name="opposition">The Opposition you wish to change.</param>
         /// <param name="changesToApply">The changes to apply for the Opposition.</param>
         /// <returns></returns>
-        internal async Task EditOpposition(Opposition opposition, Opposition changesToApply)
+        public async Task EditOpposition(Opposition opposition, Opposition changesToApply)
         {
             opposition.Name = changesToApply.Name;
             opposition.Description = changesToApply.Description;

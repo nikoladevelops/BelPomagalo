@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BelPomagalo.Services
 {
-    internal class PublishedWorkService : Service
+    public class PublishedWorkService : Service
     {
         public PublishedWorkService(ApplicationDbContext context) : base(context)
         {
@@ -18,7 +18,7 @@ namespace BelPomagalo.Services
         /// </summary>
         /// <param name="authorId">The Author id, whose PublishedWorks' names you need.</param>
         /// <returns></returns>
-        internal IEnumerable<string> GetPublishedWorksNames(int authorId)
+        public IEnumerable<string> GetPublishedWorksNames(int authorId)
         {
             return _context.PublishedWorks
                 .Where(x => x.AuthorId == authorId)
@@ -32,7 +32,7 @@ namespace BelPomagalo.Services
         /// <param name="publishedWorkName">The PublishedWork's name.</param>
         /// <param name="authorThatOwnsPublishedWork">The Author that owns the PublishedWork.</param>
         /// <returns></returns>
-        internal PublishedWork GetPublishedWork(string publishedWorkName, Author authorThatOwnsPublishedWork)
+        public PublishedWork GetPublishedWork(string publishedWorkName, Author authorThatOwnsPublishedWork)
         {
             return _context.PublishedWorks
                 .SingleOrDefault(x => x.Name == publishedWorkName && x.AuthorId == authorThatOwnsPublishedWork.Id);
@@ -42,7 +42,7 @@ namespace BelPomagalo.Services
         /// </summary>
         /// <param name="publishedWork">The PublishedWork to add.</param>
         /// <returns></returns>
-        internal async Task<PublishedWork> AddPublishedWork(PublishedWork publishedWork)
+        public async Task<PublishedWork> AddPublishedWork(PublishedWork publishedWork)
         {
             var result = await _context.PublishedWorks.AddAsync(publishedWork);
             await _context.SaveChangesAsync();
@@ -54,7 +54,7 @@ namespace BelPomagalo.Services
         /// <param name="publishedWorkName">The PublishedWork's name.</param>
         /// <param name="authorThatOwnsPublishedWork">The Author that may or may not own the PublishedWork.</param>
         /// <returns></returns>
-        internal bool IsOwnedByAuthor(string publishedWorkName, Author authorThatOwnsPublishedWork)
+        public bool IsOwnedByAuthor(string publishedWorkName, Author authorThatOwnsPublishedWork)
         {
             var publishedWork = GetPublishedWork(publishedWorkName, authorThatOwnsPublishedWork);
             if (publishedWork != null && publishedWork.AuthorId == authorThatOwnsPublishedWork.Id)
@@ -70,7 +70,7 @@ namespace BelPomagalo.Services
         /// <param name="publishedWork">The PublishedWork you wish to change.</param>
         /// <param name="changesToApply">The changes to apply for the Character.</param>
         /// <returns></returns>
-        internal async Task EditPublishedWork(PublishedWork publishedWork, PublishedWork changesToApply)
+        public async Task EditPublishedWork(PublishedWork publishedWork, PublishedWork changesToApply)
         {
             publishedWork.Name = changesToApply.Name;
             publishedWork.PublishedDate = changesToApply.PublishedDate;

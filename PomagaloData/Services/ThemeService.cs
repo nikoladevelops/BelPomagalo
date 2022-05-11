@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BelPomagalo.Services
 {
-    internal class ThemeService : Service
+    public class ThemeService : Service
     {
         public ThemeService(ApplicationDbContext context) : base(context)
         {
@@ -16,7 +16,7 @@ namespace BelPomagalo.Services
         /// Gets all Themes' names.
         /// </summary>
         /// <returns></returns>
-        internal IEnumerable<string> GetAllThemesNames()
+        public IEnumerable<string> GetAllThemesNames()
         {
             return _context.Themes
                 .Select(x => x.Name)
@@ -27,7 +27,7 @@ namespace BelPomagalo.Services
         /// </summary>
         /// <param name="themeName">The Theme's name.</param>
         /// <returns></returns>
-        internal Theme GetTheme(string themeName)
+        public Theme GetTheme(string themeName)
         {
             return _context.Themes
                 .FirstOrDefault(x => x.Name == themeName);
@@ -37,7 +37,7 @@ namespace BelPomagalo.Services
         /// </summary>
         /// <param name="themeId">The Theme's id.</param>
         /// <returns></returns>
-        internal Theme GetTheme(int themeId)
+        public Theme GetTheme(int themeId)
         {
             return _context.Themes
                 .FirstOrDefault(x => x.Id == themeId);
@@ -47,7 +47,7 @@ namespace BelPomagalo.Services
         /// </summary>
         /// <param name="theme">The Theme to add.</param>
         /// <returns></returns>
-        internal async Task<Theme> AddTheme(Theme theme)
+        public async Task<Theme> AddTheme(Theme theme)
         {
              var addedTheme = await _context.Themes.AddAsync(theme);
              await _context.SaveChangesAsync();
@@ -58,7 +58,7 @@ namespace BelPomagalo.Services
         /// </summary>
         /// <param name="themeName">The Theme's name.</param>
         /// <returns></returns>
-        internal bool Exists(string themeName)
+        public bool Exists(string themeName)
         {
             return _context.Themes.SingleOrDefault(x => x.Name == themeName) != null;
         }
@@ -69,7 +69,7 @@ namespace BelPomagalo.Services
         /// <param name="theme">The Theme you wish to change.</param>
         /// <param name="changesToApply">The changes to apply for the Theme.</param>
         /// <returns></returns>
-        internal async Task EditTheme(Theme theme, Theme changesToApply)
+        public async Task EditTheme(Theme theme, Theme changesToApply)
         {
             theme.Name = changesToApply.Name;
             theme.Description = changesToApply.Description;
