@@ -14,7 +14,7 @@ namespace BelPomagalo.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "6.0.3");
+            modelBuilder.HasAnnotation("ProductVersion", "6.0.5");
 
             modelBuilder.Entity("BelPomagalo.Models.Author", b =>
                 {
@@ -82,6 +82,44 @@ namespace BelPomagalo.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Genres");
+                });
+
+            modelBuilder.Entity("BelPomagalo.Models.GrammarRule", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("GrammarRules");
+                });
+
+            modelBuilder.Entity("BelPomagalo.Models.LexicalRule", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("LexicalRules");
                 });
 
             modelBuilder.Entity("BelPomagalo.Models.Opposition", b =>
@@ -219,6 +257,25 @@ namespace BelPomagalo.Migrations
                     b.HasIndex("ThemeId");
 
                     b.ToTable("PublishedWorkThemes");
+                });
+
+            modelBuilder.Entity("BelPomagalo.Models.PunctuationRule", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PunctuationRules");
                 });
 
             modelBuilder.Entity("BelPomagalo.Models.Theme", b =>
