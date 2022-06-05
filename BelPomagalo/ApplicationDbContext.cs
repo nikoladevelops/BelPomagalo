@@ -12,7 +12,9 @@ namespace BelPomagalo
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Filename=PomagaloData.db");
+            var currentDir = Path.GetDirectoryName(Application.ExecutablePath);
+            var connectionString = "Data Source=" + currentDir + "\\DataStore\\PomagaloData.db";
+            optionsBuilder.UseSqlite(connectionString);
         }
 
         public DbSet<Author> Authors { get; set; }
