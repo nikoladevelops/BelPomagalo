@@ -13,7 +13,7 @@ namespace BelPomagalo.Controllers
         private readonly ApplicationDbContext _context;
 
         private readonly string[] literatureComboBoxItems = new string[] { "автор", "герой", "жанр", "опозиция", "произведение", "тема" };
-        private readonly string[] bulgarianComboBoxItems = new string[] {  }; // TODO
+        private readonly string[] bulgarianComboBoxItems = new string[] {  "граматично правило", "лексикално правило", "пунктуационно правило", "задача за членуване"};
 
         public LibraryFormController(LibraryForm form, Action<Form> openChildFormMethod, ApplicationDbContext context) : base(form)
         {
@@ -37,6 +37,7 @@ namespace BelPomagalo.Controllers
             Helper.LoadComboBoxData(_form.BulgarianComboBox, bulgarianComboBoxItems);
         }
 
+        // TODO ALL OF THIS
         private void HandleDeleteBulgarianEntity(object? sender, EventArgs e)
         {
             throw new NotImplementedException();
