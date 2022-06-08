@@ -18,6 +18,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\AddNewEntityForms\AddNewQuestionChlenuvane.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\AddNewEntityForms\AddNewCharacterForm.cs">
       <SubType>Form</SubType>
     </Compile>
