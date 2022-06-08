@@ -1,6 +1,6 @@
 ﻿namespace BelPomagalo.Views.AddNewEntityForms
 {
-    partial class AddNewQuestionChlenuvane
+    partial class AddNewQuestionChlenuvaneForm
     {
         /// <summary>
         /// Required designer variable.

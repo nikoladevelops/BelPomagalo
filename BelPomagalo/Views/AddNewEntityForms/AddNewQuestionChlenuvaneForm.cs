@@ -1,8 +1,8 @@
 ﻿namespace BelPomagalo.Views.AddNewEntityForms
 {
-    public partial class AddNewQuestionChlenuvane : Form, IAddForm
+    public partial class AddNewQuestionChlenuvaneForm : Form, IAddForm
     {
-        public AddNewQuestionChlenuvane()
+        public AddNewQuestionChlenuvaneForm()
         {
             InitializeComponent();
         }
