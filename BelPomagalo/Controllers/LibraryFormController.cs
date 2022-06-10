@@ -50,7 +50,25 @@ namespace BelPomagalo.Controllers
 
         private void HandleAddNewBulgarianEntity(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            Form formToOpen = null;
+            switch (_form.BulgarianComboBox.SelectedItem)
+            {
+                case "граматично правило":
+                    break;
+                case "лексикално правило":
+                    break;
+                case "пунктуационно правило":
+                    break;
+                case "задача за членуване":
+                    formToOpen = new AddNewQuestionChlenuvaneFormController(
+                        new AddNewQuestionChlenuvaneForm(),
+                        new QuestionChlenuvaneService(_context)
+                        ).Form;
+                    break;
+                default:
+                    break;
+            }
+            _openChildFormMethod(formToOpen);
         }
 
         private void HandleAddNewLiteratureEntity(object? sender, EventArgs e)
