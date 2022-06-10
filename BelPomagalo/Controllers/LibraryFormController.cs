@@ -54,6 +54,10 @@ namespace BelPomagalo.Controllers
             switch (_form.BulgarianComboBox.SelectedItem)
             {
                 case "граматично правило":
+                    formToOpen = new AddNewGrammarRuleFormController(
+                        new AddNewRuleForm(),
+                        new GrammarRuleService(_context)
+                        ).Form;
                     break;
                 case "лексикално правило":
                     break;
