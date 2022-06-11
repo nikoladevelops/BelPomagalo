@@ -45,7 +45,25 @@ namespace BelPomagalo.Controllers
 
         private void HandleEditBulgarianEntity(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            Form formToOpen = null;
+            switch (_form.BulgarianComboBox.SelectedItem)
+            {
+                case "граматично правило":
+                    //TODO
+                    break;
+                case "правописно правило":
+                    
+                    break;
+                case "пунктуационно правило":
+                   
+                    break;
+                case "задача за членуване":
+                    
+                    break;
+                default:
+                    break;
+            }
+            _openChildFormMethod(formToOpen);
         }
 
         private void HandleAddNewBulgarianEntity(object? sender, EventArgs e)
