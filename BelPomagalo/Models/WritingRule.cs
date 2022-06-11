@@ -1,6 +1,6 @@
 ﻿namespace BelPomagalo.Models
 {
-    public class LexicalRule
+    public class WritingRule
     {
         public int Id { get; set; }
         public string Name { get; set; }

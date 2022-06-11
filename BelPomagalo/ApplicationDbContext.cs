@@ -29,7 +29,7 @@ namespace BelPomagalo
         public DbSet<PublishedWorkOpposition> PublishedWorkOppositions { get; set; }
 
         public DbSet<GrammarRule> GrammarRules { get; set; }
-        public DbSet<LexicalRule> LexicalRules { get; set; }
+        public DbSet<WritingRule> WritingRules { get; set; }
         public DbSet<PunctuationRule> PunctuationRules { get; set; }
         public DbSet<QuestionChlenuvane> QuestionsChlenuvane { get; set; }
     }
