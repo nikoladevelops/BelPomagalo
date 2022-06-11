@@ -13,7 +13,7 @@ namespace BelPomagalo.Controllers
         private readonly ApplicationDbContext _context;
 
         private readonly string[] literatureComboBoxItems = new string[] { "автор", "герой", "жанр", "опозиция", "произведение", "тема" };
-        private readonly string[] bulgarianComboBoxItems = new string[] {  "граматично правило", "лексикално правило", "пунктуационно правило", "задача за членуване"};
+        private readonly string[] bulgarianComboBoxItems = new string[] {  "граматично правило", "правописно правило", "пунктуационно правило", "задача за членуване"};
 
         public LibraryFormController(LibraryForm form, Action<Form> openChildFormMethod, ApplicationDbContext context) : base(form)
         {
@@ -59,9 +59,17 @@ namespace BelPomagalo.Controllers
                         new GrammarRuleService(_context)
                         ).Form;
                     break;
-                case "лексикално правило":
+                case "правописно правило":
+                    formToOpen = new AddNewWritingRuleFormController(
+                        new AddNewRuleForm(),
+                        new WritingRuleService(_context)
+                        ).Form;
                     break;
                 case "пунктуационно правило":
+                    formToOpen = new AddNewPunctuationRuleFormController(
+                        new AddNewRuleForm(),
+                        new PunctuationRuleService(_context)
+                        ).Form;
                     break;
                 case "задача за членуване":
                     formToOpen = new AddNewQuestionChlenuvaneFormController(
