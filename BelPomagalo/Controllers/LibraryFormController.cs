@@ -49,16 +49,32 @@ namespace BelPomagalo.Controllers
             switch (_form.BulgarianComboBox.SelectedItem)
             {
                 case "граматично правило":
-                    //TODO
+                    formToOpen = new EditGrammarRuleFormController(
+                        new EditForm(),
+                        new AddNewRuleForm(),
+                        new GrammarRuleService(_context)
+                        ).Form;
                     break;
                 case "правописно правило":
-                    
+                    formToOpen = new EditWritingRuleFormController(
+                        new EditForm(),
+                        new AddNewRuleForm(),
+                        new WritingRuleService(_context)
+                        ).Form;
                     break;
                 case "пунктуационно правило":
-                   
+                    formToOpen = new EditPunctuationRuleFormController(
+                         new EditForm(),
+                         new AddNewRuleForm(),
+                         new PunctuationRuleService(_context)
+                         ).Form;
                     break;
                 case "задача за членуване":
-                    
+                    formToOpen = new EditQuestionChlenuvaneFormController(
+                        new EditForm(),
+                        new AddNewQuestionChlenuvaneForm(),
+                        new QuestionChlenuvaneService(_context)
+                        ).Form;
                     break;
                 default:
                     break;

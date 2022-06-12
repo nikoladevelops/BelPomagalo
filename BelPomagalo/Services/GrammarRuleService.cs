@@ -54,7 +54,7 @@ namespace BelPomagalo.Services
         /// <param name="grammarRule">The GrammarRule you wish to change.</param>
         /// <param name="changesToApply">The changes to apply for the GrammarRule.</param>
         /// <returns></returns>
-        public async Task EditGrammarRule(GrammarRule grammarRule, PunctuationRule changesToApply)
+        public async Task EditGrammarRule(GrammarRule grammarRule, GrammarRule changesToApply)
         {
             grammarRule.Name = changesToApply.Name;
             grammarRule.Description = changesToApply.Description;

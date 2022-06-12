@@ -14,6 +14,7 @@ namespace BelPomagalo.Controllers.EditEntityControllers
         {
             _writingRuleService = writingRuleService;
             _innerForm = innerForm;
+            LoadEntityListBox(0);
         }
 
         protected override async Task<bool> EditEntityData()
