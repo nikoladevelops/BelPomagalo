@@ -15,6 +15,14 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
 
         protected override async Task<bool> AddNewEntity()
         {
+            // Check if a punctuationRule with this name already exists
+            // if it does, show an error message
+            if (_punctuationRuleService.Exists(_form.RuleNameTextBox.Text))
+            {
+                MessageBox.Show("Вече съществува пунктуационно правило с такова име.", "Грешка.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
             var punctuationRule = new PunctuationRule()
             {
                 Name = _form.RuleNameTextBox.Text,

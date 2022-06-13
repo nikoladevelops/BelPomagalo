@@ -15,6 +15,14 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
 
         protected override async Task<bool> AddNewEntity()
         {
+            // Check if a questionChlenuvane with this sentence already exists
+            // if it does, show an error message
+            if (_questionChlenuvaneService.Exists(_form.SentenceTextBox.Text))
+            {
+                MessageBox.Show("Вече съществува задача за членуване с такова изречение.", "Грешка.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
             var questionChlenuvane = new QuestionChlenuvane()
             {
                 Sentence = _form.SentenceTextBox.Text,

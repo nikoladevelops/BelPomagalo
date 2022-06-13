@@ -15,6 +15,14 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
 
         protected override async Task<bool> AddNewEntity()
         {
+            // Check if a writingRule with this name already exists
+            // if it does, show an error message
+            if (_writingRuleService.Exists(_form.RuleNameTextBox.Text))
+            {
+                MessageBox.Show("Вече съществува правописно правило с такова име.", "Грешка.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
             var writingRule = new WritingRule()
             {
                 Name = _form.RuleNameTextBox.Text,
