@@ -249,7 +249,31 @@ namespace BelPomagalo.Controllers
         }
         private void ShowDeleteEntityForm()
         {
-
+            Form formToOpen = null;
+            switch (_form.LiteratureComboBox.SelectedItem)
+            {
+                case "автор":
+                   //TODO
+                    break;
+                case "герой":
+                    
+                    break;
+                case "жанр":
+                   
+                    break;
+                case "опозиция":
+                    
+                    break;
+                case "произведение":
+                    
+                    break;
+                case "тема":
+                    
+                    break;
+                default:
+                    break;
+            }
+            _openChildFormMethod(formToOpen);
         }
     }
 }
