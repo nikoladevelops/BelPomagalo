@@ -78,5 +78,14 @@ namespace BelPomagalo.Controllers.EditEntityControllers
                 _innerForm.RuleDescriptionTextBox
                 );
         }
+
+        protected override void DeleteEntityData()
+        {
+            var grammarRuleName = _entityListBox.SelectedItem.ToString();
+            var grammarRule = _grammarRuleService.GetGrammarRule(grammarRuleName);
+
+            _grammarRuleService.Delete(grammarRule);
+            LoadEntityListBox(0);
+        }
     }
 }

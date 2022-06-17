@@ -18,7 +18,6 @@ namespace BelPomagalo.Controllers.EditEntityControllers
             LoadEntityListBox(0);
         }
 
-
         protected override async Task<bool> EditEntityData()
         {
             var oppositionName = _entityListBox.SelectedItem.ToString();
@@ -79,6 +78,15 @@ namespace BelPomagalo.Controllers.EditEntityControllers
                 _innerForm.OppositionNameTextBox,
                 _innerForm.OppositionDescriptionTextBox
                 );
+        }
+
+        protected override void DeleteEntityData()
+        {
+            var oppositionName = _entityListBox.SelectedItem.ToString();
+            var opposition = _oppositionService.GetOpposition(oppositionName);
+
+            _oppositionService.Delete(opposition);
+            LoadEntityListBox(0);
         }
     }
 }

@@ -80,7 +80,14 @@ namespace BelPomagalo.Services
             await _context.SaveChangesAsync();
         }
 
-
-
+        /// <summary>
+        /// Deletes a character.
+        /// </summary>
+        /// <param name="character">The character to delete.</param>
+        public async void Delete(Character character)
+        {
+            _context.Characters.Remove(character);
+            await _context.SaveChangesAsync();
+        }
     }
 }

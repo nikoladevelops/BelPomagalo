@@ -75,5 +75,15 @@ namespace BelPomagalo.Services
             genre.Description = changesToApply.Description;
             await _context.SaveChangesAsync();
         }
+
+        /// <summary>
+        /// Deletes a genre.
+        /// </summary>
+        /// <param name="genre">The genre to delete.</param>
+        public async void Delete(Genre genre)
+        {
+            _context.Genres.Remove(genre);
+            await _context.SaveChangesAsync();
+        }
     }
 }

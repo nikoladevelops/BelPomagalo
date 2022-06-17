@@ -79,5 +79,14 @@ namespace BelPomagalo.Controllers.EditEntityControllers
                 _innerForm.ThemeDescriptionTextBox
                 );
         }
+
+        protected override void DeleteEntityData()
+        {
+            var themeName = _entityListBox.SelectedItem.ToString();
+            var theme = _themeService.GetTheme(themeName);
+
+            _themeService.Delete(theme);
+            LoadEntityListBox(0);
+        }
     }
 }

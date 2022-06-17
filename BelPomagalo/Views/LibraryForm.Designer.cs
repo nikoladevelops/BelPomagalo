@@ -39,14 +39,12 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.literatureDeleteButton = new System.Windows.Forms.Button();
             this.literatureComboBox = new System.Windows.Forms.ComboBox();
             this.literatureEditButton = new System.Windows.Forms.Button();
             this.literatureAddButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.bulgarianDeleteButton = new System.Windows.Forms.Button();
             this.bulgarianComboBox = new System.Windows.Forms.ComboBox();
             this.bulgarianEditButton = new System.Windows.Forms.Button();
             this.bulgarianAddButton = new System.Windows.Forms.Button();
@@ -212,7 +210,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.literatureDeleteButton);
             this.panel1.Controls.Add(this.literatureComboBox);
             this.panel1.Controls.Add(this.literatureEditButton);
             this.panel1.Controls.Add(this.literatureAddButton);
@@ -221,20 +218,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 146);
             this.panel1.TabIndex = 4;
-            // 
-            // literatureDeleteButton
-            // 
-            this.literatureDeleteButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.literatureDeleteButton.BackColor = System.Drawing.Color.Red;
-            this.literatureDeleteButton.FlatAppearance.BorderSize = 0;
-            this.literatureDeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.literatureDeleteButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.literatureDeleteButton.Location = new System.Drawing.Point(458, 94);
-            this.literatureDeleteButton.Name = "literatureDeleteButton";
-            this.literatureDeleteButton.Size = new System.Drawing.Size(115, 37);
-            this.literatureDeleteButton.TabIndex = 3;
-            this.literatureDeleteButton.Text = "Изтрий";
-            this.literatureDeleteButton.UseVisualStyleBackColor = false;
             // 
             // literatureComboBox
             // 
@@ -319,7 +302,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.bulgarianDeleteButton);
             this.panel2.Controls.Add(this.bulgarianComboBox);
             this.panel2.Controls.Add(this.bulgarianEditButton);
             this.panel2.Controls.Add(this.bulgarianAddButton);
@@ -328,20 +310,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(800, 146);
             this.panel2.TabIndex = 6;
-            // 
-            // bulgarianDeleteButton
-            // 
-            this.bulgarianDeleteButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bulgarianDeleteButton.BackColor = System.Drawing.Color.Red;
-            this.bulgarianDeleteButton.FlatAppearance.BorderSize = 0;
-            this.bulgarianDeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bulgarianDeleteButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.bulgarianDeleteButton.Location = new System.Drawing.Point(458, 96);
-            this.bulgarianDeleteButton.Name = "bulgarianDeleteButton";
-            this.bulgarianDeleteButton.Size = new System.Drawing.Size(115, 37);
-            this.bulgarianDeleteButton.TabIndex = 3;
-            this.bulgarianDeleteButton.Text = "Изтрий";
-            this.bulgarianDeleteButton.UseVisualStyleBackColor = false;
             // 
             // bulgarianComboBox
             // 
@@ -421,14 +389,12 @@
         private Button button6;
         private Button button7;
         private Panel panel1;
-        private Button literatureDeleteButton;
         private Button literatureEditButton;
         private ComboBox literatureComboBox;
         private Button literatureAddButton;
         private TableLayoutPanel tableLayoutPanel4;
         private Label label3;
         private Panel panel2;
-        private Button bulgarianDeleteButton;
         private ComboBox bulgarianComboBox;
         private Button bulgarianEditButton;
         private Button bulgarianAddButton;

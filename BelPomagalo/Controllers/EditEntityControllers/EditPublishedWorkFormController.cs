@@ -193,5 +193,17 @@ namespace BelPomagalo.Controllers.EditEntityControllers
 
             Helper.LoadListBoxData(_entityListBox, _publishedWorkService.GetPublishedWorksNames(author.Id));
         }
+
+        protected override void DeleteEntityData()
+        {
+            var authorName = _additionalListBox.SelectedItem.ToString();
+            var author = _authorService.GetAuthor(authorName);
+
+            var publishedWorkName = _entityListBox.SelectedItem.ToString();
+            var publishedWork = _publishedWorkService.GetPublishedWork(publishedWorkName, author);
+
+            _publishedWorkService.Delete(publishedWork);
+            LoadAdditionalListBox(0);
+        }
     }
 }

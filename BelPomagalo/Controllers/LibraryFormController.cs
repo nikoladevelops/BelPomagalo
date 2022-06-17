@@ -24,23 +24,15 @@ namespace BelPomagalo.Controllers
 
             _form.LiteratureAddButton.Click += HandleAddNewLiteratureEntity;
             _form.LiteratureEditButton.Click += HandleEditLiteratureEntity;
-            _form.LiteratureDeleteButton.Click += HandleDeleteLiteratureEntity;
 
             _form.BulgarianAddButton.Click += HandleAddNewBulgarianEntity;
             _form.BulgarianEditButton.Click += HandleEditBulgarianEntity;
-            _form.BulgarianDeleteButton.Click += HandleDeleteBulgarianEntity;
         }
 
         private void HandleFormLoad(object? sender, EventArgs e)
         {
             Helper.LoadComboBoxData(_form.LiteratureComboBox, literatureComboBoxItems);
             Helper.LoadComboBoxData(_form.BulgarianComboBox, bulgarianComboBoxItems);
-        }
-
-        // TODO ALL OF THIS
-        private void HandleDeleteBulgarianEntity(object? sender, EventArgs e)
-        {
-            throw new NotImplementedException();
         }
 
         private void HandleEditBulgarianEntity(object? sender, EventArgs e)
@@ -119,18 +111,6 @@ namespace BelPomagalo.Controllers
 
         private void HandleAddNewLiteratureEntity(object? sender, EventArgs e)
         {
-            ShowAddEntityForm();
-        }
-        private void HandleEditLiteratureEntity(object? sender, EventArgs e)
-        {
-            ShowEditEntityForm();
-        }
-        private void HandleDeleteLiteratureEntity(object? sender, EventArgs e)
-        {
-            ShowDeleteEntityForm();
-        }
-        private void ShowAddEntityForm()
-        {
             Form formToOpen = null;
             switch (_form.LiteratureComboBox.SelectedItem)
             {
@@ -185,7 +165,7 @@ namespace BelPomagalo.Controllers
             }
             _openChildFormMethod(formToOpen);
         }
-        private void ShowEditEntityForm() 
+        private void HandleEditLiteratureEntity(object? sender, EventArgs e)
         {
             Form formToOpen = null;
             switch (_form.LiteratureComboBox.SelectedItem)
@@ -241,34 +221,6 @@ namespace BelPomagalo.Controllers
                         new AddNewThemeForm(),
                         new ThemeService(_context)
                         ).Form;
-                    break;
-                default:
-                    break;
-            }
-            _openChildFormMethod(formToOpen);
-        }
-        private void ShowDeleteEntityForm()
-        {
-            Form formToOpen = null;
-            switch (_form.LiteratureComboBox.SelectedItem)
-            {
-                case "автор":
-                   //TODO
-                    break;
-                case "герой":
-                    
-                    break;
-                case "жанр":
-                   
-                    break;
-                case "опозиция":
-                    
-                    break;
-                case "произведение":
-                    
-                    break;
-                case "тема":
-                    
                     break;
                 default:
                     break;

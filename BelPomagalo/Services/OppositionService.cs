@@ -69,5 +69,15 @@ namespace BelPomagalo.Services
             opposition.Description = changesToApply.Description;
             await _context.SaveChangesAsync();
         }
+
+        /// <summary>
+        /// Deletes an opposition.
+        /// </summary>
+        /// <param name="opposition">The opposition to delete.</param>
+        public async void Delete(Opposition opposition)
+        {
+            _context.Oppositions.Remove(opposition);
+            await _context.SaveChangesAsync();
+        }
     }
 }

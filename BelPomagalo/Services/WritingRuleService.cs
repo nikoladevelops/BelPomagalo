@@ -59,5 +59,15 @@ namespace BelPomagalo.Services
             writingRule.Description = changesToApply.Description;
             await _context.SaveChangesAsync();
         }
+
+        /// <summary>
+        /// Deletes a writingRule.
+        /// </summary>
+        /// <param name="writingRule">The writingRule to delete.</param>
+        public async void Delete(WritingRule writingRule)
+        {
+            _context.WritingRules.Remove(writingRule);
+            await _context.SaveChangesAsync();
+        }
     }
 }

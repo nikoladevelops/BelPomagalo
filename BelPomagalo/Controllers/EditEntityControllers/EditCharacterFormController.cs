@@ -130,5 +130,17 @@ namespace BelPomagalo.Controllers.EditEntityControllers
 
             Helper.LoadListBoxData(_entityListBox, _characterService.GetAllCharactersNamesOfAuthor(author.Id));
         }
+
+        protected override void DeleteEntityData()
+        {
+            var authorName = _additionalListBox.SelectedItem.ToString();
+            var author = _authorService.GetAuthor(authorName);
+
+            var characterName = _entityListBox.SelectedItem.ToString();
+            var character = _characterService.GetCharacter(characterName, author);
+
+            _characterService.Delete(character);
+            LoadAdditionalListBox(0);
+        }
     }
 }

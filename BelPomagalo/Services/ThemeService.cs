@@ -75,5 +75,15 @@ namespace BelPomagalo.Services
             theme.Description = changesToApply.Description;
             await _context.SaveChangesAsync();
         }
+
+        /// <summary>
+        /// Deletes a theme.
+        /// </summary>
+        /// <param name="theme">The theme to delete.</param>
+        public async void Delete(Theme theme)
+        {
+            _context.Themes.Remove(theme);
+            await _context.SaveChangesAsync();
+        }
     }
 }

@@ -78,5 +78,14 @@ namespace BelPomagalo.Controllers.EditEntityControllers
                 _innerForm.RuleDescriptionTextBox
                 );
         }
+
+        protected override void DeleteEntityData()
+        {
+            var punctuationRuleName = _entityListBox.SelectedItem.ToString();
+            var punctuationRule = _punctuationRuleService.GetPunctuationRule(punctuationRuleName);
+
+            _punctuationRuleService.Delete(punctuationRule);
+            LoadEntityListBox(0);
+        }
     }
 }

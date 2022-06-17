@@ -12,6 +12,7 @@ namespace BelPomagalo.Controllers.EditEntityControllers
         public EditEntityController(EditForm form, IAddForm innerForm) : base(form)
         {
             _entityLabel = _form.EntityLabel;
+            _form.DeleteButton.Click += HandleDeleteButtonClick;
             innerForm.AddButton.Click += HandleEditButtonClick;
             innerForm.AddButton.Text = "Редактирай";
 
@@ -30,6 +31,21 @@ namespace BelPomagalo.Controllers.EditEntityControllers
             _additionalLabel = _form.AdditionalLabel;
             _additionalListBox = _form.AdditionalListBox;
             _additionalListBox.SelectedIndexChanged += HandleAdditionalListBoxSelectedIndexChanged;
+        }
+
+        private void HandleDeleteButtonClick(object? sender, EventArgs e) 
+        {
+            if (_entityListBox.SelectedIndex == -1)
+            {
+                MessageBox.Show("Трябва да изберете запис, който желаете да изтриете.", "Грешка.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            var result = MessageBox.Show("Сигурни ли сте че искате да изтриете този запис?", "Сигурни ли сте?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                DeleteEntityData();
+                MessageBox.Show("Записът беше успешно изтрит!", "Успешно изтриване на запис.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void HandleEntityListBoxSelectedIndexChanged(object? sender, EventArgs e)
@@ -97,5 +113,11 @@ namespace BelPomagalo.Controllers.EditEntityControllers
         protected virtual void LoadAdditionalDataInAppropriateControls() 
         {
         }
+
+        /// <summary>
+        /// The logic required for deleting an entity. This method is automatically called when
+        /// the delete button is clicked.
+        /// </summary>
+        protected abstract void DeleteEntityData();
     }
 }

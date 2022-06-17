@@ -81,5 +81,15 @@ namespace BelPomagalo.Services
             publishedWork.AuthorId = changesToApply.AuthorId;
             await _context.SaveChangesAsync();
         }
+
+        /// <summary>
+        /// Deletes a publishedWork.
+        /// </summary>
+        /// <param name="publishedWork">The publishedWork to delete.</param>
+        public async void Delete(PublishedWork publishedWork)
+        {
+            _context.PublishedWorks.Remove(publishedWork);
+            await _context.SaveChangesAsync();
+        }
     }
 }

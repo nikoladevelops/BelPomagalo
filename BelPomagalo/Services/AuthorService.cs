@@ -68,5 +68,15 @@ namespace BelPomagalo.Services
         {
             return _context.Authors.SingleOrDefault(x => x.Name == authorName) != null;
         }
+
+        /// <summary>
+        /// Deletes an author.
+        /// </summary>
+        /// <param name="author">The author to delete.</param>
+        public async void Delete(Author author)
+        {
+            _context.Authors.Remove(author);
+            await _context.SaveChangesAsync();
+        }
     }
 }

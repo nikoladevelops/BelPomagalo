@@ -78,5 +78,14 @@ namespace BelPomagalo.Controllers.EditEntityControllers
                 _innerForm.RuleDescriptionTextBox
                 );
         }
+
+        protected override void DeleteEntityData()
+        {
+            var writingRuleName = _entityListBox.SelectedItem.ToString();
+            var writingRule = _writingRuleService.GetWritingRule(writingRuleName);
+
+            _writingRuleService.Delete(writingRule);
+            LoadEntityListBox(0);
+        }
     }
 }

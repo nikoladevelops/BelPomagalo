@@ -29,17 +29,19 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.additionalLabel = new System.Windows.Forms.Label();
+            this.additionalListBox = new System.Windows.Forms.ListBox();
             this.entityLabel = new System.Windows.Forms.Label();
             this.entityListBox = new System.Windows.Forms.ListBox();
             this.editPanel = new System.Windows.Forms.Panel();
-            this.additionalListBox = new System.Windows.Forms.ListBox();
-            this.additionalLabel = new System.Windows.Forms.Label();
+            this.deleteButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(166)))), ((int)(((byte)(131)))));
+            this.panel1.Controls.Add(this.deleteButton);
             this.panel1.Controls.Add(this.additionalLabel);
             this.panel1.Controls.Add(this.additionalListBox);
             this.panel1.Controls.Add(this.entityLabel);
@@ -49,6 +51,29 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(646, 239);
             this.panel1.TabIndex = 3;
+            // 
+            // additionalLabel
+            // 
+            this.additionalLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.additionalLabel.AutoSize = true;
+            this.additionalLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.additionalLabel.Location = new System.Drawing.Point(34, 27);
+            this.additionalLabel.Name = "additionalLabel";
+            this.additionalLabel.Size = new System.Drawing.Size(82, 25);
+            this.additionalLabel.TabIndex = 3;
+            this.additionalLabel.Text = "Избери ";
+            this.additionalLabel.Visible = false;
+            // 
+            // additionalListBox
+            // 
+            this.additionalListBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.additionalListBox.FormattingEnabled = true;
+            this.additionalListBox.ItemHeight = 15;
+            this.additionalListBox.Location = new System.Drawing.Point(34, 55);
+            this.additionalListBox.Name = "additionalListBox";
+            this.additionalListBox.Size = new System.Drawing.Size(196, 154);
+            this.additionalListBox.TabIndex = 2;
+            this.additionalListBox.Visible = false;
             // 
             // entityLabel
             // 
@@ -80,28 +105,17 @@
             this.editPanel.Size = new System.Drawing.Size(646, 229);
             this.editPanel.TabIndex = 4;
             // 
-            // additionalListBox
+            // deleteButton
             // 
-            this.additionalListBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.additionalListBox.FormattingEnabled = true;
-            this.additionalListBox.ItemHeight = 15;
-            this.additionalListBox.Location = new System.Drawing.Point(34, 55);
-            this.additionalListBox.Name = "additionalListBox";
-            this.additionalListBox.Size = new System.Drawing.Size(196, 154);
-            this.additionalListBox.TabIndex = 2;
-            this.additionalListBox.Visible = false;
-            // 
-            // additionalLabel
-            // 
-            this.additionalLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.additionalLabel.AutoSize = true;
-            this.additionalLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.additionalLabel.Location = new System.Drawing.Point(34, 27);
-            this.additionalLabel.Name = "additionalLabel";
-            this.additionalLabel.Size = new System.Drawing.Size(82, 25);
-            this.additionalLabel.TabIndex = 3;
-            this.additionalLabel.Text = "Избери ";
-            this.additionalLabel.Visible = false;
+            this.deleteButton.BackColor = System.Drawing.Color.Red;
+            this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.deleteButton.Location = new System.Drawing.Point(454, 93);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(161, 59);
+            this.deleteButton.TabIndex = 5;
+            this.deleteButton.Text = "Изтрий избрания запис";
+            this.deleteButton.UseVisualStyleBackColor = false;
             // 
             // EditForm
             // 
@@ -127,5 +141,6 @@
         private Label entityLabel;
         private Label additionalLabel;
         private ListBox additionalListBox;
+        private Button deleteButton;
     }
 }

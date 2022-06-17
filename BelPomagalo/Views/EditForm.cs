@@ -11,5 +11,6 @@
         public Panel EditPanel { get => editPanel; }
         public Label EntityLabel { get => entityLabel; }
         public Label AdditionalLabel { get => additionalLabel; }
+        public Button DeleteButton { get => deleteButton; }
     }
 }

@@ -79,5 +79,14 @@ namespace BelPomagalo.Controllers.EditEntityControllers
                 _innerForm.GenreDescriptionTextBox
                 );
         }
+
+        protected override void DeleteEntityData()
+        {
+            var genreName = _entityListBox.SelectedItem.ToString();
+            var genre = _genreService.GetGenre(genreName);
+
+            _genreService.Delete(genre);
+            LoadEntityListBox(0);
+        }
     }
 }

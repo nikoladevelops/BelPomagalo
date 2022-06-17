@@ -62,5 +62,15 @@ namespace BelPomagalo.Services
             questionChlenuvane.CountAnswers = changesToApply.CountAnswers;
             await _context.SaveChangesAsync();
         }
+
+        /// <summary>
+        /// Deletes a questionChlenuvane.
+        /// </summary>
+        /// <param name="questionChlenuvane">The questionChlenuvane to delete.</param>
+        public async void Delete(QuestionChlenuvane questionChlenuvane)
+        {
+            _context.QuestionsChlenuvane.Remove(questionChlenuvane);
+            await _context.SaveChangesAsync();
+        }
     }
 }

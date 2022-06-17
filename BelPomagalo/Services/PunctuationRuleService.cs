@@ -59,5 +59,15 @@ namespace BelPomagalo.Services
             punctuationRule.Description = changesToApply.Description;
             await _context.SaveChangesAsync();
         }
+
+        /// <summary>
+        /// Deletes a punctuationRule.
+        /// </summary>
+        /// <param name="punctuationRule">The punctuationRule to delete.</param>
+        public async void Delete(PunctuationRule punctuationRule)
+        {
+            _context.PunctuationRules.Remove(punctuationRule);
+            await _context.SaveChangesAsync();
+        }
     }
 }

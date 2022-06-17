@@ -60,5 +60,15 @@ namespace BelPomagalo.Services
             grammarRule.Description = changesToApply.Description;
             await _context.SaveChangesAsync();
         }
+
+        /// <summary>
+        /// Deletes a grammarRule.
+        /// </summary>
+        /// <param name="grammarRule">The grammarRule to delete.</param>
+        public async void Delete(GrammarRule grammarRule)
+        {
+            _context.GrammarRules.Remove(grammarRule);
+            await _context.SaveChangesAsync();
+        }
     }
 }

@@ -89,5 +89,13 @@ namespace BelPomagalo.Controllers.EditEntityControllers
                 _innerForm.AuthorDiedDateTextBox,
                 _innerForm.AuthorBornLocationTextBox);
         }
+
+        protected override void DeleteEntityData()
+        {
+            var authorName = _entityListBox.SelectedItem.ToString();
+            var author = _authorService.GetAuthor(authorName);
+            _authorService.Delete(author);
+            LoadEntityListBox(0);
+        }
     }
 }

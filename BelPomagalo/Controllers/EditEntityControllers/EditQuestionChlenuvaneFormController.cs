@@ -89,5 +89,14 @@ namespace BelPomagalo.Controllers.EditEntityControllers
                 _innerForm.CorrectAnswersTextBox
                 );
         }
+
+        protected override void DeleteEntityData()
+        {
+            var questionChlenuvaneSentence = _entityListBox.SelectedItem.ToString();
+            var questionChlenuvane = _questionChlenuvaneService.GetQuestionChlenuvane(questionChlenuvaneSentence);
+
+            _questionChlenuvaneService.Delete(questionChlenuvane);
+            LoadEntityListBox(0);
+        }
     }
 }
