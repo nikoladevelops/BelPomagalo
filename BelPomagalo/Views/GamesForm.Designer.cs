@@ -30,17 +30,16 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.remindPublishedWorksButton = new System.Windows.Forms.Button();
+            this.guessContextButton = new System.Windows.Forms.Button();
+            this.guessThemesButton = new System.Windows.Forms.Button();
+            this.guessAuthorButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.guessGenreButton = new System.Windows.Forms.Button();
+            this.chlenuvaiButton = new System.Windows.Forms.Button();
+            this.remindGrammarRulesButton = new System.Windows.Forms.Button();
+            this.remindWritingRulesButton = new System.Windows.Forms.Button();
+            this.remindPunctuationRulesButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,17 +50,16 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.button5, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.button4, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.button3, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.button2, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.remindPublishedWorksButton, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.guessContextButton, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.guessThemesButton, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.guessAuthorButton, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button7, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.button8, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.button9, 0, 9);
-            this.tableLayoutPanel1.Controls.Add(this.button10, 0, 10);
-            this.tableLayoutPanel1.Controls.Add(this.button11, 0, 11);
+            this.tableLayoutPanel1.Controls.Add(this.guessGenreButton, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.chlenuvaiButton, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.remindGrammarRulesButton, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.remindWritingRulesButton, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.remindPunctuationRulesButton, 0, 10);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 13;
@@ -95,65 +93,65 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Български Език";
             // 
-            // button5
+            // remindPublishedWorksButton
             // 
-            this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button5.AutoSize = true;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(109)))), ((int)(((byte)(229)))));
-            this.button5.Location = new System.Drawing.Point(251, 236);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(297, 34);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Припомни ми произведенията";
-            this.button5.UseVisualStyleBackColor = true;
+            this.remindPublishedWorksButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.remindPublishedWorksButton.AutoSize = true;
+            this.remindPublishedWorksButton.FlatAppearance.BorderSize = 0;
+            this.remindPublishedWorksButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.remindPublishedWorksButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.remindPublishedWorksButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(109)))), ((int)(((byte)(229)))));
+            this.remindPublishedWorksButton.Location = new System.Drawing.Point(251, 236);
+            this.remindPublishedWorksButton.Name = "remindPublishedWorksButton";
+            this.remindPublishedWorksButton.Size = new System.Drawing.Size(297, 34);
+            this.remindPublishedWorksButton.TabIndex = 5;
+            this.remindPublishedWorksButton.Text = "Припомни ми произведенията";
+            this.remindPublishedWorksButton.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // guessContextButton
             // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button4.AutoSize = true;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(109)))), ((int)(((byte)(229)))));
-            this.button4.Location = new System.Drawing.Point(163, 195);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(473, 34);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Познай за кое произведение се отнася контекста";
-            this.button4.UseVisualStyleBackColor = true;
+            this.guessContextButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guessContextButton.AutoSize = true;
+            this.guessContextButton.FlatAppearance.BorderSize = 0;
+            this.guessContextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.guessContextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.guessContextButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(109)))), ((int)(((byte)(229)))));
+            this.guessContextButton.Location = new System.Drawing.Point(163, 195);
+            this.guessContextButton.Name = "guessContextButton";
+            this.guessContextButton.Size = new System.Drawing.Size(473, 34);
+            this.guessContextButton.TabIndex = 4;
+            this.guessContextButton.Text = "Познай за кое произведение се отнася контекста";
+            this.guessContextButton.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // guessThemesButton
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.AutoSize = true;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(109)))), ((int)(((byte)(229)))));
-            this.button3.Location = new System.Drawing.Point(193, 154);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(413, 34);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Познай срещаните теми в произведението";
-            this.button3.UseVisualStyleBackColor = true;
+            this.guessThemesButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guessThemesButton.AutoSize = true;
+            this.guessThemesButton.FlatAppearance.BorderSize = 0;
+            this.guessThemesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.guessThemesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.guessThemesButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(109)))), ((int)(((byte)(229)))));
+            this.guessThemesButton.Location = new System.Drawing.Point(193, 154);
+            this.guessThemesButton.Name = "guessThemesButton";
+            this.guessThemesButton.Size = new System.Drawing.Size(413, 34);
+            this.guessThemesButton.TabIndex = 3;
+            this.guessThemesButton.Text = "Познай срещаните теми в произведението";
+            this.guessThemesButton.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // guessAuthorButton
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.AutoSize = true;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(109)))), ((int)(((byte)(229)))));
-            this.button2.Location = new System.Drawing.Point(323, 116);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(154, 32);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Познай автора";
-            this.button2.UseVisualStyleBackColor = true;
+            this.guessAuthorButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guessAuthorButton.AutoSize = true;
+            this.guessAuthorButton.FlatAppearance.BorderSize = 0;
+            this.guessAuthorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.guessAuthorButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.guessAuthorButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(109)))), ((int)(((byte)(229)))));
+            this.guessAuthorButton.Location = new System.Drawing.Point(231, 116);
+            this.guessAuthorButton.Name = "guessAuthorButton";
+            this.guessAuthorButton.Size = new System.Drawing.Size(338, 32);
+            this.guessAuthorButton.TabIndex = 2;
+            this.guessAuthorButton.Text = "Познай автора на произведението";
+            this.guessAuthorButton.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -167,95 +165,80 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Литература";
             // 
-            // button1
+            // guessGenreButton
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.AutoSize = true;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(109)))), ((int)(((byte)(229)))));
-            this.button1.Location = new System.Drawing.Point(326, 70);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 34);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Познай жанра";
-            this.button1.UseVisualStyleBackColor = true;
+            this.guessGenreButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guessGenreButton.AutoSize = true;
+            this.guessGenreButton.FlatAppearance.BorderSize = 0;
+            this.guessGenreButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.guessGenreButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.guessGenreButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(109)))), ((int)(((byte)(229)))));
+            this.guessGenreButton.Location = new System.Drawing.Point(234, 70);
+            this.guessGenreButton.Name = "guessGenreButton";
+            this.guessGenreButton.Size = new System.Drawing.Size(331, 34);
+            this.guessGenreButton.TabIndex = 1;
+            this.guessGenreButton.Text = "Познай жанра на произведението";
+            this.guessGenreButton.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // chlenuvaiButton
             // 
-            this.button7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button7.AutoSize = true;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(109)))), ((int)(((byte)(229)))));
-            this.button7.Location = new System.Drawing.Point(302, 355);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(195, 34);
-            this.button7.TabIndex = 8;
-            this.button7.Text = "Членувай правилно";
-            this.button7.UseVisualStyleBackColor = true;
+            this.chlenuvaiButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.chlenuvaiButton.AutoSize = true;
+            this.chlenuvaiButton.FlatAppearance.BorderSize = 0;
+            this.chlenuvaiButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.chlenuvaiButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.chlenuvaiButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(109)))), ((int)(((byte)(229)))));
+            this.chlenuvaiButton.Location = new System.Drawing.Point(302, 355);
+            this.chlenuvaiButton.Name = "chlenuvaiButton";
+            this.chlenuvaiButton.Size = new System.Drawing.Size(195, 34);
+            this.chlenuvaiButton.TabIndex = 8;
+            this.chlenuvaiButton.Text = "Членувай правилно";
+            this.chlenuvaiButton.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // remindGrammarRulesButton
             // 
-            this.button8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button8.AutoSize = true;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(109)))), ((int)(((byte)(229)))));
-            this.button8.Location = new System.Drawing.Point(326, 404);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(148, 34);
-            this.button8.TabIndex = 9;
-            this.button8.Text = "Учтива форма";
-            this.button8.UseVisualStyleBackColor = true;
+            this.remindGrammarRulesButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.remindGrammarRulesButton.AutoSize = true;
+            this.remindGrammarRulesButton.FlatAppearance.BorderSize = 0;
+            this.remindGrammarRulesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.remindGrammarRulesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.remindGrammarRulesButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(109)))), ((int)(((byte)(229)))));
+            this.remindGrammarRulesButton.Location = new System.Drawing.Point(224, 404);
+            this.remindGrammarRulesButton.Name = "remindGrammarRulesButton";
+            this.remindGrammarRulesButton.Size = new System.Drawing.Size(352, 34);
+            this.remindGrammarRulesButton.TabIndex = 10;
+            this.remindGrammarRulesButton.Text = "Припомни ми граматичните правила";
+            this.remindGrammarRulesButton.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // remindWritingRulesButton
             // 
-            this.button9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button9.AutoSize = true;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(109)))), ((int)(((byte)(229)))));
-            this.button9.Location = new System.Drawing.Point(224, 455);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(352, 34);
-            this.button9.TabIndex = 10;
-            this.button9.Text = "Припомни ми граматичните правила";
-            this.button9.UseVisualStyleBackColor = true;
+            this.remindWritingRulesButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.remindWritingRulesButton.AutoSize = true;
+            this.remindWritingRulesButton.FlatAppearance.BorderSize = 0;
+            this.remindWritingRulesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.remindWritingRulesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.remindWritingRulesButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(109)))), ((int)(((byte)(229)))));
+            this.remindWritingRulesButton.Location = new System.Drawing.Point(223, 455);
+            this.remindWritingRulesButton.Name = "remindWritingRulesButton";
+            this.remindWritingRulesButton.Size = new System.Drawing.Size(354, 34);
+            this.remindWritingRulesButton.TabIndex = 11;
+            this.remindWritingRulesButton.Text = "Припомни ми правописните правила";
+            this.remindWritingRulesButton.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // remindPunctuationRulesButton
             // 
-            this.button10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button10.AutoSize = true;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(109)))), ((int)(((byte)(229)))));
-            this.button10.Location = new System.Drawing.Point(226, 504);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(348, 34);
-            this.button10.TabIndex = 11;
-            this.button10.Text = "Припомни ми лексикалните правила";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button11.AutoSize = true;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(109)))), ((int)(((byte)(229)))));
-            this.button11.Location = new System.Drawing.Point(209, 547);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(381, 34);
-            this.button11.TabIndex = 12;
-            this.button11.Text = "Припомни ми пунктуационните правила";
-            this.button11.UseVisualStyleBackColor = true;
+            this.remindPunctuationRulesButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.remindPunctuationRulesButton.AutoSize = true;
+            this.remindPunctuationRulesButton.FlatAppearance.BorderSize = 0;
+            this.remindPunctuationRulesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.remindPunctuationRulesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.remindPunctuationRulesButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(109)))), ((int)(((byte)(229)))));
+            this.remindPunctuationRulesButton.Location = new System.Drawing.Point(209, 502);
+            this.remindPunctuationRulesButton.Name = "remindPunctuationRulesButton";
+            this.remindPunctuationRulesButton.Size = new System.Drawing.Size(381, 34);
+            this.remindPunctuationRulesButton.TabIndex = 12;
+            this.remindPunctuationRulesButton.Text = "Припомни ми пунктуационните правила";
+            this.remindPunctuationRulesButton.UseVisualStyleBackColor = true;
             // 
             // GamesForm
             // 
@@ -276,16 +259,15 @@
 
         private TableLayoutPanel tableLayoutPanel1;
         private Label label1;
-        private Button button1;
-        private Button button11;
-        private Button button10;
-        private Button button9;
-        private Button button8;
-        private Button button7;
+        private Button guessGenreButton;
+        private Button remindPunctuationRulesButton;
+        private Button remindWritingRulesButton;
+        private Button remindGrammarRulesButton;
+        private Button chlenuvaiButton;
         private Label label2;
-        private Button button5;
-        private Button button4;
-        private Button button3;
-        private Button button2;
+        private Button remindPublishedWorksButton;
+        private Button guessContextButton;
+        private Button guessThemesButton;
+        private Button guessAuthorButton;
     }
 }
