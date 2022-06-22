@@ -28,7 +28,11 @@ namespace BelPomagalo.Controllers.AddNewEntityControllers
                 Sentence = _form.SentenceTextBox.Text,
                 CorrectSentence = _form.CorrectSentenceTextBox.Text,
                 CorrectAnswers = _form.CorrectAnswersTextBox.Text,
-                WrongAnswers = _form.WrongAnswersTextBox.Text
+                WrongAnswers = _form.WrongAnswersTextBox.Text,
+                CountAnswers = _form.CorrectAnswersTextBox.Text
+                .Trim()
+                .Split(new char[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                .Count()
             };
 
             await _questionChlenuvaneService.AddQuestionChlenuvane(questionChlenuvane);
