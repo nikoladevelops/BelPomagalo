@@ -6,7 +6,18 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <Description>BelPomagalo е приложение с което може да си помагаш по БЕЛ.
+</Description>
+    <Copyright>@nikoladevelops on github</Copyright>
+    <RepositoryUrl>https://github.com/nikoladevelops/BelPomagalo</RepositoryUrl>
+    <PackageTags>бел;помагало;български език и литература</PackageTags>
+    <NeutralLanguage>bg</NeutralLanguage>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="icon.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.5" />

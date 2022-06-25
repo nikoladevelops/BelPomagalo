@@ -20,7 +20,7 @@ namespace BelPomagalo.Controllers
             // set the default form that is loaded in the content panel to be HomeForm
             activeButton = _form.HomeMenuButton;
             activeButton.BackColor = Color.FromArgb(231, 127, 103);
-            MakeFormActive(new HomeForm());
+            MakeFormActive(new HomeFormController(new HomeForm()).Form);
         }
 
         private void MakeMenuButtonActiveOnClick(object? sender, EventArgs e)
@@ -36,10 +36,10 @@ namespace BelPomagalo.Controllers
             switch (activeButton.Name)
             {
                 case "homeMenuButton":
-                    formToMakeActive = new HomeForm();
+                    formToMakeActive = new HomeFormController(new HomeForm()).Form;
                     break;
                 case "gamesMenuButton":
-                    formToMakeActive = new GamesForm();
+                    formToMakeActive = new GamesFormController(new GamesForm()).Form;
                     break;
                 case "libraryMenuButton":
                     formToMakeActive = new LibraryFormController(new LibraryForm(),

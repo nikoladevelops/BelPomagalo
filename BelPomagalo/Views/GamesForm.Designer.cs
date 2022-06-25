@@ -31,7 +31,7 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.remindPublishedWorksButton = new System.Windows.Forms.Button();
-            this.guessContextButton = new System.Windows.Forms.Button();
+            this.guessCompositionButton = new System.Windows.Forms.Button();
             this.guessThemesButton = new System.Windows.Forms.Button();
             this.guessAuthorButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,7 +51,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.remindPublishedWorksButton, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.guessContextButton, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.guessCompositionButton, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.guessThemesButton, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.guessAuthorButton, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
@@ -108,20 +108,20 @@
             this.remindPublishedWorksButton.Text = "Припомни ми произведенията";
             this.remindPublishedWorksButton.UseVisualStyleBackColor = true;
             // 
-            // guessContextButton
+            // guessCompositionButton
             // 
-            this.guessContextButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guessContextButton.AutoSize = true;
-            this.guessContextButton.FlatAppearance.BorderSize = 0;
-            this.guessContextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.guessContextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.guessContextButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(109)))), ((int)(((byte)(229)))));
-            this.guessContextButton.Location = new System.Drawing.Point(163, 195);
-            this.guessContextButton.Name = "guessContextButton";
-            this.guessContextButton.Size = new System.Drawing.Size(473, 34);
-            this.guessContextButton.TabIndex = 4;
-            this.guessContextButton.Text = "Познай за кое произведение се отнася контекста";
-            this.guessContextButton.UseVisualStyleBackColor = true;
+            this.guessCompositionButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guessCompositionButton.AutoSize = true;
+            this.guessCompositionButton.FlatAppearance.BorderSize = 0;
+            this.guessCompositionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.guessCompositionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.guessCompositionButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(109)))), ((int)(((byte)(229)))));
+            this.guessCompositionButton.Location = new System.Drawing.Point(145, 195);
+            this.guessCompositionButton.Name = "guessCompositionButton";
+            this.guessCompositionButton.Size = new System.Drawing.Size(510, 34);
+            this.guessCompositionButton.TabIndex = 4;
+            this.guessCompositionButton.Text = "Познай за кое произведение се отнася композицията";
+            this.guessCompositionButton.UseVisualStyleBackColor = true;
             // 
             // guessThemesButton
             // 
@@ -266,7 +266,7 @@
         private Button chlenuvaiButton;
         private Label label2;
         private Button remindPublishedWorksButton;
-        private Button guessContextButton;
+        private Button guessCompositionButton;
         private Button guessThemesButton;
         private Button guessAuthorButton;
     }

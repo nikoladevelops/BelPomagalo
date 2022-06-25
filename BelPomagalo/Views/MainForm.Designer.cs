@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuPanel = new System.Windows.Forms.Panel();
             this.libraryMenuButton = new System.Windows.Forms.Button();
             this.gamesMenuButton = new System.Windows.Forms.Button();
@@ -125,6 +126,7 @@
             this.ClientSize = new System.Drawing.Size(896, 490);
             this.Controls.Add(this.contentPanel);
             this.Controls.Add(this.menuPanel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Помагало";
