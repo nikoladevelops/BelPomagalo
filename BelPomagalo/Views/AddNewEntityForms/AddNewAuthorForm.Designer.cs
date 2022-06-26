@@ -59,6 +59,7 @@
             this.descriptionTextBox.Location = new System.Drawing.Point(29, 125);
             this.descriptionTextBox.Multiline = true;
             this.descriptionTextBox.Name = "descriptionTextBox";
+            this.descriptionTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.descriptionTextBox.Size = new System.Drawing.Size(295, 155);
             this.descriptionTextBox.TabIndex = 2;
             // 
@@ -130,7 +131,7 @@
             this.bornDateTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.bornDateTextBox.Location = new System.Drawing.Point(362, 125);
             this.bornDateTextBox.Name = "bornDateTextBox";
-            this.bornDateTextBox.Size = new System.Drawing.Size(167, 35);
+            this.bornDateTextBox.Size = new System.Drawing.Size(248, 35);
             this.bornDateTextBox.TabIndex = 4;
             // 
             // label5
@@ -150,7 +151,7 @@
             this.diedDateTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.diedDateTextBox.Location = new System.Drawing.Point(362, 212);
             this.diedDateTextBox.Name = "diedDateTextBox";
-            this.diedDateTextBox.Size = new System.Drawing.Size(167, 35);
+            this.diedDateTextBox.Size = new System.Drawing.Size(248, 35);
             this.diedDateTextBox.TabIndex = 5;
             // 
             // AddNewAuthorForm

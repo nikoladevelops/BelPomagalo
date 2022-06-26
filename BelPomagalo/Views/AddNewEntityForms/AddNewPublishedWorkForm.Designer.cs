@@ -77,19 +77,19 @@
             // publishedDateTextBox
             // 
             this.publishedDateTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.publishedDateTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.publishedDateTextBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.publishedDateTextBox.Location = new System.Drawing.Point(509, 37);
             this.publishedDateTextBox.Name = "publishedDateTextBox";
-            this.publishedDateTextBox.Size = new System.Drawing.Size(195, 35);
+            this.publishedDateTextBox.Size = new System.Drawing.Size(207, 33);
             this.publishedDateTextBox.TabIndex = 2;
             // 
             // nameTextBox
             // 
             this.nameTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.nameTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.nameTextBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.nameTextBox.Location = new System.Drawing.Point(221, 37);
             this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(272, 35);
+            this.nameTextBox.Size = new System.Drawing.Size(272, 33);
             this.nameTextBox.TabIndex = 1;
             // 
             // label10
@@ -109,6 +109,7 @@
             this.remarksTextBox.Location = new System.Drawing.Point(556, 504);
             this.remarksTextBox.Multiline = true;
             this.remarksTextBox.Name = "remarksTextBox";
+            this.remarksTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.remarksTextBox.Size = new System.Drawing.Size(160, 154);
             this.remarksTextBox.TabIndex = 11;
             // 
@@ -118,6 +119,7 @@
             this.compositionTextBox.Location = new System.Drawing.Point(556, 114);
             this.compositionTextBox.Multiline = true;
             this.compositionTextBox.Name = "compositionTextBox";
+            this.compositionTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.compositionTextBox.Size = new System.Drawing.Size(160, 154);
             this.compositionTextBox.TabIndex = 5;
             // 
@@ -203,6 +205,7 @@
             this.motivesAndFiguresTextBox.Location = new System.Drawing.Point(556, 309);
             this.motivesAndFiguresTextBox.Multiline = true;
             this.motivesAndFiguresTextBox.Name = "motivesAndFiguresTextBox";
+            this.motivesAndFiguresTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.motivesAndFiguresTextBox.Size = new System.Drawing.Size(160, 154);
             this.motivesAndFiguresTextBox.TabIndex = 8;
             // 
@@ -234,6 +237,7 @@
             this.ideologicalSuggestionsTextBox.Location = new System.Drawing.Point(390, 504);
             this.ideologicalSuggestionsTextBox.Multiline = true;
             this.ideologicalSuggestionsTextBox.Name = "ideologicalSuggestionsTextBox";
+            this.ideologicalSuggestionsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.ideologicalSuggestionsTextBox.Size = new System.Drawing.Size(160, 154);
             this.ideologicalSuggestionsTextBox.TabIndex = 10;
             // 

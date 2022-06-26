@@ -86,6 +86,7 @@
             this.descriptionTextBox.Location = new System.Drawing.Point(23, 130);
             this.descriptionTextBox.Multiline = true;
             this.descriptionTextBox.Name = "descriptionTextBox";
+            this.descriptionTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.descriptionTextBox.Size = new System.Drawing.Size(295, 144);
             this.descriptionTextBox.TabIndex = 2;
             // 
@@ -96,7 +97,7 @@
             this.authorListBox.ItemHeight = 15;
             this.authorListBox.Location = new System.Drawing.Point(340, 52);
             this.authorListBox.Name = "authorListBox";
-            this.authorListBox.Size = new System.Drawing.Size(187, 214);
+            this.authorListBox.Size = new System.Drawing.Size(220, 214);
             this.authorListBox.TabIndex = 3;
             // 
             // label3

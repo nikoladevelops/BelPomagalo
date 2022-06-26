@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.deleteButton = new System.Windows.Forms.Button();
             this.additionalLabel = new System.Windows.Forms.Label();
             this.additionalListBox = new System.Windows.Forms.ListBox();
             this.entityLabel = new System.Windows.Forms.Label();
             this.entityListBox = new System.Windows.Forms.ListBox();
             this.editPanel = new System.Windows.Forms.Panel();
-            this.deleteButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,6 +51,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(646, 239);
             this.panel1.TabIndex = 3;
+            // 
+            // deleteButton
+            // 
+            this.deleteButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.deleteButton.BackColor = System.Drawing.Color.Red;
+            this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.deleteButton.Location = new System.Drawing.Point(454, 93);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(161, 59);
+            this.deleteButton.TabIndex = 5;
+            this.deleteButton.Text = "Изтрий избрания запис";
+            this.deleteButton.UseVisualStyleBackColor = false;
             // 
             // additionalLabel
             // 
@@ -104,18 +117,6 @@
             this.editPanel.Name = "editPanel";
             this.editPanel.Size = new System.Drawing.Size(646, 229);
             this.editPanel.TabIndex = 4;
-            // 
-            // deleteButton
-            // 
-            this.deleteButton.BackColor = System.Drawing.Color.Red;
-            this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deleteButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.deleteButton.Location = new System.Drawing.Point(454, 93);
-            this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(161, 59);
-            this.deleteButton.TabIndex = 5;
-            this.deleteButton.Text = "Изтрий избрания запис";
-            this.deleteButton.UseVisualStyleBackColor = false;
             // 
             // EditForm
             // 
