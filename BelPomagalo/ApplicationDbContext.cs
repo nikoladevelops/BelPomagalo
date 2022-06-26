@@ -1,10 +1,5 @@
 ﻿using BelPomagalo.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BelPomagalo
 {
@@ -13,6 +8,10 @@ namespace BelPomagalo
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var currentDir = Path.GetDirectoryName(Application.ExecutablePath);
+            if (Directory.Exists(currentDir+"\\DataStore") == false)
+            {
+                Directory.CreateDirectory(currentDir + "\\DataStore");
+            }
             var connectionString = "Data Source=" + currentDir + "\\DataStore\\PomagaloData.db";
             optionsBuilder.UseSqlite(connectionString);
         }

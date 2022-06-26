@@ -43,10 +43,4 @@
     </Compile>
   </ItemGroup>
 
-  <ItemGroup>
-    <None Update="DataStore\PomagaloData.db">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
 </Project>
